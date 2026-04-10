@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Chip Pipeline — Production → Ownership → Use</title>
+  <script src="https://unpkg.com/d3@7/dist/d3.min.js"></script>
+  <script src="https://unpkg.com/d3-sankey@0.12/dist/d3-sankey.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>AI Chip Pipeline <span class="subtitle">production → ownership → use</span></h1>
+    <div class="banner">All values in H100-equivalents (FP8). Sources: Epoch AI Chip Owners DB + KP China chip sheet. Smuggling = rough estimate. Users ≈ owners (placeholder). 2026 = projected.</div>
+  </header>
+
+  <section class="controls">
+    <div class="control-group">
+      <span class="label">Year:</span>
+      <div id="year-selector" class="year-buttons"></div>
+    </div>
+    <div class="control-group">
+      <span class="label">View:</span>
+      <label class="radio">
+        <input type="radio" name="view-mode" value="aggregate" checked />
+        <span>By stage</span>
+      </label>
+      <label class="radio">
+        <input type="radio" name="view-mode" value="by_company" />
+        <span>By company</span>
+      </label>
+    </div>
+    <div class="control-group">
+      <label class="checkbox">
+        <input type="checkbox" id="aggregate-toggle" />
+        <span>Cumulative (sum up to selected year)</span>
+      </label>
+    </div>
+  </section>
+
+  <section class="chart-wrap">
+    <svg id="sankey"></svg>
+    <div id="tooltip" class="tooltip hidden"></div>
+  </section>
+
+  <section class="legend">
+    <div class="legend-item"><span class="swatch us"></span> US/RoW track</div>
+    <div class="legend-item"><span class="swatch cn"></span> China track</div>
+    <div class="legend-item"><span class="swatch cross-legal"></span> Legal imports</div>
+    <div class="legend-item"><span class="swatch cross-smuggle"></span> Smuggling</div>
+    <div class="legend-item"><span class="swatch cross-cloud"></span> Chinese cloud use of US clouds</div>
+    <div class="legend-item"><span class="swatch dummy"></span> Placeholder / forecast (not a measured value)</div>
+  </section>
+
+  <footer>
+    <p>
+      Click any node to open the underlying Google Sheet tab. Source of truth:
+      <a id="sheet-link" href="#" target="_blank">Google Sheet (not yet linked)</a>.
+      See <code>STATUS.md</code> for build state.
+    </p>
+  </footer>
+
+  <script src="sankey.js"></script>
+</body>
+</html>

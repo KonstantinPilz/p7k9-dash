@@ -1,0 +1,250 @@
+:root {
+  --us: #2f6fd8;
+  --us-light: #a8c2ee;
+  --cn: #d63b3b;
+  --cn-light: #f0a5a5;
+  --cross-legal: #6aa84f;
+  --cross-smuggle: #e69138;
+  --cross-cloud: #8e7cc3;
+  --bg: #fafafa;
+  --ink: #1a1a1a;
+  --muted: #666;
+  --card: #ffffff;
+  --border: #e1e1e1;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  margin: 0;
+  padding: 14px 28px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header h1 {
+  margin: 0 0 4px 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+header .subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 8px;
+}
+
+.banner {
+  display: inline-block;
+  background: #fff3cd;
+  border: 1px solid #ffe08a;
+  color: #664d03;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin: 8px 0 12px 0;
+}
+
+.controls {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.control-group .label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.year-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.year-buttons button {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.12s;
+}
+
+.year-buttons button:hover {
+  background: #f0f0f0;
+}
+
+.year-buttons button.active {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+.checkbox,
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.radio + .radio {
+  margin-left: 8px;
+}
+
+.chart-wrap {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px 16px;
+  position: relative;
+}
+
+#sankey {
+  width: 100%;
+  height: 560px;
+  display: block;
+}
+
+.tooltip {
+  position: absolute;
+  background: rgba(26, 26, 26, 0.95);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  pointer-events: none;
+  max-width: 280px;
+  line-height: 1.4;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.tooltip.hidden { display: none; }
+
+.tooltip .value {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.tooltip .sub {
+  color: #ccc;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.tooltip .ci {
+  color: #7cd97c;
+  font-weight: 500;
+}
+
+.tooltip .ci-missing {
+  color: #999;
+  font-style: italic;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 8px 16px;
+  margin-top: 10px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+.swatch.us { background: var(--us); }
+.swatch.cn { background: var(--cn); }
+.swatch.cross-legal { background: var(--cross-legal); }
+.swatch.cross-smuggle { background: var(--cross-smuggle); }
+.swatch.cross-cloud { background: var(--cross-cloud); }
+.swatch.dummy {
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.7) 0 3px,
+      transparent 3px 8px
+    ),
+    #888;
+  border: 1px solid #666;
+}
+
+/* Sankey node & link styles */
+.node rect {
+  cursor: pointer;
+  stroke: #333;
+  stroke-width: 1;
+}
+
+.node rect:hover {
+  stroke-width: 2;
+}
+
+.node text {
+  font-size: 13px;
+  font-weight: 500;
+  pointer-events: none;
+  fill: var(--ink);
+}
+
+.link {
+  fill: none;
+  stroke-opacity: 0.45;
+  transition: stroke-opacity 0.15s;
+}
+
+.link:hover {
+  stroke-opacity: 0.75;
+}
+
+footer {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+footer a {
+  color: var(--us);
+}
+
+footer code {
+  background: #eee;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 12px;
+}

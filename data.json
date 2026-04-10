@@ -1,0 +1,1552 @@
+{
+  "unit": "H100-equivalents",
+  "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026,
+    2027
+  ],
+  "views": {
+    "aggregate": {
+      "nodes": [
+        {
+          "id": "us_prod",
+          "label": "US/RoW production",
+          "country": "us",
+          "stage": "prod",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit"
+        },
+        {
+          "id": "us_own",
+          "label": "US/RoW owners",
+          "country": "us",
+          "stage": "own",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit"
+        },
+        {
+          "id": "us_use",
+          "label": "US/RoW users",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit"
+        },
+        {
+          "id": "cn_prod",
+          "label": "China production",
+          "country": "cn",
+          "stage": "prod",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit"
+        },
+        {
+          "id": "cn_own",
+          "label": "China owners",
+          "country": "cn",
+          "stage": "own",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit"
+        },
+        {
+          "id": "cn_use",
+          "label": "China users",
+          "country": "cn",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit"
+        }
+      ],
+      "edgesByYear": {
+        "2022": [
+          {
+            "source": "us_prod",
+            "target": "us_own",
+            "value": 257520,
+            "ci_low": 158142,
+            "ci_high": 422527,
+            "label": "US/RoW production (Epoch)",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod",
+            "target": "cn_own",
+            "value": 31877,
+            "ci_low": 21640,
+            "ci_high": 47249,
+            "label": "US chips → China (Epoch)",
+            "is_dummy": false
+          },
+          {
+            "source": "cn_own",
+            "target": "cn_use",
+            "value": 31877,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own",
+            "target": "us_use",
+            "value": 257520,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          }
+        ],
+        "2023": [
+          {
+            "source": "us_prod",
+            "target": "us_own",
+            "value": 1124400,
+            "ci_low": 812633,
+            "ci_high": 1544181,
+            "label": "US/RoW production (Epoch)",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod",
+            "target": "cn_own",
+            "value": 144916,
+            "ci_low": 115676,
+            "ci_high": 181895,
+            "label": "US chips → China (Epoch)",
+            "is_dummy": false
+          },
+          {
+            "source": "cn_prod",
+            "target": "cn_own",
+            "value": 3883,
+            "ci_low": 777,
+            "ci_high": 20708,
+            "label": "China domestic production",
+            "is_dummy": false
+          },
+          {
+            "source": "cn_own",
+            "target": "cn_use",
+            "value": 148799,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own",
+            "target": "us_use",
+            "value": 1124400,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          }
+        ],
+        "2024": [
+          {
+            "source": "us_prod",
+            "target": "us_own",
+            "value": 4640504,
+            "ci_low": 3252363,
+            "ci_high": 6523539,
+            "label": "US/RoW production (Epoch)",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod",
+            "target": "cn_own",
+            "value": 143422,
+            "ci_low": 110348,
+            "ci_high": 186579,
+            "label": "US chips → China (Epoch)",
+            "is_dummy": false
+          },
+          {
+            "source": "cn_prod",
+            "target": "cn_own",
+            "value": 200893,
+            "ci_low": 86641,
+            "ci_high": 321948,
+            "label": "China domestic production",
+            "is_dummy": false
+          },
+          {
+            "source": "cn_own",
+            "target": "cn_use",
+            "value": 344315,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own",
+            "target": "us_use",
+            "value": 4640504,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          }
+        ],
+        "2025": [
+          {
+            "source": "us_prod",
+            "target": "cn_own",
+            "value": 90058,
+            "ci_low": 69799,
+            "ci_high": 116304,
+            "label": "US chips → China (Epoch)",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod",
+            "target": "us_own",
+            "value": 12157259,
+            "ci_low": 8906584,
+            "ci_high": 16399412,
+            "label": "US/RoW production (Epoch)",
+            "is_dummy": false
+          },
+          {
+            "source": "cn_prod",
+            "target": "cn_own",
+            "value": 680017,
+            "ci_low": 374618,
+            "ci_high": 875393,
+            "label": "China domestic production",
+            "is_dummy": false
+          },
+          {
+            "source": "cn_own",
+            "target": "cn_use",
+            "value": 770075,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own",
+            "target": "us_use",
+            "value": 12157259,
+            "ci_low": 8284928,
+            "ci_high": 13068173,
+            "label": "to use",
+            "is_dummy": true
+          }
+        ],
+        "2026": [
+          {
+            "source": "us_prod",
+            "target": "us_own",
+            "value": 1108978,
+            "ci_low": 782198,
+            "ci_high": 1514426,
+            "label": "US/RoW production (Epoch)",
+            "is_dummy": true
+          },
+          {
+            "source": "cn_prod",
+            "target": "cn_own",
+            "value": 831699,
+            "ci_low": 395844,
+            "ci_high": 1674115,
+            "label": "China domestic production",
+            "is_dummy": true
+          },
+          {
+            "source": "cn_own",
+            "target": "cn_use",
+            "value": 831699,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own",
+            "target": "us_use",
+            "value": 1108978,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          }
+        ],
+        "2027": [
+          {
+            "source": "cn_prod",
+            "target": "cn_own",
+            "value": 1500000,
+            "ci_low": 700000,
+            "ci_high": 3000000,
+            "label": "China domestic production",
+            "is_dummy": true
+          },
+          {
+            "source": "cn_own",
+            "target": "cn_use",
+            "value": 1500000,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          }
+        ]
+      }
+    },
+    "by_company": {
+      "nodes": [
+        {
+          "id": "us_prod_google",
+          "label": "Google",
+          "country": "us",
+          "stage": "prod",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Google"
+        },
+        {
+          "id": "us_own_google",
+          "label": "Google",
+          "country": "us",
+          "stage": "own",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Google"
+        },
+        {
+          "id": "us_prod_nvidia",
+          "label": "Nvidia",
+          "country": "us",
+          "stage": "prod",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Nvidia"
+        },
+        {
+          "id": "us_own_amazon",
+          "label": "Amazon",
+          "country": "us",
+          "stage": "own",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Amazon"
+        },
+        {
+          "id": "cn_own_china",
+          "label": "China",
+          "country": "cn",
+          "stage": "own",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "China"
+        },
+        {
+          "id": "us_own_meta",
+          "label": "Meta",
+          "country": "us",
+          "stage": "own",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Meta"
+        },
+        {
+          "id": "us_own_microsoft",
+          "label": "Microsoft",
+          "country": "us",
+          "stage": "own",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Microsoft"
+        },
+        {
+          "id": "us_own_oracle",
+          "label": "Oracle",
+          "country": "us",
+          "stage": "own",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Oracle"
+        },
+        {
+          "id": "us_own_other",
+          "label": "Other",
+          "country": "us",
+          "stage": "own",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Other"
+        },
+        {
+          "id": "us_prod_amd",
+          "label": "AMD",
+          "country": "us",
+          "stage": "prod",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "AMD"
+        },
+        {
+          "id": "us_prod_amazon",
+          "label": "Amazon",
+          "country": "us",
+          "stage": "prod",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Amazon"
+        },
+        {
+          "id": "us_own_xai",
+          "label": "xAI",
+          "country": "us",
+          "stage": "own",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "xAI"
+        },
+        {
+          "id": "cn_prod_huawei",
+          "label": "Huawei",
+          "country": "cn",
+          "stage": "prod",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Huawei"
+        },
+        {
+          "id": "cn_prod_cambricon",
+          "label": "Cambricon",
+          "country": "cn",
+          "stage": "prod",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Cambricon"
+        },
+        {
+          "id": "cn_prod_other_china",
+          "label": "Other China",
+          "country": "cn",
+          "stage": "prod",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Other China"
+        },
+        {
+          "id": "us_use_amazon",
+          "label": "Amazon",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Amazon"
+        },
+        {
+          "id": "us_use_anthropic",
+          "label": "Anthropic",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Anthropic"
+        },
+        {
+          "id": "us_use_other_amazon",
+          "label": "Other Amazon",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Other Amazon"
+        },
+        {
+          "id": "us_use_apple",
+          "label": "Apple",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Apple"
+        },
+        {
+          "id": "us_use_google",
+          "label": "Google",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Google"
+        },
+        {
+          "id": "us_use_other_google",
+          "label": "Other Google",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Other Google"
+        },
+        {
+          "id": "us_use_meta",
+          "label": "Meta",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Meta"
+        },
+        {
+          "id": "us_use_other_meta",
+          "label": "Other Meta",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Other Meta"
+        },
+        {
+          "id": "us_use_microsoft",
+          "label": "Microsoft",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Microsoft"
+        },
+        {
+          "id": "us_use_openai",
+          "label": "OpenAI",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "OpenAI"
+        },
+        {
+          "id": "us_use_other_microsoft",
+          "label": "Other Microsoft",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Other Microsoft"
+        },
+        {
+          "id": "us_use_other_oracle",
+          "label": "Other Oracle",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Other Oracle"
+        },
+        {
+          "id": "us_use_xai",
+          "label": "xAI",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "xAI"
+        },
+        {
+          "id": "us_use_other_xai",
+          "label": "Other xAI",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Other xAI"
+        },
+        {
+          "id": "us_use",
+          "label": "US/RoW users",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit"
+        },
+        {
+          "id": "cn_use",
+          "label": "China users",
+          "country": "cn",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit"
+        }
+      ],
+      "edgesByYear": {
+        "2022": [
+          {
+            "source": "us_prod_google",
+            "target": "us_own_google",
+            "value": 13706,
+            "ci_low": 9503,
+            "ci_high": 19122,
+            "label": "Google → Google",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_amazon",
+            "value": 24530,
+            "ci_low": 15254,
+            "ci_high": 40236,
+            "label": "Nvidia → Amazon",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "cn_own_china",
+            "value": 31877,
+            "ci_low": 21640,
+            "ci_high": 47249,
+            "label": "Nvidia → China",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_google",
+            "value": 24576,
+            "ci_low": 15163,
+            "ci_high": 39996,
+            "label": "Nvidia → Google",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_meta",
+            "value": 33770,
+            "ci_low": 20706,
+            "ci_high": 55734,
+            "label": "Nvidia → Meta",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_microsoft",
+            "value": 64503,
+            "ci_low": 39730,
+            "ci_high": 106041,
+            "label": "Nvidia → Microsoft",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_oracle",
+            "value": 7706,
+            "ci_low": 3795,
+            "ci_high": 15487,
+            "label": "Nvidia → Oracle",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_other",
+            "value": 88729,
+            "ci_low": 53991,
+            "ci_high": 145911,
+            "label": "Nvidia → Other",
+            "is_dummy": false
+          },
+          {
+            "source": "cn_own_china",
+            "target": "cn_use",
+            "value": 31877,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use",
+            "value": 24530,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use",
+            "value": 38282,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_meta",
+            "target": "us_use",
+            "value": 33770,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_microsoft",
+            "target": "us_use",
+            "value": 64503,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_oracle",
+            "target": "us_use",
+            "value": 7706,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_other",
+            "target": "us_use",
+            "value": 88729,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          }
+        ],
+        "2023": [
+          {
+            "source": "us_prod_google",
+            "target": "us_own_google",
+            "value": 193804,
+            "ci_low": 136655,
+            "ci_high": 261450,
+            "label": "Google → Google",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_amazon",
+            "value": 91977,
+            "ci_low": 67008,
+            "ci_high": 124744,
+            "label": "Nvidia → Amazon",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "cn_own_china",
+            "value": 144916,
+            "ci_low": 115676,
+            "ci_high": 181895,
+            "label": "Nvidia → China",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_google",
+            "value": 92020,
+            "ci_low": 67281,
+            "ci_high": 125982,
+            "label": "Nvidia → Google",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_meta",
+            "value": 126499,
+            "ci_low": 92920,
+            "ci_high": 173680,
+            "label": "Nvidia → Meta",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_microsoft",
+            "value": 241161,
+            "ci_low": 176347,
+            "ci_high": 329204,
+            "label": "Nvidia → Microsoft",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_oracle",
+            "value": 46206,
+            "ci_low": 28678,
+            "ci_high": 75287,
+            "label": "Nvidia → Oracle",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_other",
+            "value": 332733,
+            "ci_low": 243744,
+            "ci_high": 453834,
+            "label": "Nvidia → Other",
+            "is_dummy": false
+          },
+          {
+            "source": "cn_prod_other_china",
+            "target": "cn_own_china",
+            "value": 3883,
+            "ci_low": 777,
+            "ci_high": 20708,
+            "label": "Other China (small vendors)",
+            "is_dummy": false
+          },
+          {
+            "source": "cn_own_china",
+            "target": "cn_use",
+            "value": 148799,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use",
+            "value": 91977,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use",
+            "value": 285824,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_meta",
+            "target": "us_use",
+            "value": 126499,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_microsoft",
+            "target": "us_use",
+            "value": 241161,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_oracle",
+            "target": "us_use",
+            "value": 46206,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_other",
+            "target": "us_use",
+            "value": 332733,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          }
+        ],
+        "2024": [
+          {
+            "source": "us_prod_amd",
+            "target": "us_own_meta",
+            "value": 166658,
+            "ci_low": 117576,
+            "ci_high": 235080,
+            "label": "AMD → Meta",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_amd",
+            "target": "us_own_microsoft",
+            "value": 105722,
+            "ci_low": 77174,
+            "ci_high": 143841,
+            "label": "AMD → Microsoft",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_amd",
+            "target": "us_own_oracle",
+            "value": 42256,
+            "ci_low": 30800,
+            "ci_high": 57435,
+            "label": "AMD → Oracle",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_amd",
+            "target": "us_own_other",
+            "value": 239247,
+            "ci_low": 142890,
+            "ci_high": 342577,
+            "label": "AMD → Other",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_amazon",
+            "target": "us_own_amazon",
+            "value": 299167,
+            "ci_low": 174190,
+            "ci_high": 503060,
+            "label": "Amazon → Amazon",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_google",
+            "target": "us_own_google",
+            "value": 735170,
+            "ci_low": 503601,
+            "ci_high": 1018548,
+            "label": "Google → Google",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_amazon",
+            "value": 332626,
+            "ci_low": 244418,
+            "ci_high": 451369,
+            "label": "Nvidia → Amazon",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "cn_own_china",
+            "value": 143422,
+            "ci_low": 110348,
+            "ci_high": 186579,
+            "label": "Nvidia → China",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_google",
+            "value": 310420,
+            "ci_low": 227891,
+            "ci_high": 420956,
+            "label": "Nvidia → Google",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_meta",
+            "value": 434415,
+            "ci_low": 317807,
+            "ci_high": 590526,
+            "label": "Nvidia → Meta",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_microsoft",
+            "value": 805665,
+            "ci_low": 591651,
+            "ci_high": 1102308,
+            "label": "Nvidia → Microsoft",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_oracle",
+            "value": 207933,
+            "ci_low": 141318,
+            "ci_high": 305111,
+            "label": "Nvidia → Oracle",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_other",
+            "value": 861174,
+            "ci_low": 582996,
+            "ci_high": 1252677,
+            "label": "Nvidia → Other",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_xai",
+            "value": 100051,
+            "ci_low": 100051,
+            "ci_high": 100051,
+            "label": "Nvidia → xAI",
+            "is_dummy": false
+          },
+          {
+            "source": "cn_prod_huawei",
+            "target": "cn_own_china",
+            "value": 190091,
+            "ci_low": 83640,
+            "ci_high": 300344,
+            "label": "Huawei — 910B, 910C",
+            "is_dummy": false
+          },
+          {
+            "source": "cn_prod_other_china",
+            "target": "cn_own_china",
+            "value": 10802,
+            "ci_low": 3001,
+            "ci_high": 21604,
+            "label": "Other China (small vendors)",
+            "is_dummy": false
+          },
+          {
+            "source": "cn_own_china",
+            "target": "cn_use",
+            "value": 344315,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use",
+            "value": 631793,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use",
+            "value": 1045590,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_meta",
+            "target": "us_use",
+            "value": 601073,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_microsoft",
+            "target": "us_use",
+            "value": 911387,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_oracle",
+            "target": "us_use",
+            "value": 250189,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_other",
+            "target": "us_use",
+            "value": 1100421,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_xai",
+            "target": "us_use",
+            "value": 100051,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          }
+        ],
+        "2025": [
+          {
+            "source": "us_prod_amd",
+            "target": "cn_own_china",
+            "value": 10523,
+            "ci_low": 8605,
+            "ci_high": 12837,
+            "label": "AMD → China",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_amd",
+            "target": "us_own_meta",
+            "value": 284417,
+            "ci_low": 166899,
+            "ci_high": 466493,
+            "label": "AMD → Meta",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_amd",
+            "target": "us_own_microsoft",
+            "value": 153689,
+            "ci_low": 85411,
+            "ci_high": 266653,
+            "label": "AMD → Microsoft",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_amd",
+            "target": "us_own_oracle",
+            "value": 66417,
+            "ci_low": 29799,
+            "ci_high": 146528,
+            "label": "AMD → Oracle",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_amd",
+            "target": "us_own_other",
+            "value": 153415,
+            "ci_low": 3650,
+            "ci_high": 310429,
+            "label": "AMD → Other",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_amazon",
+            "target": "us_own_amazon",
+            "value": 710800,
+            "ci_low": 607968,
+            "ci_high": 822211,
+            "label": "Amazon → Amazon",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_google",
+            "target": "us_own_google",
+            "value": 2851145,
+            "ci_low": 2058240,
+            "ci_high": 3704932,
+            "label": "Google → Google",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_amazon",
+            "value": 885901,
+            "ci_low": 653151,
+            "ci_high": 1203929,
+            "label": "Nvidia → Amazon",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "cn_own_china",
+            "value": 79535,
+            "ci_low": 61194,
+            "ci_high": 103467,
+            "label": "Nvidia → China",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_google",
+            "value": 712382,
+            "ci_low": 523673,
+            "ci_high": 964859,
+            "label": "Nvidia → Google",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_meta",
+            "value": 1118612,
+            "ci_low": 822496,
+            "ci_high": 1520875,
+            "label": "Nvidia → Meta",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_microsoft",
+            "value": 1824629,
+            "ci_low": 1341863,
+            "ci_high": 2482422,
+            "label": "Nvidia → Microsoft",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_oracle",
+            "value": 688761,
+            "ci_low": 493030,
+            "ci_high": 969335,
+            "label": "Nvidia → Oracle",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_other",
+            "value": 2288537,
+            "ci_low": 1701850,
+            "ci_high": 3122192,
+            "label": "Nvidia → Other",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_xai",
+            "value": 418554,
+            "ci_low": 418554,
+            "ci_high": 418554,
+            "label": "Nvidia → xAI",
+            "is_dummy": false
+          },
+          {
+            "source": "cn_prod_huawei",
+            "target": "cn_own_china",
+            "value": 539859,
+            "ci_low": 273731,
+            "ci_high": 684328,
+            "label": "Huawei — 910B, 910C",
+            "is_dummy": false
+          },
+          {
+            "source": "cn_prod_other_china",
+            "target": "cn_own_china",
+            "value": 140158,
+            "ci_low": 100887,
+            "ci_high": 191065,
+            "label": "Other China (small vendors)",
+            "is_dummy": false
+          },
+          {
+            "source": "cn_own_china",
+            "target": "cn_use",
+            "value": 770075,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use_amazon",
+            "value": 550000,
+            "ci_low": 350000,
+            "ci_high": 800000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use_anthropic",
+            "value": 400000,
+            "ci_low": 250000,
+            "ci_high": 600000,
+            "label": "credible reporting",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use_other_amazon",
+            "value": 646701,
+            "ci_low": 250000,
+            "ci_high": 700000,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use_anthropic",
+            "value": 477258,
+            "ci_low": 318172,
+            "ci_high": 636344,
+            "label": "credible reporting",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use_apple",
+            "value": 23863,
+            "ci_low": 11931,
+            "ci_high": 39772,
+            "label": "credible reporting",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use_google",
+            "value": 2784005,
+            "ci_low": 2227204,
+            "ci_high": 3340807,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use_other_google",
+            "value": 278401,
+            "ci_low": 159086,
+            "ci_high": 397715,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_meta",
+            "target": "us_use_meta",
+            "value": 670000,
+            "ci_low": 430000,
+            "ci_high": 1000000,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_meta",
+            "target": "us_use_other_meta",
+            "value": 733029,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "residual (unattributed)",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_microsoft",
+            "target": "us_use_microsoft",
+            "value": 180000,
+            "ci_low": 100000,
+            "ci_high": 300000,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_microsoft",
+            "target": "us_use_openai",
+            "value": 450000,
+            "ci_low": 300000,
+            "ci_high": 650000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_microsoft",
+            "target": "us_use_other_microsoft",
+            "value": 1348318,
+            "ci_low": 100000,
+            "ci_high": 350000,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_oracle",
+            "target": "us_use_meta",
+            "value": 20000,
+            "ci_low": 0,
+            "ci_high": 50000,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_oracle",
+            "target": "us_use_openai",
+            "value": 300000,
+            "ci_low": 200000,
+            "ci_high": 450000,
+            "label": "credible reporting",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_oracle",
+            "target": "us_use_other_oracle",
+            "value": 419178,
+            "ci_low": 20000,
+            "ci_high": 100000,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_oracle",
+            "target": "us_use_xai",
+            "value": 16000,
+            "ci_low": 10000,
+            "ci_high": 25000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_other",
+            "target": "us_use",
+            "value": 2441952,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_xai",
+            "target": "us_use_xai",
+            "value": 315000,
+            "ci_low": 280000,
+            "ci_high": 350000,
+            "label": "confirmed",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_xai",
+            "target": "us_use_other_xai",
+            "value": 103554,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "residual (unattributed)",
+            "is_dummy": true
+          }
+        ],
+        "2026": [
+          {
+            "source": "us_prod_google",
+            "target": "us_own_google",
+            "value": 359213,
+            "ci_low": 224255,
+            "ci_high": 506294,
+            "label": "Google → Google",
+            "is_dummy": true
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_amazon",
+            "value": 67607,
+            "ci_low": 48922,
+            "ci_high": 94145,
+            "label": "Nvidia → Amazon",
+            "is_dummy": true
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_google",
+            "value": 51873,
+            "ci_low": 37163,
+            "ci_high": 72034,
+            "label": "Nvidia → Google",
+            "is_dummy": true
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_meta",
+            "value": 95986,
+            "ci_low": 68676,
+            "ci_high": 132921,
+            "label": "Nvidia → Meta",
+            "is_dummy": true
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_microsoft",
+            "value": 151091,
+            "ci_low": 109294,
+            "ci_high": 209964,
+            "label": "Nvidia → Microsoft",
+            "is_dummy": true
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_oracle",
+            "value": 56048,
+            "ci_low": 38398,
+            "ci_high": 83209,
+            "label": "Nvidia → Oracle",
+            "is_dummy": true
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_other",
+            "value": 327160,
+            "ci_low": 255490,
+            "ci_high": 415859,
+            "label": "Nvidia → Other",
+            "is_dummy": true
+          },
+          {
+            "source": "cn_prod_cambricon",
+            "target": "cn_own_china",
+            "value": 139535,
+            "ci_low": 76744,
+            "ci_high": 191860,
+            "label": "Cambricon (forecast) — Siyuan 590 + 690",
+            "is_dummy": true
+          },
+          {
+            "source": "cn_prod_huawei",
+            "target": "cn_own_china",
+            "value": 692164,
+            "ci_low": 319100,
+            "ci_high": 1482255,
+            "label": "Huawei (forecast) — 910C, 950DT, 950PR",
+            "is_dummy": true
+          },
+          {
+            "source": "cn_own_china",
+            "target": "cn_use",
+            "value": 831699,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use",
+            "value": 67607,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use",
+            "value": 411086,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_meta",
+            "target": "us_use",
+            "value": 95986,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_microsoft",
+            "target": "us_use",
+            "value": 151091,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_oracle",
+            "target": "us_use",
+            "value": 56048,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_other",
+            "target": "us_use",
+            "value": 327160,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          }
+        ],
+        "2027": [
+          {
+            "source": "cn_prod_huawei",
+            "target": "cn_own_china",
+            "value": 1500000,
+            "ci_low": 700000,
+            "ci_high": 3000000,
+            "label": "Huawei (forecast) — Total Ascend (mostly 950)",
+            "is_dummy": true
+          },
+          {
+            "source": "cn_own_china",
+            "target": "cn_use",
+            "value": 1500000,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
+            "is_dummy": true
+          }
+        ]
+      }
+    }
+  }
+}
