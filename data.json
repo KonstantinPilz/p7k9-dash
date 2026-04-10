@@ -204,7 +204,7 @@
             "ci_low": 8906584,
             "ci_high": 16399412,
             "label": "US/RoW production (Epoch)",
-            "is_dummy": false
+            "is_dummy": true
           },
           {
             "source": "cn_prod",
@@ -228,8 +228,8 @@
             "source": "us_own",
             "target": "us_use",
             "value": 12157259,
-            "ci_low": 8284928,
-            "ci_high": 13068173,
+            "ci_low": 7989928,
+            "ci_high": 13398173,
             "label": "to use",
             "is_dummy": true
           }
@@ -417,6 +417,14 @@
           "entity": "Other China"
         },
         {
+          "id": "us_own_coreweave",
+          "label": "Coreweave",
+          "country": "us",
+          "stage": "own",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Coreweave"
+        },
+        {
           "id": "us_use_amazon",
           "label": "Amazon",
           "country": "us",
@@ -439,6 +447,30 @@
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
           "entity": "Other Amazon"
+        },
+        {
+          "id": "us_use_microsoft",
+          "label": "Microsoft",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Microsoft"
+        },
+        {
+          "id": "us_use_openai",
+          "label": "OpenAI",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "OpenAI"
+        },
+        {
+          "id": "us_use_other_coreweave",
+          "label": "Other CoreWeave",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Other CoreWeave"
         },
         {
           "id": "us_use_apple",
@@ -479,22 +511,6 @@
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
           "entity": "Other Meta"
-        },
-        {
-          "id": "us_use_microsoft",
-          "label": "Microsoft",
-          "country": "us",
-          "stage": "use",
-          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Microsoft"
-        },
-        {
-          "id": "us_use_openai",
-          "label": "OpenAI",
-          "country": "us",
-          "stage": "use",
-          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "OpenAI"
         },
         {
           "id": "us_use_other_microsoft",
@@ -1085,9 +1101,9 @@
           {
             "source": "us_prod_amd",
             "target": "us_own_other",
-            "value": 153415,
-            "ci_low": 3650,
-            "ci_high": 310429,
+            "value": 114464,
+            "ci_low": 2723,
+            "ci_high": 231613,
             "label": "AMD → Other",
             "is_dummy": false
           },
@@ -1166,9 +1182,9 @@
           {
             "source": "us_prod_nvidia",
             "target": "us_own_other",
-            "value": 2288537,
-            "ci_low": 1701850,
-            "ci_high": 3122192,
+            "value": 1707488,
+            "ci_low": 1269758,
+            "ci_high": 2329482,
             "label": "Nvidia → Other",
             "is_dummy": false
           },
@@ -1198,6 +1214,24 @@
             "ci_high": 191065,
             "label": "Other China (small vendors)",
             "is_dummy": false
+          },
+          {
+            "source": "us_prod_amd",
+            "target": "us_own_coreweave",
+            "value": 38951,
+            "ci_low": 927,
+            "ci_high": 78816,
+            "label": "Amd → Coreweave",
+            "is_dummy": true
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_coreweave",
+            "value": 581049,
+            "ci_low": 432092,
+            "ci_high": 792710,
+            "label": "Nvidia → Coreweave",
+            "is_dummy": true
           },
           {
             "source": "cn_own_china",
@@ -1232,6 +1266,33 @@
             "value": 646701,
             "ci_low": 250000,
             "ci_high": 700000,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_coreweave",
+            "target": "us_use_microsoft",
+            "value": 350000,
+            "ci_low": 200000,
+            "ci_high": 500000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_coreweave",
+            "target": "us_use_openai",
+            "value": 150000,
+            "ci_low": 75000,
+            "ci_high": 250000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_coreweave",
+            "target": "us_use_other_coreweave",
+            "value": 120000,
+            "ci_low": 50000,
+            "ci_high": 200000,
             "label": "speculation",
             "is_dummy": true
           },
@@ -1355,7 +1416,7 @@
           {
             "source": "us_own_other",
             "target": "us_use",
-            "value": 2441952,
+            "value": 1821952,
             "ci_low": null,
             "ci_high": null,
             "label": "to use",
