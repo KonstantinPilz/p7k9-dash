@@ -63,7 +63,7 @@
             "ci_low": 158142,
             "ci_high": 422527,
             "label": "US/RoW production (Epoch)",
-            "is_dummy": false
+            "is_dummy": true
           },
           {
             "source": "us_prod",
@@ -87,8 +87,8 @@
             "source": "us_own",
             "target": "us_use",
             "value": 257520,
-            "ci_low": null,
-            "ci_high": null,
+            "ci_low": 138949,
+            "ci_high": 262375,
             "label": "to use",
             "is_dummy": true
           }
@@ -101,7 +101,7 @@
             "ci_low": 812633,
             "ci_high": 1544181,
             "label": "US/RoW production (Epoch)",
-            "is_dummy": false
+            "is_dummy": true
           },
           {
             "source": "us_prod",
@@ -134,8 +134,8 @@
             "source": "us_own",
             "target": "us_use",
             "value": 1124400,
-            "ci_low": null,
-            "ci_high": null,
+            "ci_low": 619353,
+            "ci_high": 1727111,
             "label": "to use",
             "is_dummy": true
           }
@@ -148,7 +148,7 @@
             "ci_low": 3252363,
             "ci_high": 6523539,
             "label": "US/RoW production (Epoch)",
-            "is_dummy": false
+            "is_dummy": true
           },
           {
             "source": "us_prod",
@@ -180,9 +180,9 @@
           {
             "source": "us_own",
             "target": "us_use",
-            "value": 4640504,
-            "ci_low": null,
-            "ci_high": null,
+            "value": 4640505,
+            "ci_low": 3123164,
+            "ci_high": 5783040,
             "label": "to use",
             "is_dummy": true
           }
@@ -227,9 +227,9 @@
           {
             "source": "us_own",
             "target": "us_use",
-            "value": 12157259,
-            "ci_low": 7989928,
-            "ci_high": 13398173,
+            "value": 12157260,
+            "ci_low": 8412527,
+            "ci_high": 14058516,
             "label": "to use",
             "is_dummy": true
           }
@@ -449,20 +449,12 @@
           "entity": "Other Amazon"
         },
         {
-          "id": "us_use_microsoft",
-          "label": "Microsoft",
+          "id": "us_use_stability_ai",
+          "label": "Stability AI",
           "country": "us",
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Microsoft"
-        },
-        {
-          "id": "us_use_openai",
-          "label": "OpenAI",
-          "country": "us",
-          "stage": "use",
-          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "OpenAI"
+          "entity": "Stability AI"
         },
         {
           "id": "us_use_other_coreweave",
@@ -471,14 +463,6 @@
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
           "entity": "Other CoreWeave"
-        },
-        {
-          "id": "us_use_apple",
-          "label": "Apple",
-          "country": "us",
-          "stage": "use",
-          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Apple"
         },
         {
           "id": "us_use_google",
@@ -513,6 +497,22 @@
           "entity": "Other Meta"
         },
         {
+          "id": "us_use_microsoft",
+          "label": "Microsoft",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Microsoft"
+        },
+        {
+          "id": "us_use_openai",
+          "label": "OpenAI",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "OpenAI"
+        },
+        {
           "id": "us_use_other_microsoft",
           "label": "Other Microsoft",
           "country": "us",
@@ -529,12 +529,60 @@
           "entity": "Other Oracle"
         },
         {
+          "id": "us_use_coreweave_microsoft",
+          "label": "CoreWeave (Microsoft)",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "CoreWeave (Microsoft)"
+        },
+        {
+          "id": "us_use_coreweave_openai",
+          "label": "CoreWeave (OpenAI)",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "CoreWeave (OpenAI)"
+        },
+        {
+          "id": "us_use_coreweave_stability_ai",
+          "label": "CoreWeave (Stability AI)",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "CoreWeave (Stability AI)"
+        },
+        {
+          "id": "us_use_oracle",
+          "label": "Oracle",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Oracle"
+        },
+        {
+          "id": "us_use_other_us",
+          "label": "Other US",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Other US"
+        },
+        {
           "id": "us_use_xai",
           "label": "xAI",
           "country": "us",
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
           "entity": "xAI"
+        },
+        {
+          "id": "us_use_apple",
+          "label": "Apple",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Apple"
         },
         {
           "id": "us_use_other_xai",
@@ -627,11 +675,20 @@
           {
             "source": "us_prod_nvidia",
             "target": "us_own_other",
-            "value": 88729,
-            "ci_low": 53991,
-            "ci_high": 145911,
+            "value": 87729,
+            "ci_low": 53383,
+            "ci_high": 144267,
             "label": "Nvidia → Other",
             "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_coreweave",
+            "value": 1000,
+            "ci_low": 608,
+            "ci_high": 1644,
+            "label": "Nvidia → Coreweave",
+            "is_dummy": true
           },
           {
             "source": "cn_own_china",
@@ -644,53 +701,134 @@
           },
           {
             "source": "us_own_amazon",
-            "target": "us_use",
-            "value": 24530,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "to use",
+            "target": "us_use_amazon",
+            "value": 3500,
+            "ci_low": 1000,
+            "ci_high": 9000,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use_anthropic",
+            "value": 100,
+            "ci_low": 0,
+            "ci_high": 500,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use_other_amazon",
+            "value": 20780,
+            "ci_low": 2500,
+            "ci_high": 17000,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use_stability_ai",
+            "value": 150,
+            "ci_low": 50,
+            "ci_high": 500,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_coreweave",
+            "target": "us_use_other_coreweave",
+            "value": 1000,
+            "ci_low": 300,
+            "ci_high": 3000,
+            "label": "speculation",
             "is_dummy": true
           },
           {
             "source": "us_own_google",
-            "target": "us_use",
-            "value": 38282,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "to use",
+            "target": "us_use_anthropic",
+            "value": 15,
+            "ci_low": 0,
+            "ci_high": 77,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use_google",
+            "value": 36736,
+            "ci_low": 14541,
+            "ci_high": 73472,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use_other_google",
+            "value": 1531,
+            "ci_low": 459,
+            "ci_high": 3827,
+            "label": "speculation",
             "is_dummy": true
           },
           {
             "source": "us_own_meta",
-            "target": "us_use",
-            "value": 33770,
+            "target": "us_use_meta",
+            "value": 10000,
+            "ci_low": 5000,
+            "ci_high": 18000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_meta",
+            "target": "us_use_other_meta",
+            "value": 23770,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "residual (unattributed)",
             "is_dummy": true
           },
           {
             "source": "us_own_microsoft",
-            "target": "us_use",
-            "value": 64503,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "to use",
+            "target": "us_use_microsoft",
+            "value": 2000,
+            "ci_low": 500,
+            "ci_high": 5000,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_microsoft",
+            "target": "us_use_openai",
+            "value": 5000,
+            "ci_low": 2000,
+            "ci_high": 10000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_microsoft",
+            "target": "us_use_other_microsoft",
+            "value": 57503,
+            "ci_low": 1000,
+            "ci_high": 9000,
+            "label": "speculation",
             "is_dummy": true
           },
           {
             "source": "us_own_oracle",
-            "target": "us_use",
+            "target": "us_use_other_oracle",
             "value": 7706,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "to use",
+            "ci_low": 100,
+            "ci_high": 1500,
+            "label": "speculation",
             "is_dummy": true
           },
           {
             "source": "us_own_other",
             "target": "us_use",
-            "value": 88729,
+            "value": 87729,
             "ci_low": null,
             "ci_high": null,
             "label": "to use",
@@ -764,9 +902,9 @@
           {
             "source": "us_prod_nvidia",
             "target": "us_own_other",
-            "value": 332733,
-            "ci_low": 243744,
-            "ci_high": 453834,
+            "value": 274733,
+            "ci_low": 201256,
+            "ci_high": 374724,
             "label": "Nvidia → Other",
             "is_dummy": false
           },
@@ -780,6 +918,24 @@
             "is_dummy": false
           },
           {
+            "source": "us_prod_nvidia",
+            "target": "us_own_coreweave",
+            "value": 53000,
+            "ci_low": 38825,
+            "ci_high": 72290,
+            "label": "Nvidia → Coreweave",
+            "is_dummy": true
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_xai",
+            "value": 5000,
+            "ci_low": 3663,
+            "ci_high": 6820,
+            "label": "Nvidia → Xai",
+            "is_dummy": true
+          },
+          {
             "source": "cn_own_china",
             "target": "cn_use",
             "value": 148799,
@@ -790,57 +946,183 @@
           },
           {
             "source": "us_own_amazon",
-            "target": "us_use",
-            "value": 91977,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "to use",
+            "target": "us_use_amazon",
+            "value": 30000,
+            "ci_low": 15000,
+            "ci_high": 55000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use_anthropic",
+            "value": 3000,
+            "ci_low": 500,
+            "ci_high": 10000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use_other_amazon",
+            "value": 57477,
+            "ci_low": 25000,
+            "ci_high": 85000,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use_stability_ai",
+            "value": 1500,
+            "ci_low": 500,
+            "ci_high": 4000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_coreweave",
+            "target": "us_use_coreweave_microsoft",
+            "value": 25000,
+            "ci_low": 10000,
+            "ci_high": 50000,
+            "label": "credible reporting",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_coreweave",
+            "target": "us_use_coreweave_openai",
+            "value": 8000,
+            "ci_low": 2000,
+            "ci_high": 20000,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_coreweave",
+            "target": "us_use_coreweave_stability_ai",
+            "value": 5000,
+            "ci_low": 2000,
+            "ci_high": 12000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_coreweave",
+            "target": "us_use_other_coreweave",
+            "value": 15000,
+            "ci_low": 5000,
+            "ci_high": 35000,
+            "label": "speculation",
             "is_dummy": true
           },
           {
             "source": "us_own_google",
-            "target": "us_use",
-            "value": 285824,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "to use",
+            "target": "us_use_anthropic",
+            "value": 5000,
+            "ci_low": 1000,
+            "ci_high": 15000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use_google",
+            "value": 250000,
+            "ci_low": 140000,
+            "ci_high": 350000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use_other_google",
+            "value": 30824,
+            "ci_low": 10000,
+            "ci_high": 60000,
+            "label": "speculation",
             "is_dummy": true
           },
           {
             "source": "us_own_meta",
-            "target": "us_use",
-            "value": 126499,
+            "target": "us_use_meta",
+            "value": 126000,
+            "ci_low": 93000,
+            "ci_high": 174000,
+            "label": "credible reporting",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_meta",
+            "target": "us_use_other_meta",
+            "value": 499,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "residual (unattributed)",
             "is_dummy": true
           },
           {
             "source": "us_own_microsoft",
-            "target": "us_use",
-            "value": 241161,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "to use",
+            "target": "us_use_microsoft",
+            "value": 25000,
+            "ci_low": 12000,
+            "ci_high": 45000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_microsoft",
+            "target": "us_use_openai",
+            "value": 130000,
+            "ci_low": 80000,
+            "ci_high": 190000,
+            "label": "credible reporting",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_microsoft",
+            "target": "us_use_other_microsoft",
+            "value": 86161,
+            "ci_low": 50000,
+            "ci_high": 130000,
+            "label": "analyst inference",
             "is_dummy": true
           },
           {
             "source": "us_own_oracle",
-            "target": "us_use",
-            "value": 46206,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "to use",
+            "target": "us_use_oracle",
+            "value": 5000,
+            "ci_low": 2000,
+            "ci_high": 12000,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_oracle",
+            "target": "us_use_other_oracle",
+            "value": 41206,
+            "ci_low": 20000,
+            "ci_high": 65000,
+            "label": "analyst inference",
             "is_dummy": true
           },
           {
             "source": "us_own_other",
-            "target": "us_use",
-            "value": 332733,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "to use",
+            "target": "us_use_other_us",
+            "value": 274733,
+            "ci_low": 149854,
+            "ci_high": 399612,
+            "label": "speculation",
             "is_dummy": true
+          },
+          {
+            "source": "us_own_xai",
+            "target": "us_use_xai",
+            "value": 5000,
+            "ci_low": 1000,
+            "ci_high": 15000,
+            "label": "analyst inference",
+            "is_dummy": false
           }
         ],
         "2024": [
@@ -874,9 +1156,9 @@
           {
             "source": "us_prod_amd",
             "target": "us_own_other",
-            "value": 239247,
-            "ci_low": 142890,
-            "ci_high": 342577,
+            "value": 204461,
+            "ci_low": 122114,
+            "ci_high": 292767,
             "label": "AMD → Other",
             "is_dummy": false
           },
@@ -955,9 +1237,9 @@
           {
             "source": "us_prod_nvidia",
             "target": "us_own_other",
-            "value": 861174,
-            "ci_low": 582996,
-            "ci_high": 1252677,
+            "value": 735960,
+            "ci_low": 498229,
+            "ci_high": 1070539,
             "label": "Nvidia → Other",
             "is_dummy": false
           },
@@ -989,6 +1271,24 @@
             "is_dummy": false
           },
           {
+            "source": "us_prod_amd",
+            "target": "us_own_coreweave",
+            "value": 34786,
+            "ci_low": 20776,
+            "ci_high": 49810,
+            "label": "Amd → Coreweave",
+            "is_dummy": true
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_coreweave",
+            "value": 125214,
+            "ci_low": 84767,
+            "ci_high": 182138,
+            "label": "Nvidia → Coreweave",
+            "is_dummy": true
+          },
+          {
             "source": "cn_own_china",
             "target": "cn_use",
             "value": 344315,
@@ -999,53 +1299,170 @@
           },
           {
             "source": "us_own_amazon",
-            "target": "us_use",
-            "value": 631793,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "to use",
+            "target": "us_use_amazon",
+            "value": 250000,
+            "ci_low": 150000,
+            "ci_high": 400000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use_anthropic",
+            "value": 150000,
+            "ci_low": 80000,
+            "ci_high": 250000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use_other_amazon",
+            "value": 231793,
+            "ci_low": 100000,
+            "ci_high": 350000,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_coreweave",
+            "target": "us_use_microsoft",
+            "value": 120000,
+            "ci_low": 80000,
+            "ci_high": 180000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_coreweave",
+            "target": "us_use_openai",
+            "value": 10000,
+            "ci_low": 5000,
+            "ci_high": 25000,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_coreweave",
+            "target": "us_use_other_coreweave",
+            "value": 30000,
+            "ci_low": 15000,
+            "ci_high": 65000,
+            "label": "speculation",
             "is_dummy": true
           },
           {
             "source": "us_own_google",
-            "target": "us_use",
-            "value": 1045590,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "to use",
+            "target": "us_use_anthropic",
+            "value": 43184,
+            "ci_low": 21592,
+            "ci_high": 80970,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use_apple",
+            "value": 3779,
+            "ci_low": 2699,
+            "ci_high": 8097,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use_google",
+            "value": 917658,
+            "ci_low": 647758,
+            "ci_high": 1241537,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use_other_google",
+            "value": 80970,
+            "ci_low": 43184,
+            "ci_high": 134950,
+            "label": "speculation",
             "is_dummy": true
           },
           {
             "source": "us_own_meta",
-            "target": "us_use",
-            "value": 601073,
+            "target": "us_use_meta",
+            "value": 600000,
+            "ci_low": 500000,
+            "ci_high": 700000,
+            "label": "confirmed",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_meta",
+            "target": "us_use_other_meta",
+            "value": 1073,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "residual (unattributed)",
             "is_dummy": true
           },
           {
             "source": "us_own_microsoft",
-            "target": "us_use",
-            "value": 911387,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "to use",
+            "target": "us_use_microsoft",
+            "value": 150000,
+            "ci_low": 80000,
+            "ci_high": 250000,
+            "label": "speculation",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_microsoft",
+            "target": "us_use_openai",
+            "value": 350000,
+            "ci_low": 230000,
+            "ci_high": 500000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_microsoft",
+            "target": "us_use_other_microsoft",
+            "value": 411387,
+            "ci_low": 100000,
+            "ci_high": 350000,
+            "label": "speculation",
             "is_dummy": true
           },
           {
             "source": "us_own_oracle",
-            "target": "us_use",
-            "value": 250189,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "to use",
+            "target": "us_use_openai",
+            "value": 30000,
+            "ci_low": 15000,
+            "ci_high": 60000,
+            "label": "analyst inference",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_oracle",
+            "target": "us_use_other_oracle",
+            "value": 204189,
+            "ci_low": 20000,
+            "ci_high": 100000,
+            "label": "speculation",
             "is_dummy": true
+          },
+          {
+            "source": "us_own_oracle",
+            "target": "us_use_xai",
+            "value": 16000,
+            "ci_low": 10000,
+            "ci_high": 25000,
+            "label": "credible reporting",
+            "is_dummy": false
           },
           {
             "source": "us_own_other",
             "target": "us_use",
-            "value": 1100421,
+            "value": 940421,
             "ci_low": null,
             "ci_high": null,
             "label": "to use",
@@ -1053,12 +1470,12 @@
           },
           {
             "source": "us_own_xai",
-            "target": "us_use",
+            "target": "us_use_xai",
             "value": 100051,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "to use",
-            "is_dummy": true
+            "ci_low": 81437,
+            "ci_high": 120992,
+            "label": "confirmed",
+            "is_dummy": false
           }
         ],
         "2025": [
@@ -1245,27 +1662,27 @@
           {
             "source": "us_own_amazon",
             "target": "us_use_amazon",
-            "value": 550000,
-            "ci_low": 350000,
-            "ci_high": 800000,
+            "value": 657465,
+            "ci_low": 422656,
+            "ci_high": 939236,
             "label": "analyst inference",
             "is_dummy": false
           },
           {
             "source": "us_own_amazon",
             "target": "us_use_anthropic",
-            "value": 400000,
-            "ci_low": 250000,
-            "ci_high": 600000,
+            "value": 375694,
+            "ci_low": 234809,
+            "ci_high": 563542,
             "label": "credible reporting",
             "is_dummy": false
           },
           {
             "source": "us_own_amazon",
             "target": "us_use_other_amazon",
-            "value": 646701,
-            "ci_low": 250000,
-            "ci_high": 700000,
+            "value": 563542,
+            "ci_low": 328733,
+            "ci_high": 845312,
             "label": "speculation",
             "is_dummy": true
           },
@@ -1299,36 +1716,36 @@
           {
             "source": "us_own_google",
             "target": "us_use_anthropic",
-            "value": 477258,
-            "ci_low": 318172,
-            "ci_high": 636344,
+            "value": 429341,
+            "ci_low": 286227,
+            "ci_high": 572454,
             "label": "credible reporting",
             "is_dummy": false
           },
           {
             "source": "us_own_google",
             "target": "us_use_apple",
-            "value": 23863,
-            "ci_low": 11931,
-            "ci_high": 39772,
+            "value": 21467,
+            "ci_low": 10734,
+            "ci_high": 35778,
             "label": "credible reporting",
             "is_dummy": false
           },
           {
             "source": "us_own_google",
             "target": "us_use_google",
-            "value": 2784005,
-            "ci_low": 2227204,
-            "ci_high": 3340807,
+            "value": 2862271,
+            "ci_low": 2289817,
+            "ci_high": 3434725,
             "label": "analyst inference",
             "is_dummy": false
           },
           {
             "source": "us_own_google",
             "target": "us_use_other_google",
-            "value": 278401,
-            "ci_low": 159086,
-            "ci_high": 397715,
+            "value": 250449,
+            "ci_low": 143114,
+            "ci_high": 357784,
             "label": "speculation",
             "is_dummy": true
           },
@@ -1380,36 +1797,36 @@
           {
             "source": "us_own_oracle",
             "target": "us_use_meta",
-            "value": 20000,
+            "value": 16489,
             "ci_low": 0,
-            "ci_high": 50000,
+            "ci_high": 41222,
             "label": "speculation",
             "is_dummy": true
           },
           {
             "source": "us_own_oracle",
             "target": "us_use_openai",
-            "value": 300000,
-            "ci_low": 200000,
-            "ci_high": 450000,
+            "value": 247329,
+            "ci_low": 164886,
+            "ci_high": 370994,
             "label": "credible reporting",
             "is_dummy": false
           },
           {
             "source": "us_own_oracle",
             "target": "us_use_other_oracle",
-            "value": 419178,
-            "ci_low": 20000,
-            "ci_high": 100000,
+            "value": 478169,
+            "ci_low": 329772,
+            "ci_high": 618323,
             "label": "speculation",
             "is_dummy": true
           },
           {
             "source": "us_own_oracle",
             "target": "us_use_xai",
-            "value": 16000,
-            "ci_low": 10000,
-            "ci_high": 25000,
+            "value": 13191,
+            "ci_low": 8244,
+            "ci_high": 20611,
             "label": "analyst inference",
             "is_dummy": false
           },
