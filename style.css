@@ -193,6 +193,7 @@ header .subtitle {
 .swatch.cross-legal { background: var(--cross-legal); }
 .swatch.cross-smuggle { background: var(--cross-smuggle); }
 .swatch.cross-cloud { background: var(--cross-cloud); }
+.swatch.other { background: #999; }
 .swatch.dummy {
   background:
     repeating-linear-gradient(

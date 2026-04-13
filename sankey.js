@@ -36,7 +36,6 @@ const COMPANY_COLORS = {
   "Meta":      "#8ab4f0",
   "Oracle":    "#5a95d5",
   "xAI":       "#7aabdf",
-  "Other":     "#9bc0e8",
   // China — reds
   "Huawei":    "#b02727",
   "China":     "#c84040",
@@ -45,23 +44,33 @@ const COMPANY_COLORS = {
   "Alibaba":   "#e05858",
   "Baidu":     "#e87575",
   "Moore Threads": "#ed9898",
-  "Others":    "#f0a5a5",
-  "Other China": "#f0a5a5",
 };
 
+// Grey for catch-all / residual nodes so named entities stand out.
+const OTHER_UNKNOWN_COLOR = "#999";
+
+function isOtherUnknown(n) {
+  const id = (n.id || "").toLowerCase();
+  return id.includes("other") || id.includes("unknown");
+}
+
 function nodeColor(n) {
+  if (isOtherUnknown(n)) return OTHER_UNKNOWN_COLOR;
   if (n.entity && COMPANY_COLORS[n.entity]) return COMPANY_COLORS[n.entity];
   if (STAGE_COLORS[n.id]) return STAGE_COLORS[n.id];
   // Fallback by country
   return n.country === "us" ? "#6b9fe8" : "#e87575";
 }
 
-// Link colors by edge type. Cross-track edges get distinct colors.
+// Link colors by edge type. Cross-track edges get distinct colors;
+// edges touching Other/Unknown nodes get grey.
 function linkColor(edge, view) {
   const nodes = view.nodes;
   const sNode = nodes.find(n => n.id === edge.sourceId);
   const tNode = nodes.find(n => n.id === edge.targetId);
   if (!sNode || !tNode) return "#999";
+  // Grey for edges flowing to/from residual "Other"/"Unknown" buckets.
+  if (isOtherUnknown(sNode) || isOtherUnknown(tNode)) return OTHER_UNKNOWN_COLOR;
   if (sNode.country !== tNode.country) {
     const lbl = (edge.label || "").toLowerCase();
     if (lbl.includes("smuggl")) return "#e69138";
@@ -190,13 +199,20 @@ function render() {
 
   const sankeyLayout = d3.sankey()
     .nodeWidth(18)
-    .nodePadding(state.view === "by_company" ? 8 : 24)
-    // Chinese entities always render at the bottom, US/RoW at the top.
-    // Within-country order is left to d3-sankey's default crossings-min.
+    .nodePadding(state.view === "by_company" ? 10 : 24)
+    // Sort: (1) US/RoW at top, China at bottom; (2) within each country,
+    // other/unknown buckets sink to the bottom of their group; (3) within
+    // named entities, largest value first to reduce edge crossings.
     .nodeSort((a, b) => {
       const aCN = a.country === "cn" ? 1 : 0;
       const bCN = b.country === "cn" ? 1 : 0;
-      return aCN - bCN;
+      if (aCN !== bCN) return aCN - bCN;
+      // Within same country: push other/unknown to bottom
+      const aOther = isOtherUnknown(a) ? 1 : 0;
+      const bOther = isOtherUnknown(b) ? 1 : 0;
+      if (aOther !== bOther) return aOther - bOther;
+      // Named entities: largest value first (descending)
+      return (b.value || 0) - (a.value || 0);
     })
     .extent([[0, 0], [innerW, innerH]]);
 
