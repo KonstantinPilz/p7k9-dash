@@ -87,8 +87,8 @@
             "source": "us_own",
             "target": "us_use",
             "value": 257520,
-            "ci_low": 138949,
-            "ci_high": 262375,
+            "ci_low": 229314,
+            "ci_high": 287814,
             "label": "to use",
             "is_dummy": true
           }
@@ -134,8 +134,8 @@
             "source": "us_own",
             "target": "us_use",
             "value": 1124400,
-            "ci_low": 619353,
-            "ci_high": 1727111,
+            "ci_low": 951694,
+            "ci_high": 1302194,
             "label": "to use",
             "is_dummy": true
           }
@@ -180,9 +180,9 @@
           {
             "source": "us_own",
             "target": "us_use",
-            "value": 4640505,
-            "ci_low": 3123164,
-            "ci_high": 5783040,
+            "value": 4640504,
+            "ci_low": 3913264,
+            "ci_high": 5534264,
             "label": "to use",
             "is_dummy": true
           }
@@ -227,9 +227,9 @@
           {
             "source": "us_own",
             "target": "us_use",
-            "value": 12157260,
-            "ci_low": 8412527,
-            "ci_high": 14058516,
+            "value": 12157259,
+            "ci_low": 8963527,
+            "ci_high": 15438527,
             "label": "to use",
             "is_dummy": true
           }
@@ -433,14 +433,6 @@
           "entity": "Amazon"
         },
         {
-          "id": "us_use_anthropic",
-          "label": "Anthropic",
-          "country": "us",
-          "stage": "use",
-          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Anthropic"
-        },
-        {
           "id": "us_use_other_amazon",
           "label": "Other Amazon",
           "country": "us",
@@ -449,36 +441,28 @@
           "entity": "Other Amazon"
         },
         {
-          "id": "us_use_stability_ai",
-          "label": "Stability AI",
+          "id": "us_use_unknown",
+          "label": "Unknown",
           "country": "us",
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Stability AI"
+          "entity": "Unknown"
         },
         {
-          "id": "us_use_other_coreweave",
-          "label": "Other CoreWeave",
+          "id": "us_use_other",
+          "label": "Other",
           "country": "us",
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Other CoreWeave"
+          "entity": "Other"
         },
         {
-          "id": "us_use_google",
-          "label": "Google",
+          "id": "us_use_google_internal",
+          "label": "Google internal",
           "country": "us",
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Google"
-        },
-        {
-          "id": "us_use_other_google",
-          "label": "Other Google",
-          "country": "us",
-          "stage": "use",
-          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Other Google"
+          "entity": "Google internal"
         },
         {
           "id": "us_use_meta",
@@ -489,20 +473,12 @@
           "entity": "Meta"
         },
         {
-          "id": "us_use_other_meta",
-          "label": "Other Meta",
+          "id": "us_use_microsoft_internal",
+          "label": "Microsoft internal",
           "country": "us",
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Other Meta"
-        },
-        {
-          "id": "us_use_microsoft",
-          "label": "Microsoft",
-          "country": "us",
-          "stage": "use",
-          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Microsoft"
+          "entity": "Microsoft internal"
         },
         {
           "id": "us_use_openai",
@@ -513,68 +489,60 @@
           "entity": "OpenAI"
         },
         {
-          "id": "us_use_other_microsoft",
-          "label": "Other Microsoft",
+          "id": "us_use_other_oci_internal",
+          "label": "Other OCI + internal",
           "country": "us",
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Other Microsoft"
+          "entity": "Other OCI + internal"
         },
         {
-          "id": "us_use_other_oracle",
-          "label": "Other Oracle",
+          "id": "us_use_anthropic",
+          "label": "Anthropic",
           "country": "us",
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Other Oracle"
+          "entity": "Anthropic"
         },
         {
-          "id": "us_use_coreweave_microsoft",
-          "label": "CoreWeave (Microsoft)",
+          "id": "us_use_microsoft",
+          "label": "Microsoft",
           "country": "us",
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "CoreWeave (Microsoft)"
+          "entity": "Microsoft"
         },
         {
-          "id": "us_use_coreweave_openai",
-          "label": "CoreWeave (OpenAI)",
+          "id": "us_use_nvidia",
+          "label": "NVIDIA",
           "country": "us",
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "CoreWeave (OpenAI)"
+          "entity": "NVIDIA"
         },
         {
-          "id": "us_use_coreweave_stability_ai",
-          "label": "CoreWeave (Stability AI)",
+          "id": "us_use_nvidia_dgx_cloud",
+          "label": "NVIDIA (DGX Cloud)",
           "country": "us",
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "CoreWeave (Stability AI)"
+          "entity": "NVIDIA (DGX Cloud)"
         },
         {
-          "id": "us_use_oracle",
-          "label": "Oracle",
+          "id": "us_use_xai_legacy_oci",
+          "label": "xAI (legacy OCI)",
           "country": "us",
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Oracle"
+          "entity": "xAI (legacy OCI)"
         },
         {
-          "id": "us_use_other_us",
-          "label": "Other US",
+          "id": "us_use_xai_grok",
+          "label": "xAI / Grok",
           "country": "us",
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Other US"
-        },
-        {
-          "id": "us_use_xai",
-          "label": "xAI",
-          "country": "us",
-          "stage": "use",
-          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "xAI"
+          "entity": "xAI / Grok"
         },
         {
           "id": "us_use_apple",
@@ -585,12 +553,20 @@
           "entity": "Apple"
         },
         {
-          "id": "us_use_other_xai",
-          "label": "Other xAI",
+          "id": "us_use_openai_stargate",
+          "label": "OpenAI / Stargate",
           "country": "us",
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Other xAI"
+          "entity": "OpenAI / Stargate"
+        },
+        {
+          "id": "us_use_other_anthropic_perplexity_ibm_cohere_poolside_etc",
+          "label": "Other (Anthropic, Perplexity, IBM, Cohere, Poolside, etc.)",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Other (Anthropic, Perplexity, IBM, Cohere, Poolside, etc.)"
         },
         {
           "id": "us_use",
@@ -702,127 +678,100 @@
           {
             "source": "us_own_amazon",
             "target": "us_use_amazon",
-            "value": 3500,
-            "ci_low": 1000,
-            "ci_high": 9000,
-            "label": "speculation",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_amazon",
-            "target": "us_use_anthropic",
-            "value": 100,
-            "ci_low": 0,
-            "ci_high": 500,
-            "label": "speculation",
+            "value": 10000,
+            "ci_low": 5000,
+            "ci_high": 15000,
+            "label": "35",
             "is_dummy": true
           },
           {
             "source": "us_own_amazon",
             "target": "us_use_other_amazon",
-            "value": 20780,
-            "ci_low": 2500,
-            "ci_high": 17000,
-            "label": "speculation",
+            "value": 5000,
+            "ci_low": 2000,
+            "ci_high": 10000,
+            "label": "25",
             "is_dummy": true
           },
           {
             "source": "us_own_amazon",
-            "target": "us_use_stability_ai",
-            "value": 150,
-            "ci_low": 50,
-            "ci_high": 500,
-            "label": "analyst inference",
-            "is_dummy": false
+            "target": "us_use_unknown",
+            "value": 9530,
+            "ci_low": 9530,
+            "ci_high": 9530,
+            "label": "30",
+            "is_dummy": true
           },
           {
             "source": "us_own_coreweave",
-            "target": "us_use_other_coreweave",
+            "target": "us_use_other",
             "value": 1000,
-            "ci_low": 300,
-            "ci_high": 3000,
-            "label": "speculation",
+            "ci_low": 500,
+            "ci_high": 1000,
+            "label": "30",
             "is_dummy": true
           },
           {
             "source": "us_own_google",
-            "target": "us_use_anthropic",
-            "value": 15,
-            "ci_low": 0,
-            "ci_high": 77,
-            "label": "speculation",
-            "is_dummy": true
+            "target": "us_use_google_internal",
+            "value": 35000,
+            "ci_low": 30000,
+            "ci_high": 37000,
+            "label": "55",
+            "is_dummy": false
           },
           {
             "source": "us_own_google",
-            "target": "us_use_google",
-            "value": 36736,
-            "ci_low": 14541,
-            "ci_high": 73472,
-            "label": "speculation",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_google",
-            "target": "us_use_other_google",
-            "value": 1531,
-            "ci_low": 459,
-            "ci_high": 3827,
-            "label": "speculation",
+            "target": "us_use_unknown",
+            "value": 3282,
+            "ci_low": 3282,
+            "ci_high": 3282,
+            "label": "30",
             "is_dummy": true
           },
           {
             "source": "us_own_meta",
             "target": "us_use_meta",
-            "value": 10000,
-            "ci_low": 5000,
-            "ci_high": 18000,
-            "label": "analyst inference",
+            "value": 33770,
+            "ci_low": 33770,
+            "ci_high": 33770,
+            "label": "90",
             "is_dummy": false
           },
           {
-            "source": "us_own_meta",
-            "target": "us_use_other_meta",
-            "value": 23770,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "residual (unattributed)",
-            "is_dummy": true
-          },
-          {
             "source": "us_own_microsoft",
-            "target": "us_use_microsoft",
-            "value": 2000,
-            "ci_low": 500,
-            "ci_high": 5000,
-            "label": "speculation",
+            "target": "us_use_microsoft_internal",
+            "value": 8000,
+            "ci_low": 3000,
+            "ci_high": 15000,
+            "label": "30",
             "is_dummy": true
           },
           {
             "source": "us_own_microsoft",
             "target": "us_use_openai",
-            "value": 5000,
-            "ci_low": 2000,
-            "ci_high": 10000,
-            "label": "analyst inference",
+            "value": 15000,
+            "ci_low": 8000,
+            "ci_high": 25000,
+            "label": "40",
             "is_dummy": false
           },
           {
             "source": "us_own_microsoft",
-            "target": "us_use_other_microsoft",
-            "value": 57503,
-            "ci_low": 1000,
-            "ci_high": 9000,
-            "label": "speculation",
+            "target": "us_use_unknown",
+            "value": 41503,
+            "ci_low": 41503,
+            "ci_high": 41503,
+            "label": "30",
             "is_dummy": true
           },
           {
             "source": "us_own_oracle",
-            "target": "us_use_other_oracle",
+            "target": "us_use_other_oci_internal",
             "value": 7706,
-            "ci_low": 100,
-            "ci_high": 1500,
-            "label": "speculation",
+            "ci_low": 5000,
+            "ci_high": 9000,
+            "label": "30",
             "is_dummy": true
           },
           {
@@ -947,181 +896,172 @@
           {
             "source": "us_own_amazon",
             "target": "us_use_amazon",
-            "value": 30000,
+            "value": 25000,
             "ci_low": 15000,
-            "ci_high": 55000,
-            "label": "analyst inference",
-            "is_dummy": false
+            "ci_high": 40000,
+            "label": "35",
+            "is_dummy": true
           },
           {
             "source": "us_own_amazon",
             "target": "us_use_anthropic",
-            "value": 3000,
-            "ci_low": 500,
-            "ci_high": 10000,
-            "label": "analyst inference",
-            "is_dummy": false
+            "value": 15000,
+            "ci_low": 5000,
+            "ci_high": 30000,
+            "label": "35",
+            "is_dummy": true
           },
           {
             "source": "us_own_amazon",
             "target": "us_use_other_amazon",
-            "value": 57477,
-            "ci_low": 25000,
-            "ci_high": 85000,
-            "label": "speculation",
+            "value": 20000,
+            "ci_low": 10000,
+            "ci_high": 35000,
+            "label": "25",
             "is_dummy": true
           },
           {
             "source": "us_own_amazon",
-            "target": "us_use_stability_ai",
-            "value": 1500,
-            "ci_low": 500,
-            "ci_high": 4000,
-            "label": "analyst inference",
-            "is_dummy": false
-          },
-          {
-            "source": "us_own_coreweave",
-            "target": "us_use_coreweave_microsoft",
-            "value": 25000,
-            "ci_low": 10000,
-            "ci_high": 50000,
-            "label": "credible reporting",
-            "is_dummy": false
-          },
-          {
-            "source": "us_own_coreweave",
-            "target": "us_use_coreweave_openai",
-            "value": 8000,
-            "ci_low": 2000,
-            "ci_high": 20000,
-            "label": "speculation",
+            "target": "us_use_unknown",
+            "value": 31977,
+            "ci_low": 31977,
+            "ci_high": 31977,
+            "label": "30",
             "is_dummy": true
           },
           {
             "source": "us_own_coreweave",
-            "target": "us_use_coreweave_stability_ai",
-            "value": 5000,
-            "ci_low": 2000,
-            "ci_high": 12000,
-            "label": "analyst inference",
+            "target": "us_use_microsoft",
+            "value": 30000,
+            "ci_low": 20000,
+            "ci_high": 40000,
+            "label": "50",
             "is_dummy": false
           },
           {
             "source": "us_own_coreweave",
-            "target": "us_use_other_coreweave",
-            "value": 15000,
-            "ci_low": 5000,
-            "ci_high": 35000,
-            "label": "speculation",
+            "target": "us_use_nvidia",
+            "value": 3000,
+            "ci_low": 1000,
+            "ci_high": 5000,
+            "label": "40",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_coreweave",
+            "target": "us_use_other",
+            "value": 20000,
+            "ci_low": 10000,
+            "ci_high": 30000,
+            "label": "30",
             "is_dummy": true
           },
           {
             "source": "us_own_google",
             "target": "us_use_anthropic",
-            "value": 5000,
-            "ci_low": 1000,
-            "ci_high": 15000,
-            "label": "analyst inference",
+            "value": 15000,
+            "ci_low": 5000,
+            "ci_high": 30000,
+            "label": "40",
             "is_dummy": false
           },
           {
             "source": "us_own_google",
-            "target": "us_use_google",
+            "target": "us_use_google_internal",
             "value": 250000,
-            "ci_low": 140000,
-            "ci_high": 350000,
-            "label": "analyst inference",
+            "ci_low": 210000,
+            "ci_high": 270000,
+            "label": "50",
             "is_dummy": false
           },
           {
             "source": "us_own_google",
-            "target": "us_use_other_google",
-            "value": 30824,
-            "ci_low": 10000,
-            "ci_high": 60000,
-            "label": "speculation",
+            "target": "us_use_unknown",
+            "value": 20824,
+            "ci_low": 20824,
+            "ci_high": 20824,
+            "label": "30",
             "is_dummy": true
           },
           {
             "source": "us_own_meta",
             "target": "us_use_meta",
-            "value": 126000,
-            "ci_low": 93000,
-            "ci_high": 174000,
-            "label": "credible reporting",
+            "value": 126499,
+            "ci_low": 126499,
+            "ci_high": 126499,
+            "label": "90",
             "is_dummy": false
-          },
-          {
-            "source": "us_own_meta",
-            "target": "us_use_other_meta",
-            "value": 499,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "residual (unattributed)",
-            "is_dummy": true
           },
           {
             "source": "us_own_microsoft",
-            "target": "us_use_microsoft",
-            "value": 25000,
-            "ci_low": 12000,
-            "ci_high": 45000,
-            "label": "analyst inference",
-            "is_dummy": false
+            "target": "us_use_microsoft_internal",
+            "value": 30000,
+            "ci_low": 15000,
+            "ci_high": 50000,
+            "label": "35",
+            "is_dummy": true
           },
           {
             "source": "us_own_microsoft",
             "target": "us_use_openai",
-            "value": 130000,
+            "value": 120000,
             "ci_low": 80000,
-            "ci_high": 190000,
-            "label": "credible reporting",
+            "ci_high": 160000,
+            "label": "45",
             "is_dummy": false
           },
           {
             "source": "us_own_microsoft",
-            "target": "us_use_other_microsoft",
-            "value": 86161,
-            "ci_low": 50000,
-            "ci_high": 130000,
-            "label": "analyst inference",
+            "target": "us_use_unknown",
+            "value": 91161,
+            "ci_low": 91161,
+            "ci_high": 91161,
+            "label": "30",
             "is_dummy": true
           },
           {
             "source": "us_own_oracle",
-            "target": "us_use_oracle",
+            "target": "us_use_nvidia_dgx_cloud",
+            "value": 2000,
+            "ci_low": 500,
+            "ci_high": 5000,
+            "label": "40",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_oracle",
+            "target": "us_use_other_oci_internal",
+            "value": 39206,
+            "ci_low": 30000,
+            "ci_high": 45000,
+            "label": "30",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_oracle",
+            "target": "us_use_xai_legacy_oci",
             "value": 5000,
             "ci_low": 2000,
-            "ci_high": 12000,
-            "label": "speculation",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_oracle",
-            "target": "us_use_other_oracle",
-            "value": 41206,
-            "ci_low": 20000,
-            "ci_high": 65000,
-            "label": "analyst inference",
-            "is_dummy": true
+            "ci_high": 10000,
+            "label": "50",
+            "is_dummy": false
           },
           {
             "source": "us_own_other",
-            "target": "us_use_other_us",
+            "target": "us_use",
             "value": 274733,
-            "ci_low": 149854,
-            "ci_high": 399612,
-            "label": "speculation",
+            "ci_low": null,
+            "ci_high": null,
+            "label": "to use",
             "is_dummy": true
           },
           {
             "source": "us_own_xai",
-            "target": "us_use_xai",
+            "target": "us_use_xai_grok",
             "value": 5000,
-            "ci_low": 1000,
-            "ci_high": 15000,
-            "label": "analyst inference",
+            "ci_low": 3000,
+            "ci_high": 7000,
+            "label": "60",
             "is_dummy": false
           }
         ],
@@ -1300,163 +1240,199 @@
           {
             "source": "us_own_amazon",
             "target": "us_use_amazon",
-            "value": 250000,
-            "ci_low": 150000,
-            "ci_high": 400000,
-            "label": "analyst inference",
+            "value": 100000,
+            "ci_low": 60000,
+            "ci_high": 160000,
+            "label": "40",
             "is_dummy": false
           },
           {
             "source": "us_own_amazon",
             "target": "us_use_anthropic",
-            "value": 150000,
-            "ci_low": 80000,
-            "ci_high": 250000,
-            "label": "analyst inference",
+            "value": 120000,
+            "ci_low": 70000,
+            "ci_high": 200000,
+            "label": "50",
             "is_dummy": false
           },
           {
             "source": "us_own_amazon",
+            "target": "us_use_apple",
+            "value": 3000,
+            "ci_low": 1000,
+            "ci_high": 8000,
+            "label": "25",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_amazon",
             "target": "us_use_other_amazon",
-            "value": 231793,
-            "ci_low": 100000,
-            "ci_high": 350000,
-            "label": "speculation",
+            "value": 150000,
+            "ci_low": 80000,
+            "ci_high": 250000,
+            "label": "30",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use_unknown",
+            "value": 258793,
+            "ci_low": 258793,
+            "ci_high": 258793,
+            "label": "30",
             "is_dummy": true
           },
           {
             "source": "us_own_coreweave",
             "target": "us_use_microsoft",
-            "value": 120000,
-            "ci_low": 80000,
-            "ci_high": 180000,
-            "label": "analyst inference",
+            "value": 100000,
+            "ci_low": 70000,
+            "ci_high": 130000,
+            "label": "55",
             "is_dummy": false
           },
           {
             "source": "us_own_coreweave",
-            "target": "us_use_openai",
-            "value": 10000,
-            "ci_low": 5000,
-            "ci_high": 25000,
-            "label": "speculation",
+            "target": "us_use_nvidia",
+            "value": 5000,
+            "ci_low": 2000,
+            "ci_high": 10000,
+            "label": "35",
             "is_dummy": true
           },
           {
             "source": "us_own_coreweave",
-            "target": "us_use_other_coreweave",
-            "value": 30000,
-            "ci_low": 15000,
-            "ci_high": 65000,
-            "label": "speculation",
+            "target": "us_use_openai",
+            "value": 5000,
+            "ci_low": 0,
+            "ci_high": 15000,
+            "label": "30",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_coreweave",
+            "target": "us_use_other",
+            "value": 50000,
+            "ci_low": 30000,
+            "ci_high": 70000,
+            "label": "35",
             "is_dummy": true
           },
           {
             "source": "us_own_google",
             "target": "us_use_anthropic",
-            "value": 43184,
-            "ci_low": 21592,
-            "ci_high": 80970,
-            "label": "speculation",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_google",
-            "target": "us_use_apple",
-            "value": 3779,
-            "ci_low": 2699,
-            "ci_high": 8097,
-            "label": "speculation",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_google",
-            "target": "us_use_google",
-            "value": 917658,
-            "ci_low": 647758,
-            "ci_high": 1241537,
-            "label": "analyst inference",
+            "value": 100000,
+            "ci_low": 50000,
+            "ci_high": 180000,
+            "label": "45",
             "is_dummy": false
           },
           {
             "source": "us_own_google",
-            "target": "us_use_other_google",
-            "value": 80970,
-            "ci_low": 43184,
-            "ci_high": 134950,
-            "label": "speculation",
+            "target": "us_use_apple",
+            "value": 5000,
+            "ci_low": 1000,
+            "ci_high": 15000,
+            "label": "30",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use_google_internal",
+            "value": 800000,
+            "ci_low": 650000,
+            "ci_high": 950000,
+            "label": "50",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use_unknown",
+            "value": 140590,
+            "ci_low": 140590,
+            "ci_high": 140590,
+            "label": "30",
             "is_dummy": true
           },
           {
             "source": "us_own_meta",
             "target": "us_use_meta",
-            "value": 600000,
-            "ci_low": 500000,
-            "ci_high": 700000,
-            "label": "confirmed",
+            "value": 601073,
+            "ci_low": 601073,
+            "ci_high": 601073,
+            "label": "90",
             "is_dummy": false
           },
           {
-            "source": "us_own_meta",
-            "target": "us_use_other_meta",
-            "value": 1073,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "residual (unattributed)",
+            "source": "us_own_microsoft",
+            "target": "us_use_anthropic",
+            "value": 10000,
+            "ci_low": 2000,
+            "ci_high": 30000,
+            "label": "30",
             "is_dummy": true
           },
           {
             "source": "us_own_microsoft",
-            "target": "us_use_microsoft",
-            "value": 150000,
-            "ci_low": 80000,
-            "ci_high": 250000,
-            "label": "speculation",
-            "is_dummy": true
+            "target": "us_use_microsoft_internal",
+            "value": 120000,
+            "ci_low": 70000,
+            "ci_high": 200000,
+            "label": "40",
+            "is_dummy": false
           },
           {
             "source": "us_own_microsoft",
             "target": "us_use_openai",
-            "value": 350000,
-            "ci_low": 230000,
-            "ci_high": 500000,
-            "label": "analyst inference",
+            "value": 500000,
+            "ci_low": 350000,
+            "ci_high": 650000,
+            "label": "50",
             "is_dummy": false
           },
           {
             "source": "us_own_microsoft",
-            "target": "us_use_other_microsoft",
-            "value": 411387,
-            "ci_low": 100000,
-            "ci_high": 350000,
-            "label": "speculation",
+            "target": "us_use_unknown",
+            "value": 281387,
+            "ci_low": 281387,
+            "ci_high": 281387,
+            "label": "30",
             "is_dummy": true
           },
           {
             "source": "us_own_oracle",
-            "target": "us_use_openai",
+            "target": "us_use_nvidia_dgx_cloud",
+            "value": 10000,
+            "ci_low": 5000,
+            "ci_high": 20000,
+            "label": "45",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_oracle",
+            "target": "us_use_openai_stargate",
             "value": 30000,
-            "ci_low": 15000,
+            "ci_low": 10000,
             "ci_high": 60000,
-            "label": "analyst inference",
+            "label": "40",
             "is_dummy": false
           },
           {
             "source": "us_own_oracle",
-            "target": "us_use_other_oracle",
-            "value": 204189,
-            "ci_low": 20000,
-            "ci_high": 100000,
-            "label": "speculation",
+            "target": "us_use_other_oci_internal",
+            "value": 194189,
+            "ci_low": 150000,
+            "ci_high": 220000,
+            "label": "30",
             "is_dummy": true
           },
           {
             "source": "us_own_oracle",
-            "target": "us_use_xai",
+            "target": "us_use_xai_legacy_oci",
             "value": 16000,
             "ci_low": 10000,
-            "ci_high": 25000,
-            "label": "credible reporting",
+            "ci_high": 24000,
+            "label": "60",
             "is_dummy": false
           },
           {
@@ -1470,11 +1446,11 @@
           },
           {
             "source": "us_own_xai",
-            "target": "us_use_xai",
+            "target": "us_use_xai_grok",
             "value": 100051,
-            "ci_low": 81437,
-            "ci_high": 120992,
-            "label": "confirmed",
+            "ci_low": 80000,
+            "ci_high": 120000,
+            "label": "70",
             "is_dummy": false
           }
         ],
@@ -1662,172 +1638,208 @@
           {
             "source": "us_own_amazon",
             "target": "us_use_amazon",
-            "value": 657465,
-            "ci_low": 422656,
-            "ci_high": 939236,
-            "label": "analyst inference",
+            "value": 350000,
+            "ci_low": 200000,
+            "ci_high": 500000,
+            "label": "45",
             "is_dummy": false
           },
           {
             "source": "us_own_amazon",
             "target": "us_use_anthropic",
-            "value": 375694,
-            "ci_low": 234809,
-            "ci_high": 563542,
-            "label": "credible reporting",
+            "value": 400000,
+            "ci_low": 300000,
+            "ci_high": 500000,
+            "label": "62",
             "is_dummy": false
           },
           {
             "source": "us_own_amazon",
+            "target": "us_use_apple",
+            "value": 20000,
+            "ci_low": 10000,
+            "ci_high": 40000,
+            "label": "35",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_amazon",
             "target": "us_use_other_amazon",
-            "value": 563542,
-            "ci_low": 328733,
-            "ci_high": 845312,
-            "label": "speculation",
+            "value": 330000,
+            "ci_low": 200000,
+            "ci_high": 550000,
+            "label": "35",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use_unknown",
+            "value": 496701,
+            "ci_low": 496701,
+            "ci_high": 496701,
+            "label": "30",
             "is_dummy": true
           },
           {
             "source": "us_own_coreweave",
             "target": "us_use_microsoft",
-            "value": 350000,
-            "ci_low": 200000,
-            "ci_high": 500000,
-            "label": "analyst inference",
+            "value": 340000,
+            "ci_low": 220000,
+            "ci_high": 450000,
+            "label": "55",
             "is_dummy": false
+          },
+          {
+            "source": "us_own_coreweave",
+            "target": "us_use_nvidia",
+            "value": 15000,
+            "ci_low": 5000,
+            "ci_high": 40000,
+            "label": "35",
+            "is_dummy": true
           },
           {
             "source": "us_own_coreweave",
             "target": "us_use_openai",
-            "value": 150000,
-            "ci_low": 75000,
-            "ci_high": 250000,
-            "label": "analyst inference",
+            "value": 110000,
+            "ci_low": 50000,
+            "ci_high": 200000,
+            "label": "50",
             "is_dummy": false
           },
           {
             "source": "us_own_coreweave",
-            "target": "us_use_other_coreweave",
-            "value": 120000,
-            "ci_low": 50000,
-            "ci_high": 200000,
-            "label": "speculation",
+            "target": "us_use_other_anthropic_perplexity_ibm_cohere_poolside_etc",
+            "value": 155000,
+            "ci_low": 80000,
+            "ci_high": 250000,
+            "label": "35",
             "is_dummy": true
           },
           {
             "source": "us_own_google",
             "target": "us_use_anthropic",
-            "value": 429341,
-            "ci_low": 286227,
-            "ci_high": 572454,
-            "label": "credible reporting",
+            "value": 450000,
+            "ci_low": 250000,
+            "ci_high": 700000,
+            "label": "48",
             "is_dummy": false
           },
           {
             "source": "us_own_google",
             "target": "us_use_apple",
-            "value": 21467,
-            "ci_low": 10734,
-            "ci_high": 35778,
-            "label": "credible reporting",
+            "value": 25000,
+            "ci_low": 10000,
+            "ci_high": 50000,
+            "label": "50",
             "is_dummy": false
           },
           {
             "source": "us_own_google",
-            "target": "us_use_google",
-            "value": 2862271,
-            "ci_low": 2289817,
-            "ci_high": 3434725,
-            "label": "analyst inference",
+            "target": "us_use_google_internal",
+            "value": 2600000,
+            "ci_low": 2100000,
+            "ci_high": 3000000,
+            "label": "50",
             "is_dummy": false
           },
           {
             "source": "us_own_google",
-            "target": "us_use_other_google",
-            "value": 250449,
-            "ci_low": 143114,
-            "ci_high": 357784,
-            "label": "speculation",
+            "target": "us_use_unknown",
+            "value": 488527,
+            "ci_low": 88527,
+            "ci_high": 888527,
+            "label": "30",
             "is_dummy": true
           },
           {
             "source": "us_own_meta",
             "target": "us_use_meta",
-            "value": 670000,
-            "ci_low": 430000,
-            "ci_high": 1000000,
-            "label": "speculation",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_meta",
-            "target": "us_use_other_meta",
-            "value": 733029,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "residual (unattributed)",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_microsoft",
-            "target": "us_use_microsoft",
-            "value": 180000,
-            "ci_low": 100000,
-            "ci_high": 300000,
-            "label": "speculation",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_microsoft",
-            "target": "us_use_openai",
-            "value": 450000,
-            "ci_low": 300000,
-            "ci_high": 650000,
-            "label": "analyst inference",
+            "value": 1403029,
+            "ci_low": 1403029,
+            "ci_high": 1403029,
+            "label": "90",
             "is_dummy": false
           },
           {
             "source": "us_own_microsoft",
-            "target": "us_use_other_microsoft",
-            "value": 1348318,
-            "ci_low": 100000,
-            "ci_high": 350000,
-            "label": "speculation",
+            "target": "us_use_anthropic",
+            "value": 50000,
+            "ci_low": 15000,
+            "ci_high": 120000,
+            "label": "35",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_microsoft",
+            "target": "us_use_microsoft_internal",
+            "value": 350000,
+            "ci_low": 200000,
+            "ci_high": 550000,
+            "label": "40",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_microsoft",
+            "target": "us_use_openai",
+            "value": 850000,
+            "ci_low": 550000,
+            "ci_high": 1150000,
+            "label": "55",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_microsoft",
+            "target": "us_use_unknown",
+            "value": 728318,
+            "ci_low": 128318,
+            "ci_high": 1163318,
+            "label": "30",
             "is_dummy": true
           },
           {
             "source": "us_own_oracle",
             "target": "us_use_meta",
-            "value": 16489,
+            "value": 10000,
             "ci_low": 0,
-            "ci_high": 41222,
-            "label": "speculation",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_oracle",
-            "target": "us_use_openai",
-            "value": 247329,
-            "ci_low": 164886,
-            "ci_high": 370994,
-            "label": "credible reporting",
+            "ci_high": 40000,
+            "label": "40",
             "is_dummy": false
           },
           {
             "source": "us_own_oracle",
-            "target": "us_use_other_oracle",
-            "value": 478169,
-            "ci_low": 329772,
-            "ci_high": 618323,
-            "label": "speculation",
+            "target": "us_use_nvidia_dgx_cloud",
+            "value": 50000,
+            "ci_low": 25000,
+            "ci_high": 80000,
+            "label": "55",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_oracle",
+            "target": "us_use_openai_stargate",
+            "value": 300000,
+            "ci_low": 200000,
+            "ci_high": 420000,
+            "label": "65",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_oracle",
+            "target": "us_use_other_oci_internal",
+            "value": 379178,
+            "ci_low": 250000,
+            "ci_high": 500000,
+            "label": "30",
             "is_dummy": true
           },
           {
             "source": "us_own_oracle",
-            "target": "us_use_xai",
-            "value": 13191,
-            "ci_low": 8244,
-            "ci_high": 20611,
-            "label": "analyst inference",
+            "target": "us_use_xai_legacy_oci",
+            "value": 16000,
+            "ci_low": 10000,
+            "ci_high": 25000,
+            "label": "75",
             "is_dummy": false
           },
           {
@@ -1841,21 +1853,12 @@
           },
           {
             "source": "us_own_xai",
-            "target": "us_use_xai",
-            "value": 315000,
-            "ci_low": 280000,
-            "ci_high": 350000,
-            "label": "confirmed",
+            "target": "us_use_xai_grok",
+            "value": 418554,
+            "ci_low": 350000,
+            "ci_high": 500000,
+            "label": "58",
             "is_dummy": false
-          },
-          {
-            "source": "us_own_xai",
-            "target": "us_use_other_xai",
-            "value": 103554,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "residual (unattributed)",
-            "is_dummy": true
           }
         ],
         "2026": [
