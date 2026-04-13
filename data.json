@@ -425,6 +425,14 @@
           "entity": "Coreweave"
         },
         {
+          "id": "cn_use_unknown",
+          "label": "Unknown",
+          "country": "cn",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Unknown"
+        },
+        {
           "id": "us_use_amazon",
           "label": "Amazon",
           "country": "us",
@@ -433,28 +441,12 @@
           "entity": "Amazon"
         },
         {
-          "id": "us_use_other_amazon",
-          "label": "Other Amazon",
-          "country": "us",
-          "stage": "use",
-          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Other Amazon"
-        },
-        {
           "id": "us_use_unknown",
           "label": "Unknown",
           "country": "us",
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
           "entity": "Unknown"
-        },
-        {
-          "id": "us_use_other",
-          "label": "Other",
-          "country": "us",
-          "stage": "use",
-          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Other"
         },
         {
           "id": "us_use_google_internal",
@@ -487,14 +479,6 @@
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
           "entity": "OpenAI"
-        },
-        {
-          "id": "us_use_other_oci_internal",
-          "label": "Other OCI + internal",
-          "country": "us",
-          "stage": "use",
-          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Other OCI + internal"
         },
         {
           "id": "us_use_anthropic",
@@ -559,14 +543,6 @@
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
           "entity": "OpenAI / Stargate"
-        },
-        {
-          "id": "us_use_other_anthropic_perplexity_ibm_cohere_poolside_etc",
-          "label": "Other (Anthropic, Perplexity, IBM, Cohere, Poolside, etc.)",
-          "country": "us",
-          "stage": "use",
-          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Other (Anthropic, Perplexity, IBM, Cohere, Poolside, etc.)"
         },
         {
           "id": "us_use",
@@ -668,11 +644,11 @@
           },
           {
             "source": "cn_own_china",
-            "target": "cn_use",
+            "target": "cn_use_unknown",
             "value": 31877,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -686,29 +662,20 @@
           },
           {
             "source": "us_own_amazon",
-            "target": "us_use_other_amazon",
-            "value": 5000,
-            "ci_low": 2000,
-            "ci_high": 10000,
-            "label": "25",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_amazon",
             "target": "us_use_unknown",
-            "value": 9530,
-            "ci_low": 9530,
-            "ci_high": 9530,
-            "label": "30",
+            "value": 14530,
+            "ci_low": 11530,
+            "ci_high": 19530,
+            "label": "unattributed",
             "is_dummy": true
           },
           {
             "source": "us_own_coreweave",
-            "target": "us_use_other",
+            "target": "us_use_unknown",
             "value": 1000,
             "ci_low": 500,
             "ci_high": 1000,
-            "label": "30",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -726,7 +693,7 @@
             "value": 3282,
             "ci_low": 3282,
             "ci_high": 3282,
-            "label": "30",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -762,25 +729,25 @@
             "value": 41503,
             "ci_low": 41503,
             "ci_high": 41503,
-            "label": "30",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
             "source": "us_own_oracle",
-            "target": "us_use_other_oci_internal",
+            "target": "us_use_unknown",
             "value": 7706,
             "ci_low": 5000,
             "ci_high": 9000,
-            "label": "30",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
             "source": "us_own_other",
-            "target": "us_use",
+            "target": "us_use_unknown",
             "value": 87729,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "unattributed",
             "is_dummy": true
           }
         ],
@@ -886,11 +853,11 @@
           },
           {
             "source": "cn_own_china",
-            "target": "cn_use",
+            "target": "cn_use_unknown",
             "value": 148799,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -913,20 +880,11 @@
           },
           {
             "source": "us_own_amazon",
-            "target": "us_use_other_amazon",
-            "value": 20000,
-            "ci_low": 10000,
-            "ci_high": 35000,
-            "label": "25",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_amazon",
             "target": "us_use_unknown",
-            "value": 31977,
-            "ci_low": 31977,
-            "ci_high": 31977,
-            "label": "30",
+            "value": 51977,
+            "ci_low": 41977,
+            "ci_high": 66977,
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -949,11 +907,11 @@
           },
           {
             "source": "us_own_coreweave",
-            "target": "us_use_other",
+            "target": "us_use_unknown",
             "value": 20000,
             "ci_low": 10000,
             "ci_high": 30000,
-            "label": "30",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -980,7 +938,7 @@
             "value": 20824,
             "ci_low": 20824,
             "ci_high": 20824,
-            "label": "30",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -1016,7 +974,7 @@
             "value": 91161,
             "ci_low": 91161,
             "ci_high": 91161,
-            "label": "30",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -1030,15 +988,6 @@
           },
           {
             "source": "us_own_oracle",
-            "target": "us_use_other_oci_internal",
-            "value": 39206,
-            "ci_low": 30000,
-            "ci_high": 45000,
-            "label": "30",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_oracle",
             "target": "us_use_xai_legacy_oci",
             "value": 5000,
             "ci_low": 2000,
@@ -1047,12 +996,21 @@
             "is_dummy": false
           },
           {
+            "source": "us_own_oracle",
+            "target": "us_use_unknown",
+            "value": 39206,
+            "ci_low": 30000,
+            "ci_high": 45000,
+            "label": "unattributed",
+            "is_dummy": true
+          },
+          {
             "source": "us_own_other",
-            "target": "us_use",
+            "target": "us_use_unknown",
             "value": 274733,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -1230,11 +1188,11 @@
           },
           {
             "source": "cn_own_china",
-            "target": "cn_use",
+            "target": "cn_use_unknown",
             "value": 344315,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -1266,20 +1224,11 @@
           },
           {
             "source": "us_own_amazon",
-            "target": "us_use_other_amazon",
-            "value": 150000,
-            "ci_low": 80000,
-            "ci_high": 250000,
-            "label": "30",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_amazon",
             "target": "us_use_unknown",
-            "value": 258793,
-            "ci_low": 258793,
-            "ci_high": 258793,
-            "label": "30",
+            "value": 408793,
+            "ci_low": 338793,
+            "ci_high": 508793,
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -1311,11 +1260,11 @@
           },
           {
             "source": "us_own_coreweave",
-            "target": "us_use_other",
+            "target": "us_use_unknown",
             "value": 50000,
             "ci_low": 30000,
             "ci_high": 70000,
-            "label": "35",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -1351,7 +1300,7 @@
             "value": 140590,
             "ci_low": 140590,
             "ci_high": 140590,
-            "label": "30",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -1396,7 +1345,7 @@
             "value": 281387,
             "ci_low": 281387,
             "ci_high": 281387,
-            "label": "30",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -1419,15 +1368,6 @@
           },
           {
             "source": "us_own_oracle",
-            "target": "us_use_other_oci_internal",
-            "value": 194189,
-            "ci_low": 150000,
-            "ci_high": 220000,
-            "label": "30",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_oracle",
             "target": "us_use_xai_legacy_oci",
             "value": 16000,
             "ci_low": 10000,
@@ -1436,12 +1376,21 @@
             "is_dummy": false
           },
           {
+            "source": "us_own_oracle",
+            "target": "us_use_unknown",
+            "value": 194189,
+            "ci_low": 150000,
+            "ci_high": 220000,
+            "label": "unattributed",
+            "is_dummy": true
+          },
+          {
             "source": "us_own_other",
-            "target": "us_use",
+            "target": "us_use_unknown",
             "value": 940421,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -1628,11 +1577,11 @@
           },
           {
             "source": "cn_own_china",
-            "target": "cn_use",
+            "target": "cn_use_unknown",
             "value": 770075,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -1664,20 +1613,11 @@
           },
           {
             "source": "us_own_amazon",
-            "target": "us_use_other_amazon",
-            "value": 330000,
-            "ci_low": 200000,
-            "ci_high": 550000,
-            "label": "35",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_amazon",
             "target": "us_use_unknown",
-            "value": 496701,
-            "ci_low": 496701,
-            "ci_high": 496701,
-            "label": "30",
+            "value": 826701,
+            "ci_low": 696701,
+            "ci_high": 1046701,
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -1709,11 +1649,11 @@
           },
           {
             "source": "us_own_coreweave",
-            "target": "us_use_other_anthropic_perplexity_ibm_cohere_poolside_etc",
+            "target": "us_use_unknown",
             "value": 155000,
             "ci_low": 80000,
             "ci_high": 250000,
-            "label": "35",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -1749,7 +1689,7 @@
             "value": 488527,
             "ci_low": 88527,
             "ci_high": 888527,
-            "label": "30",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -1794,7 +1734,7 @@
             "value": 728318,
             "ci_low": 128318,
             "ci_high": 1163318,
-            "label": "30",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -1826,15 +1766,6 @@
           },
           {
             "source": "us_own_oracle",
-            "target": "us_use_other_oci_internal",
-            "value": 379178,
-            "ci_low": 250000,
-            "ci_high": 500000,
-            "label": "30",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_oracle",
             "target": "us_use_xai_legacy_oci",
             "value": 16000,
             "ci_low": 10000,
@@ -1843,12 +1774,21 @@
             "is_dummy": false
           },
           {
+            "source": "us_own_oracle",
+            "target": "us_use_unknown",
+            "value": 379178,
+            "ci_low": 250000,
+            "ci_high": 500000,
+            "label": "unattributed",
+            "is_dummy": true
+          },
+          {
             "source": "us_own_other",
-            "target": "us_use",
+            "target": "us_use_unknown",
             "value": 1821952,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
@@ -1945,65 +1885,65 @@
           },
           {
             "source": "cn_own_china",
-            "target": "cn_use",
+            "target": "cn_use_unknown",
             "value": 831699,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
             "source": "us_own_amazon",
-            "target": "us_use",
+            "target": "us_use_unknown",
             "value": 67607,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
             "source": "us_own_google",
-            "target": "us_use",
+            "target": "us_use_unknown",
             "value": 411086,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
             "source": "us_own_meta",
-            "target": "us_use",
+            "target": "us_use_unknown",
             "value": 95986,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
             "source": "us_own_microsoft",
-            "target": "us_use",
+            "target": "us_use_unknown",
             "value": 151091,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
             "source": "us_own_oracle",
-            "target": "us_use",
+            "target": "us_use_unknown",
             "value": 56048,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "unattributed",
             "is_dummy": true
           },
           {
             "source": "us_own_other",
-            "target": "us_use",
+            "target": "us_use_unknown",
             "value": 327160,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "unattributed",
             "is_dummy": true
           }
         ],
@@ -2019,11 +1959,11 @@
           },
           {
             "source": "cn_own_china",
-            "target": "cn_use",
+            "target": "cn_use_unknown",
             "value": 1500000,
             "ci_low": null,
             "ci_high": null,
-            "label": "to use",
+            "label": "unattributed",
             "is_dummy": true
           }
         ]
