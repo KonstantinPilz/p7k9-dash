@@ -1,12 +1,11 @@
 // Sankey rendering for the chip pipeline dashboard.
 // Fetches data.json (produced by sync/sheet_to_json.py) at startup.
-// Re-renders on year / view / aggregate changes.
+// Re-renders on year / view changes.
 
 let PIPELINE_DATA = null;
 
 const state = {
   year: 2025,
-  aggregateYears: false,
   view: "aggregate", // "aggregate" | "by_company"
 };
 
@@ -94,35 +93,6 @@ function getActiveView() {
 
 function getEdgesForState() {
   const view = getActiveView();
-  if (state.aggregateYears) {
-    // Sum from earliest year up to (and including) the selected year.
-    const agg = new Map();
-    for (const y of PIPELINE_DATA.years) {
-      if (y > state.year) continue;
-      for (const e of view.edgesByYear[String(y)] || []) {
-        const key = `${e.source}|${e.target}|${e.label || ""}`;
-        if (!agg.has(key)) {
-          agg.set(key, {
-            source: e.source,
-            target: e.target,
-            value: 0,
-            ci_low: 0,
-            ci_high: 0,
-            label: e.label,
-            is_dummy: false,
-          });
-        }
-        const a = agg.get(key);
-        a.value += e.value;
-        // CI bounds: if either edge is missing a bound, treat it as value.
-        a.ci_low  += (e.ci_low  == null ? e.value : e.ci_low);
-        a.ci_high += (e.ci_high == null ? e.value : e.ci_high);
-        // If any year's version is dummy, the combined edge is dummy.
-        if (e.is_dummy) a.is_dummy = true;
-      }
-    }
-    return Array.from(agg.values());
-  }
   return view.edgesByYear[String(state.year)] || [];
 }
 
@@ -336,17 +306,11 @@ function dummyBadge() {
   return `<div class="sub ci-missing">⚠ placeholder / forecast — not a measured value</div>`;
 }
 
-function aggregateTimeframe() {
-  const first = PIPELINE_DATA.years[0];
-  return first < state.year ? `(${first}–${state.year})` : `(${state.year})`;
-}
-
 function nodeTooltipHTML(d) {
   const total = formatNumber(d.value);
-  const timeframe = state.aggregateYears ? " " + aggregateTimeframe() : " (" + state.year + ")";
   return `
     <div class="value">${d.label}</div>
-    <div class="sub">${total} H100e${timeframe}</div>
+    <div class="sub">${total} H100e installed base through end of ${state.year}</div>
     ${d.is_dummy ? dummyBadge() : ""}
     <div class="sub">Click to open sheet tab.</div>
   `;
@@ -382,12 +346,6 @@ function setupControls() {
     yearWrap.appendChild(btn);
   }
 
-  document.getElementById("aggregate-toggle").addEventListener("change", (e) => {
-    state.aggregateYears = e.target.checked;
-    updateYearButtons();
-    render();
-  });
-
   // View toggle
   document.querySelectorAll("input[name='view-mode']").forEach(el => {
     el.addEventListener("change", (e) => {
@@ -399,23 +357,18 @@ function setupControls() {
   });
 
   window.addEventListener("resize", render);
+  updateYearButtons();
 }
 
 function updateYearButtons() {
   const btns = document.querySelectorAll("#year-selector button");
   btns.forEach(b => {
     const y = Number(b.dataset.year);
-    if (state.aggregateYears) {
-      // In aggregate mode: highlight all years up to selected, dim years after.
-      b.classList.toggle("active", y <= state.year);
-      b.disabled = false;
-      b.style.opacity = y <= state.year ? "1" : "0.4";
-    } else {
-      b.classList.toggle("active", y === state.year);
-      b.disabled = false;
-      b.style.opacity = "1";
-    }
+    b.classList.toggle("active", y === state.year);
   });
+  // Update subtitle year label
+  const yearLabel = document.getElementById("year-label");
+  if (yearLabel) yearLabel.textContent = state.year;
 }
 
 // ---------- Bootstrap ----------
