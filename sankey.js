@@ -6,7 +6,7 @@ let PIPELINE_DATA = null;
 
 const state = {
   year: 2025,
-  view: "aggregate", // "aggregate" | "by_company"
+  view: "by_company", // "aggregate" | "by_company"
 };
 
 // Stage-level (aggregate) colors.
