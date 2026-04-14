@@ -392,7 +392,7 @@ fetch("data.json", { cache: "no-store" })
   .then(json => {
     PIPELINE_DATA = json;
     if (Array.isArray(json.years) && json.years.length) {
-      state.year = json.years[json.years.length - 1];
+      state.year = json.years.includes(2025) ? 2025 : json.years[json.years.length - 1];
     }
     setupControls();
     render();
