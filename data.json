@@ -59,25 +59,25 @@
           {
             "source": "us_prod",
             "target": "us_own",
-            "value": 257520,
-            "ci_low": 158142,
-            "ci_high": 422527,
+            "value": 256341,
+            "ci_low": 157946,
+            "ci_high": 421650,
             "label": "US/RoW production (Epoch)",
             "is_dummy": true
           },
           {
             "source": "us_prod",
             "target": "cn_own",
-            "value": 31877,
-            "ci_low": 21640,
-            "ci_high": 47249,
+            "value": 31808,
+            "ci_low": 21646,
+            "ci_high": 47079,
             "label": "US chips → China (Epoch)",
             "is_dummy": false
           },
           {
             "source": "cn_own",
             "target": "cn_use",
-            "value": 31877,
+            "value": 31808,
             "ci_low": null,
             "ci_high": null,
             "label": "to use",
@@ -86,9 +86,9 @@
           {
             "source": "us_own",
             "target": "us_use",
-            "value": 257520,
-            "ci_low": 229314,
-            "ci_high": 287814,
+            "value": 256341,
+            "ci_low": 228135,
+            "ci_high": 286635,
             "label": "to use",
             "is_dummy": true
           }
@@ -97,9 +97,9 @@
           {
             "source": "us_prod",
             "target": "us_own",
-            "value": 1124400,
-            "ci_low": 812633,
-            "ci_high": 1544181,
+            "value": 1123688,
+            "ci_low": 813225,
+            "ci_high": 1542398,
             "label": "US/RoW production (Epoch)",
             "is_dummy": true
           },
@@ -133,9 +133,9 @@
           {
             "source": "us_own",
             "target": "us_use",
-            "value": 1124400,
-            "ci_low": 951694,
-            "ci_high": 1302194,
+            "value": 1123688,
+            "ci_low": 950982,
+            "ci_high": 1301482,
             "label": "to use",
             "is_dummy": true
           }
@@ -144,9 +144,9 @@
           {
             "source": "us_prod",
             "target": "us_own",
-            "value": 4640504,
-            "ci_low": 3252363,
-            "ci_high": 6523539,
+            "value": 4640105,
+            "ci_low": 3254272,
+            "ci_high": 6536069,
             "label": "US/RoW production (Epoch)",
             "is_dummy": true
           },
@@ -180,9 +180,9 @@
           {
             "source": "us_own",
             "target": "us_use",
-            "value": 4640504,
-            "ci_low": 3913264,
-            "ci_high": 5534264,
+            "value": 4640105,
+            "ci_low": 3912865,
+            "ci_high": 5533865,
             "label": "to use",
             "is_dummy": true
           },
@@ -209,9 +209,9 @@
           {
             "source": "us_prod",
             "target": "us_own",
-            "value": 12157259,
-            "ci_low": 8906584,
-            "ci_high": 16399412,
+            "value": 12156353,
+            "ci_low": 8904652,
+            "ci_high": 16390698,
             "label": "US/RoW production (Epoch)",
             "is_dummy": true
           },
@@ -236,9 +236,9 @@
           {
             "source": "us_own",
             "target": "us_use",
-            "value": 12157259,
-            "ci_low": 8963527,
-            "ci_high": 15438527,
+            "value": 12156352,
+            "ci_low": 8954646,
+            "ci_high": 15423848,
             "label": "to use",
             "is_dummy": true
           },
@@ -256,9 +256,9 @@
           {
             "source": "us_prod",
             "target": "us_own",
-            "value": 1108978,
-            "ci_low": 782198,
-            "ci_high": 1514426,
+            "value": 1108575,
+            "ci_low": 781240,
+            "ci_high": 1515058,
             "label": "US/RoW production (Epoch)",
             "is_dummy": true
           },
@@ -283,7 +283,7 @@
           {
             "source": "us_own",
             "target": "us_use",
-            "value": 1108978,
+            "value": 1108575,
             "ci_low": null,
             "ci_high": null,
             "label": "to use",
@@ -609,9 +609,9 @@
           {
             "source": "us_prod_nvidia",
             "target": "cn_own_china",
-            "value": 31877,
-            "ci_low": 21640,
-            "ci_high": 47249,
+            "value": 31808,
+            "ci_low": 21646,
+            "ci_high": 47079,
             "label": "Nvidia → China",
             "is_dummy": false
           },
@@ -654,9 +654,9 @@
           {
             "source": "us_prod_nvidia",
             "target": "us_own_other",
-            "value": 87729,
-            "ci_low": 53383,
-            "ci_high": 144267,
+            "value": 86550,
+            "ci_low": 53181,
+            "ci_high": 143377,
             "label": "Nvidia → Other",
             "is_dummy": false
           },
@@ -664,15 +664,15 @@
             "source": "us_prod_nvidia",
             "target": "us_own_coreweave",
             "value": 1000,
-            "ci_low": 608,
-            "ci_high": 1644,
+            "ci_low": 614,
+            "ci_high": 1657,
             "label": "Nvidia → Coreweave",
             "is_dummy": true
           },
           {
             "source": "cn_own_china",
             "target": "cn_use_unknown",
-            "value": 31877,
+            "value": 31808,
             "ci_low": null,
             "ci_high": null,
             "label": "unattributed",
@@ -771,7 +771,7 @@
           {
             "source": "us_own_other",
             "target": "us_use_unknown",
-            "value": 87729,
+            "value": 86550,
             "ci_low": null,
             "ci_high": null,
             "label": "unattributed",
@@ -845,9 +845,9 @@
           {
             "source": "us_prod_nvidia",
             "target": "us_own_other",
-            "value": 274733,
-            "ci_low": 201256,
-            "ci_high": 374724,
+            "value": 274021,
+            "ci_low": 201653,
+            "ci_high": 373083,
             "label": "Nvidia → Other",
             "is_dummy": false
           },
@@ -864,8 +864,8 @@
             "source": "us_prod_nvidia",
             "target": "us_own_coreweave",
             "value": 53000,
-            "ci_low": 38825,
-            "ci_high": 72290,
+            "ci_low": 39003,
+            "ci_high": 72160,
             "label": "Nvidia → Coreweave",
             "is_dummy": true
           },
@@ -873,8 +873,8 @@
             "source": "us_prod_nvidia",
             "target": "us_own_xai",
             "value": 5000,
-            "ci_low": 3663,
-            "ci_high": 6820,
+            "ci_low": 3680,
+            "ci_high": 6808,
             "label": "Nvidia → Xai",
             "is_dummy": true
           },
@@ -1034,7 +1034,7 @@
           {
             "source": "us_own_other",
             "target": "us_use_unknown",
-            "value": 274733,
+            "value": 274021,
             "ci_low": null,
             "ci_high": null,
             "label": "unattributed",
@@ -1081,9 +1081,9 @@
           {
             "source": "us_prod_amd",
             "target": "us_own_other",
-            "value": 204461,
-            "ci_low": 122114,
-            "ci_high": 292767,
+            "value": 204448,
+            "ci_low": 122106,
+            "ci_high": 292749,
             "label": "AMD → Other",
             "is_dummy": false
           },
@@ -1162,9 +1162,9 @@
           {
             "source": "us_prod_nvidia",
             "target": "us_own_other",
-            "value": 735960,
-            "ci_low": 498229,
-            "ci_high": 1070539,
+            "value": 735574,
+            "ci_low": 499830,
+            "ci_high": 1081181,
             "label": "Nvidia → Other",
             "is_dummy": false
           },
@@ -1198,18 +1198,18 @@
           {
             "source": "us_prod_amd",
             "target": "us_own_coreweave",
-            "value": 34786,
-            "ci_low": 20776,
-            "ci_high": 49810,
+            "value": 34799,
+            "ci_low": 20784,
+            "ci_high": 49828,
             "label": "Amd → Coreweave",
             "is_dummy": true
           },
           {
             "source": "us_prod_nvidia",
             "target": "us_own_coreweave",
-            "value": 125214,
-            "ci_low": 84767,
-            "ci_high": 182138,
+            "value": 125201,
+            "ci_low": 85075,
+            "ci_high": 184026,
             "label": "Nvidia → Coreweave",
             "is_dummy": true
           },
@@ -1414,7 +1414,7 @@
           {
             "source": "us_own_other",
             "target": "us_use_unknown",
-            "value": 940421,
+            "value": 940022,
             "ci_low": null,
             "ci_high": null,
             "label": "unattributed",
@@ -1479,9 +1479,9 @@
           {
             "source": "us_prod_amd",
             "target": "us_own_other",
-            "value": 114464,
+            "value": 114449,
             "ci_low": 2723,
-            "ci_high": 231613,
+            "ci_high": 231582,
             "label": "AMD → Other",
             "is_dummy": false
           },
@@ -1506,9 +1506,9 @@
           {
             "source": "us_prod_nvidia",
             "target": "us_own_amazon",
-            "value": 885901,
-            "ci_low": 653151,
-            "ci_high": 1203929,
+            "value": 875383,
+            "ci_low": 645298,
+            "ci_high": 1189309,
             "label": "Nvidia → Amazon",
             "is_dummy": false
           },
@@ -1524,9 +1524,9 @@
           {
             "source": "us_prod_nvidia",
             "target": "us_own_google",
-            "value": 712382,
-            "ci_low": 523673,
-            "ci_high": 964859,
+            "value": 722927,
+            "ci_low": 531222,
+            "ci_high": 979604,
             "label": "Nvidia → Google",
             "is_dummy": false
           },
@@ -1560,9 +1560,9 @@
           {
             "source": "us_prod_nvidia",
             "target": "us_own_other",
-            "value": 1707488,
-            "ci_low": 1269758,
-            "ci_high": 2329482,
+            "value": 1706570,
+            "ci_low": 1268379,
+            "ci_high": 2322585,
             "label": "Nvidia → Other",
             "is_dummy": false
           },
@@ -1596,18 +1596,18 @@
           {
             "source": "us_prod_amd",
             "target": "us_own_coreweave",
-            "value": 38951,
+            "value": 38966,
             "ci_low": 927,
-            "ci_high": 78816,
+            "ci_high": 78847,
             "label": "Amd → Coreweave",
             "is_dummy": true
           },
           {
             "source": "us_prod_nvidia",
             "target": "us_own_coreweave",
-            "value": 581049,
-            "ci_low": 432092,
-            "ci_high": 792710,
+            "value": 581034,
+            "ci_low": 431843,
+            "ci_high": 790768,
             "label": "Nvidia → Coreweave",
             "is_dummy": true
           },
@@ -1623,36 +1623,36 @@
           {
             "source": "us_own_amazon",
             "target": "us_use_amazon",
-            "value": 350000,
-            "ci_low": 200000,
-            "ci_high": 500000,
+            "value": 347694,
+            "ci_low": 198683,
+            "ci_high": 496706,
             "label": "45",
             "is_dummy": false
           },
           {
             "source": "us_own_amazon",
             "target": "us_use_anthropic",
-            "value": 400000,
-            "ci_low": 300000,
-            "ci_high": 500000,
+            "value": 397365,
+            "ci_low": 298024,
+            "ci_high": 496706,
             "label": "62",
             "is_dummy": false
           },
           {
             "source": "us_own_amazon",
             "target": "us_use_apple",
-            "value": 20000,
-            "ci_low": 10000,
-            "ci_high": 40000,
+            "value": 19868,
+            "ci_low": 9934,
+            "ci_high": 39737,
             "label": "35",
             "is_dummy": true
           },
           {
             "source": "us_own_amazon",
             "target": "us_use_unknown",
-            "value": 826701,
-            "ci_low": 696701,
-            "ci_high": 1046701,
+            "value": 821255,
+            "ci_low": 692112,
+            "ci_high": 1039806,
             "label": "unattributed",
             "is_dummy": true
           },
@@ -1722,7 +1722,7 @@
           {
             "source": "us_own_google",
             "target": "us_use_unknown",
-            "value": 488527,
+            "value": 499072,
             "ci_low": 88527,
             "ci_high": 888527,
             "label": "unattributed",
@@ -1821,7 +1821,7 @@
           {
             "source": "us_own_other",
             "target": "us_use_unknown",
-            "value": 1821952,
+            "value": 1821019,
             "ci_low": null,
             "ci_high": null,
             "label": "unattributed",
@@ -1859,18 +1859,18 @@
           {
             "source": "us_prod_nvidia",
             "target": "us_own_amazon",
-            "value": 67607,
-            "ci_low": 48922,
-            "ci_high": 94145,
+            "value": 63628,
+            "ci_low": 46047,
+            "ci_high": 88605,
             "label": "Nvidia → Amazon",
             "is_dummy": true
           },
           {
             "source": "us_prod_nvidia",
             "target": "us_own_google",
-            "value": 51873,
-            "ci_low": 37163,
-            "ci_high": 72034,
+            "value": 55863,
+            "ci_low": 40020,
+            "ci_high": 77574,
             "label": "Nvidia → Google",
             "is_dummy": true
           },
@@ -1904,9 +1904,9 @@
           {
             "source": "us_prod_nvidia",
             "target": "us_own_other",
-            "value": 327160,
-            "ci_low": 255490,
-            "ci_high": 415859,
+            "value": 326746,
+            "ci_low": 254550,
+            "ci_high": 416491,
             "label": "Nvidia → Other",
             "is_dummy": true
           },
@@ -1940,7 +1940,7 @@
           {
             "source": "us_own_amazon",
             "target": "us_use_unknown",
-            "value": 67607,
+            "value": 63628,
             "ci_low": null,
             "ci_high": null,
             "label": "unattributed",
@@ -1949,7 +1949,7 @@
           {
             "source": "us_own_google",
             "target": "us_use_unknown",
-            "value": 411086,
+            "value": 415076,
             "ci_low": null,
             "ci_high": null,
             "label": "unattributed",
@@ -1985,7 +1985,7 @@
           {
             "source": "us_own_other",
             "target": "us_use_unknown",
-            "value": 327160,
+            "value": 326746,
             "ci_low": null,
             "ci_high": null,
             "label": "unattributed",
