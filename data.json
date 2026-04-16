@@ -143,9 +143,9 @@
             "source": "us_prod",
             "target": "cn_own",
             "value": 50000,
-            "ci_low": 40000,
-            "ci_high": 60000,
-            "label": "smuggling",
+            "ci_low": 20000,
+            "ci_high": 100000,
+            "label": "smuggling (Epoch tentative)",
             "is_dummy": true
           }
         ],
@@ -180,7 +180,7 @@
           {
             "source": "cn_own",
             "target": "cn_use",
-            "value": 444315,
+            "value": 494315,
             "ci_low": null,
             "ci_high": null,
             "label": "to use",
@@ -198,10 +198,10 @@
           {
             "source": "us_prod",
             "target": "cn_own",
-            "value": 100000,
-            "ci_low": 80000,
-            "ci_high": 120000,
-            "label": "smuggling",
+            "value": 150000,
+            "ci_low": 58000,
+            "ci_high": 428000,
+            "label": "smuggling (Epoch)",
             "is_dummy": true
           }
         ],
@@ -236,7 +236,7 @@
           {
             "source": "cn_own",
             "target": "cn_use",
-            "value": 920075,
+            "value": 1098075,
             "ci_low": null,
             "ci_high": null,
             "label": "to use",
@@ -254,10 +254,10 @@
           {
             "source": "us_prod",
             "target": "cn_own",
-            "value": 150000,
-            "ci_low": 120000,
-            "ci_high": 180000,
-            "label": "smuggling",
+            "value": 328000,
+            "ci_low": 123000,
+            "ci_high": 932000,
+            "label": "smuggling (Epoch)",
             "is_dummy": true
           }
         ],
@@ -283,7 +283,7 @@
           {
             "source": "cn_own",
             "target": "cn_use",
-            "value": 1031699,
+            "value": 1231699,
             "ci_low": null,
             "ci_high": null,
             "label": "to use",
@@ -301,10 +301,10 @@
           {
             "source": "us_prod",
             "target": "cn_own",
-            "value": 200000,
-            "ci_low": 160000,
-            "ci_high": 240000,
-            "label": "smuggling",
+            "value": 400000,
+            "ci_low": 150000,
+            "ci_high": 1000000,
+            "label": "smuggling (projected)",
             "is_dummy": true
           }
         ],
@@ -1062,9 +1062,9 @@
             "source": "us_prod_nvidia",
             "target": "cn_own_china",
             "value": 50000,
-            "ci_low": 40000,
-            "ci_high": 60000,
-            "label": "smuggling",
+            "ci_low": 20000,
+            "ci_high": 100000,
+            "label": "smuggling (Epoch tentative)",
             "is_dummy": true
           }
         ],
@@ -1234,7 +1234,7 @@
           {
             "source": "cn_own_china",
             "target": "cn_use_unknown",
-            "value": 444315,
+            "value": 494315,
             "ci_low": null,
             "ci_high": null,
             "label": "unattributed",
@@ -1450,10 +1450,10 @@
           {
             "source": "us_prod_nvidia",
             "target": "cn_own_china",
-            "value": 100000,
-            "ci_low": 80000,
-            "ci_high": 120000,
-            "label": "smuggling",
+            "value": 150000,
+            "ci_low": 58000,
+            "ci_high": 428000,
+            "label": "smuggling (Epoch)",
             "is_dummy": true
           }
         ],
@@ -1632,7 +1632,7 @@
           {
             "source": "cn_own_china",
             "target": "cn_use_unknown",
-            "value": 920075,
+            "value": 1098075,
             "ci_low": null,
             "ci_high": null,
             "label": "unattributed",
@@ -1857,10 +1857,10 @@
           {
             "source": "us_prod_nvidia",
             "target": "cn_own_china",
-            "value": 150000,
-            "ci_low": 120000,
-            "ci_high": 180000,
-            "label": "smuggling",
+            "value": 328000,
+            "ci_low": 123000,
+            "ci_high": 932000,
+            "label": "smuggling (Epoch)",
             "is_dummy": true
           }
         ],
@@ -1949,7 +1949,7 @@
           {
             "source": "cn_own_china",
             "target": "cn_use_unknown",
-            "value": 1031699,
+            "value": 1231699,
             "ci_low": null,
             "ci_high": null,
             "label": "unattributed",
@@ -2012,10 +2012,10 @@
           {
             "source": "us_prod_nvidia",
             "target": "cn_own_china",
-            "value": 200000,
-            "ci_low": 160000,
-            "ci_high": 240000,
-            "label": "smuggling",
+            "value": 400000,
+            "ci_low": 150000,
+            "ci_high": 1000000,
+            "label": "smuggling (projected)",
             "is_dummy": true
           }
         ],
