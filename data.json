@@ -124,7 +124,7 @@
           {
             "source": "cn_own",
             "target": "cn_use",
-            "value": 148799,
+            "value": 198799,
             "ci_low": null,
             "ci_high": null,
             "label": "to use",
@@ -137,6 +137,15 @@
             "ci_low": 951694,
             "ci_high": 1302194,
             "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_prod",
+            "target": "cn_own",
+            "value": 50000,
+            "ci_low": 40000,
+            "ci_high": 60000,
+            "label": "smuggling",
             "is_dummy": true
           }
         ],
@@ -171,7 +180,7 @@
           {
             "source": "cn_own",
             "target": "cn_use",
-            "value": 344315,
+            "value": 444315,
             "ci_low": null,
             "ci_high": null,
             "label": "to use",
@@ -184,6 +193,15 @@
             "ci_low": 3913264,
             "ci_high": 5534264,
             "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_prod",
+            "target": "cn_own",
+            "value": 100000,
+            "ci_low": 80000,
+            "ci_high": 120000,
+            "label": "smuggling",
             "is_dummy": true
           }
         ],
@@ -218,7 +236,7 @@
           {
             "source": "cn_own",
             "target": "cn_use",
-            "value": 770075,
+            "value": 920075,
             "ci_low": null,
             "ci_high": null,
             "label": "to use",
@@ -231,6 +249,15 @@
             "ci_low": 8963527,
             "ci_high": 15438527,
             "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_prod",
+            "target": "cn_own",
+            "value": 150000,
+            "ci_low": 120000,
+            "ci_high": 180000,
+            "label": "smuggling",
             "is_dummy": true
           }
         ],
@@ -256,7 +283,7 @@
           {
             "source": "cn_own",
             "target": "cn_use",
-            "value": 831699,
+            "value": 1031699,
             "ci_low": null,
             "ci_high": null,
             "label": "to use",
@@ -269,6 +296,15 @@
             "ci_low": null,
             "ci_high": null,
             "label": "to use",
+            "is_dummy": true
+          },
+          {
+            "source": "us_prod",
+            "target": "cn_own",
+            "value": 200000,
+            "ci_low": 160000,
+            "ci_high": 240000,
+            "label": "smuggling",
             "is_dummy": true
           }
         ],
@@ -854,7 +890,7 @@
           {
             "source": "cn_own_china",
             "target": "cn_use_unknown",
-            "value": 148799,
+            "value": 198799,
             "ci_low": null,
             "ci_high": null,
             "label": "unattributed",
@@ -1021,6 +1057,15 @@
             "ci_high": 7000,
             "label": "60",
             "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "cn_own_china",
+            "value": 50000,
+            "ci_low": 40000,
+            "ci_high": 60000,
+            "label": "smuggling",
+            "is_dummy": true
           }
         ],
         "2024": [
@@ -1189,7 +1234,7 @@
           {
             "source": "cn_own_china",
             "target": "cn_use_unknown",
-            "value": 344315,
+            "value": 444315,
             "ci_low": null,
             "ci_high": null,
             "label": "unattributed",
@@ -1401,6 +1446,15 @@
             "ci_high": 120000,
             "label": "70",
             "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "cn_own_china",
+            "value": 100000,
+            "ci_low": 80000,
+            "ci_high": 120000,
+            "label": "smuggling",
+            "is_dummy": true
           }
         ],
         "2025": [
@@ -1578,7 +1632,7 @@
           {
             "source": "cn_own_china",
             "target": "cn_use_unknown",
-            "value": 770075,
+            "value": 920075,
             "ci_low": null,
             "ci_high": null,
             "label": "unattributed",
@@ -1799,6 +1853,15 @@
             "ci_high": 500000,
             "label": "58",
             "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "cn_own_china",
+            "value": 150000,
+            "ci_low": 120000,
+            "ci_high": 180000,
+            "label": "smuggling",
+            "is_dummy": true
           }
         ],
         "2026": [
@@ -1886,7 +1949,7 @@
           {
             "source": "cn_own_china",
             "target": "cn_use_unknown",
-            "value": 831699,
+            "value": 1031699,
             "ci_low": null,
             "ci_high": null,
             "label": "unattributed",
@@ -1944,6 +2007,15 @@
             "ci_low": null,
             "ci_high": null,
             "label": "unattributed",
+            "is_dummy": true
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "cn_own_china",
+            "value": 200000,
+            "ci_low": 160000,
+            "ci_high": 240000,
+            "label": "smuggling",
             "is_dummy": true
           }
         ],
