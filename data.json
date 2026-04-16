@@ -144,9 +144,9 @@
           {
             "source": "us_prod",
             "target": "us_own",
-            "value": 4678240,
-            "ci_low": 3181934,
-            "ci_high": 6491353,
+            "value": 4728240,
+            "ci_low": 3281934,
+            "ci_high": 6706353,
             "label": "US/RoW production (Epoch)",
             "is_dummy": true
           },
@@ -180,9 +180,9 @@
           {
             "source": "us_own",
             "target": "us_use",
-            "value": 4678240,
-            "ci_low": 3921950,
-            "ci_high": 5542930,
+            "value": 4728240,
+            "ci_low": 3971940,
+            "ci_high": 5592940,
             "label": "to use",
             "is_dummy": true
           },
@@ -1151,15 +1151,6 @@
             "is_dummy": false
           },
           {
-            "source": "us_prod_nvidia",
-            "target": "us_own_xai",
-            "value": 100000,
-            "ci_low": 0,
-            "ci_high": 0,
-            "label": "Nvidia → xAI",
-            "is_dummy": false
-          },
-          {
             "source": "us_prod_amd",
             "target": "us_own_microsoft",
             "value": 105669,
@@ -1175,6 +1166,15 @@
             "ci_low": 30784,
             "ci_high": 57406,
             "label": "AMD → Oracle",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_xai",
+            "value": 150000,
+            "ci_low": 100000,
+            "ci_high": 215000,
+            "label": "Nvidia → xAI",
             "is_dummy": false
           },
           {
@@ -1432,11 +1432,20 @@
           {
             "source": "us_own_xai",
             "target": "us_use_xai_grok",
-            "value": 100000,
-            "ci_low": 79959,
-            "ci_high": 119939,
+            "value": 100051,
+            "ci_low": 80000,
+            "ci_high": 120000,
             "label": "70",
             "is_dummy": false
+          },
+          {
+            "source": "us_own_xai",
+            "target": "us_use_unknown",
+            "value": 49949,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "unattributed",
+            "is_dummy": true
           },
           {
             "source": "us_prod_nvidia",
