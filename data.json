@@ -134,8 +134,8 @@
             "source": "us_own",
             "target": "us_use",
             "value": 1106300,
-            "ci_low": 673249,
-            "ci_high": 1015325,
+            "ci_low": 937539,
+            "ci_high": 1279615,
             "label": "to use",
             "is_dummy": true
           }
@@ -181,8 +181,8 @@
             "source": "us_own",
             "target": "us_use",
             "value": 4812141,
-            "ci_low": 3114294,
-            "ci_high": 4735294,
+            "ci_low": 4005892,
+            "ci_high": 5626892,
             "label": "to use",
             "is_dummy": true
           },
@@ -237,8 +237,8 @@
             "source": "us_own",
             "target": "us_use",
             "value": 12663746,
-            "ci_low": 7320403,
-            "ci_high": 13795403,
+            "ci_low": 9206109,
+            "ci_high": 15681109,
             "label": "to use",
             "is_dummy": true
           },
@@ -500,6 +500,14 @@
           "entity": "Unknown"
         },
         {
+          "id": "us_use_doe",
+          "label": "Doe",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Doe"
+        },
+        {
           "id": "us_use_google_internal",
           "label": "Google internal",
           "country": "us",
@@ -668,7 +676,7 @@
           },
           {
             "source": "us_own_doe",
-            "target": "us_use_unknown",
+            "target": "us_use_doe",
             "value": 12992,
             "ci_low": null,
             "ci_high": null,
@@ -932,9 +940,9 @@
           {
             "source": "us_own_other",
             "target": "us_use_unknown",
-            "value": 277282,
-            "ci_low": 12992,
-            "ci_high": 12992,
+            "value": 264290,
+            "ci_low": null,
+            "ci_high": null,
             "label": "unattributed",
             "is_dummy": true
           },
@@ -986,11 +994,11 @@
           {
             "source": "us_own_other",
             "target": "us_use_other",
-            "value": 5000,
-            "ci_low": 3000,
-            "ci_high": 7000,
+            "value": 17992,
+            "ci_low": 15992,
+            "ci_high": 19992,
             "label": "Other (small entities)",
-            "is_dummy": false
+            "is_dummy": true
           }
         ],
         "2024": [
@@ -1293,6 +1301,15 @@
           },
           {
             "source": "us_own_oracle",
+            "target": "us_use_xai",
+            "value": 16000,
+            "ci_low": 10000,
+            "ci_high": 24000,
+            "label": "60",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_oracle",
             "target": "us_use_unknown",
             "value": 197837,
             "ci_low": 150000,
@@ -1303,9 +1320,9 @@
           {
             "source": "us_own_other",
             "target": "us_use_unknown",
-            "value": 1075397,
-            "ci_low": 133850,
-            "ci_high": 133850,
+            "value": 941547,
+            "ci_low": null,
+            "ci_high": null,
             "label": "unattributed",
             "is_dummy": true
           },
@@ -1315,6 +1332,15 @@
             "value": 26770,
             "ci_low": 26500,
             "ci_high": 27050,
+            "label": "Other (small entities)",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_other",
+            "target": "us_use_xai",
+            "value": 150000,
+            "ci_low": 80000,
+            "ci_high": 120000,
             "label": "Other (small entities)",
             "is_dummy": false
           },
@@ -1348,20 +1374,20 @@
           {
             "source": "us_own_oracle",
             "target": "us_use_other",
-            "value": 26000,
-            "ci_low": 15000,
-            "ci_high": 44000,
+            "value": 10000,
+            "ci_low": 5000,
+            "ci_high": 20000,
             "label": "Other (small entities)",
             "is_dummy": false
           },
           {
             "source": "us_own_other",
             "target": "us_use_other",
-            "value": 100051,
-            "ci_low": 80000,
-            "ci_high": 120000,
+            "value": 83901,
+            "ci_low": 83901,
+            "ci_high": 83901,
             "label": "Other (small entities)",
-            "is_dummy": false
+            "is_dummy": true
           },
           {
             "source": "us_prod_nvidia",
@@ -1719,29 +1745,20 @@
           {
             "source": "us_own_other",
             "target": "us_use_unknown",
-            "value": 2003025,
-            "ci_low": 82159,
-            "ci_high": 82159,
+            "value": 1920866,
+            "ci_low": null,
+            "ci_high": null,
             "label": "unattributed",
             "is_dummy": true
           },
           {
             "source": "us_own_xai",
             "target": "us_use_xai",
-            "value": 418554,
+            "value": 453714,
             "ci_low": 350000,
             "ci_high": 500000,
             "label": "58",
             "is_dummy": false
-          },
-          {
-            "source": "us_own_xai",
-            "target": "us_use_unknown",
-            "value": 35160,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "unattributed",
-            "is_dummy": true
           },
           {
             "source": "us_prod_intel",
@@ -1787,6 +1804,15 @@
             "ci_high": 80000,
             "label": "Other (small entities)",
             "is_dummy": false
+          },
+          {
+            "source": "us_own_other",
+            "target": "us_use_other",
+            "value": 82159,
+            "ci_low": 82159,
+            "ci_high": 82159,
+            "label": "Other (small entities)",
+            "is_dummy": true
           },
           {
             "source": "us_prod_nvidia",
@@ -1927,7 +1953,7 @@
           },
           {
             "source": "us_own_doe",
-            "target": "us_use_unknown",
+            "target": "us_use_doe",
             "value": 104000,
             "ci_low": null,
             "ci_high": null,
@@ -2221,6 +2247,14 @@
           "entity": "Unknown"
         },
         {
+          "id": "us_use_doe",
+          "label": "Doe",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "Doe"
+        },
+        {
           "id": "us_use_google_internal",
           "label": "Google internal",
           "country": "us",
@@ -2438,7 +2472,7 @@
           },
           {
             "source": "us_own_doe",
-            "target": "us_use_unknown",
+            "target": "us_use_doe",
             "value": 12992,
             "ci_low": null,
             "ci_high": null,
@@ -2701,7 +2735,7 @@
           },
           {
             "source": "us_own_doe",
-            "target": "us_use_unknown",
+            "target": "us_use_doe",
             "value": 12992,
             "ci_low": null,
             "ci_high": null,
@@ -3090,7 +3124,7 @@
           },
           {
             "source": "us_own_doe",
-            "target": "us_use_unknown",
+            "target": "us_use_doe",
             "value": 83901,
             "ci_low": null,
             "ci_high": null,
@@ -3235,20 +3269,11 @@
           {
             "source": "us_own_xai",
             "target": "us_use_xai",
-            "value": 100051,
+            "value": 150000,
             "ci_low": 80000,
             "ci_high": 120000,
             "label": "70",
             "is_dummy": false
-          },
-          {
-            "source": "us_own_xai",
-            "target": "us_use_unknown",
-            "value": 49949,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "unattributed",
-            "is_dummy": true
           },
           {
             "source": "us_prod_nvidia",
@@ -3596,7 +3621,7 @@
           },
           {
             "source": "us_own_doe",
-            "target": "us_use_unknown",
+            "target": "us_use_doe",
             "value": 82159,
             "ci_low": null,
             "ci_high": null,
@@ -3750,20 +3775,11 @@
           {
             "source": "us_own_xai",
             "target": "us_use_xai",
-            "value": 418554,
+            "value": 453714,
             "ci_low": 350000,
             "ci_high": 500000,
             "label": "58",
             "is_dummy": false
-          },
-          {
-            "source": "us_own_xai",
-            "target": "us_use_unknown",
-            "value": 35160,
-            "ci_low": null,
-            "ci_high": null,
-            "label": "unattributed",
-            "is_dummy": true
           },
           {
             "source": "us_prod_nvidia",
@@ -3913,7 +3929,7 @@
           },
           {
             "source": "us_own_doe",
-            "target": "us_use_unknown",
+            "target": "us_use_doe",
             "value": 104000,
             "ci_low": null,
             "ci_high": null,
