@@ -7,6 +7,7 @@ let PIPELINE_DATA = null;
 const state = {
   year: 2025,
   view: "by_company", // "aggregate" | "by_company"
+  showAll: false,     // when true and view === "by_company", swap in by_company_full
 };
 
 // Stage-level (aggregate) colors.
@@ -88,6 +89,9 @@ function formatNumber(n) {
 }
 
 function getActiveView() {
+  if (state.view === "by_company" && state.showAll) {
+    return PIPELINE_DATA.views.by_company_full;
+  }
   return PIPELINE_DATA.views[state.view];
 }
 
@@ -351,13 +355,31 @@ function setupControls() {
     el.addEventListener("change", (e) => {
       if (e.target.checked) {
         state.view = e.target.value;
+        updateShowAllVisibility();
         render();
       }
     });
   });
 
+  // "Show all entities" — swaps the per-company view between bucketed
+  // (small entities merged into *_other) and full (no threshold applied).
+  const showAllEl = document.getElementById("show-all-entities");
+  if (showAllEl) {
+    showAllEl.addEventListener("change", (e) => {
+      state.showAll = e.target.checked;
+      render();
+    });
+  }
+  updateShowAllVisibility();
+
   window.addEventListener("resize", render);
   updateYearButtons();
+}
+
+function updateShowAllVisibility() {
+  // The checkbox only applies to the By-company view.
+  const group = document.getElementById("show-all-group");
+  if (group) group.style.display = state.view === "by_company" ? "" : "none";
 }
 
 function updateYearButtons() {
