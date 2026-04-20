@@ -501,11 +501,11 @@
         },
         {
           "id": "us_use_doe",
-          "label": "Doe",
+          "label": "DoE",
           "country": "us",
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Doe"
+          "entity": "DoE"
         },
         {
           "id": "us_use_google_internal",
@@ -548,6 +548,14 @@
           "entity": "Anthropic"
         },
         {
+          "id": "us_use_nvidia",
+          "label": "NVIDIA",
+          "country": "us",
+          "stage": "use",
+          "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
+          "entity": "NVIDIA"
+        },
+        {
           "id": "us_use_xai",
           "label": "xAI",
           "country": "us",
@@ -556,12 +564,12 @@
           "entity": "xAI"
         },
         {
-          "id": "us_use_other",
-          "label": "Other users",
+          "id": "us_use_apple",
+          "label": "Apple",
           "country": "us",
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Other users"
+          "entity": "Apple"
         }
       ],
       "edgesByYear": {
@@ -712,6 +720,15 @@
           },
           {
             "source": "us_own_microsoft",
+            "target": "us_use_microsoft",
+            "value": 4618,
+            "ci_low": 1732,
+            "ci_high": 8660,
+            "label": "30",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_microsoft",
             "target": "us_use_openai",
             "value": 8660,
             "ci_low": 4618,
@@ -736,15 +753,6 @@
             "ci_high": 6393,
             "label": "unattributed",
             "is_dummy": true
-          },
-          {
-            "source": "us_own_microsoft",
-            "target": "us_use_other",
-            "value": 4618,
-            "ci_low": 1732,
-            "ci_high": 8660,
-            "label": "Other (small entities)",
-            "is_dummy": true
           }
         ],
         "2023": [
@@ -760,11 +768,11 @@
           {
             "source": "us_prod_nvidia",
             "target": "us_own_other",
-            "value": 274932,
-            "ci_low": 203882,
-            "ci_high": 371672,
+            "value": 264290,
+            "ci_low": 194968,
+            "ci_high": 358932,
             "label": "Nvidia → Other",
-            "is_dummy": true
+            "is_dummy": false
           },
           {
             "source": "us_prod_nvidia",
@@ -821,6 +829,24 @@
             "is_dummy": false
           },
           {
+            "source": "us_prod_amd",
+            "target": "us_own_doe",
+            "value": 7350,
+            "ci_low": 7280,
+            "ci_high": 7430,
+            "label": "AMD → DoE",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_doe",
+            "value": 5642,
+            "ci_low": 5225,
+            "ci_high": 5950,
+            "label": "Nvidia → DoE",
+            "is_dummy": false
+          },
+          {
             "source": "cn_prod_other_china",
             "target": "cn_own_china",
             "value": 3883,
@@ -839,12 +865,39 @@
             "is_dummy": true
           },
           {
+            "source": "us_prod_nvidia",
+            "target": "us_own_xai",
+            "value": 5000,
+            "ci_low": 3689,
+            "ci_high": 6790,
+            "label": "Nvidia → Xai",
+            "is_dummy": true
+          },
+          {
             "source": "cn_own_china",
             "target": "cn_use_unknown",
             "value": 134019,
             "ci_low": null,
             "ci_high": null,
             "label": "unattributed",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use_amazon",
+            "value": 24126,
+            "ci_low": 14476,
+            "ci_high": 38601,
+            "label": "35",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use_anthropic",
+            "value": 14476,
+            "ci_low": 4825,
+            "ci_high": 28951,
+            "label": "35",
             "is_dummy": true
           },
           {
@@ -867,12 +920,39 @@
           },
           {
             "source": "us_own_coreweave",
+            "target": "us_use_nvidia",
+            "value": 3000,
+            "ci_low": 1000,
+            "ci_high": 5000,
+            "label": "40",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_coreweave",
             "target": "us_use_unknown",
             "value": 20000,
             "ci_low": 10000,
             "ci_high": 30000,
             "label": "unattributed",
             "is_dummy": true
+          },
+          {
+            "source": "us_own_doe",
+            "target": "us_use_doe",
+            "value": 12992,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "unattributed",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use_anthropic",
+            "value": 14831,
+            "ci_low": 4944,
+            "ci_high": 29663,
+            "label": "40",
+            "is_dummy": false
           },
           {
             "source": "us_own_google",
@@ -930,6 +1010,24 @@
           },
           {
             "source": "us_own_oracle",
+            "target": "us_use_nvidia",
+            "value": 1939,
+            "ci_low": 485,
+            "ci_high": 4849,
+            "label": "40",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_oracle",
+            "target": "us_use_xai",
+            "value": 4849,
+            "ci_low": 1939,
+            "ci_high": 9697,
+            "label": "50",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_oracle",
             "target": "us_use_unknown",
             "value": 38018,
             "ci_low": 29091,
@@ -947,58 +1045,13 @@
             "is_dummy": true
           },
           {
-            "source": "us_prod_amd",
-            "target": "us_own_other",
-            "value": 7350,
-            "ci_low": 7280,
-            "ci_high": 7430,
-            "label": "Other (small entities)",
+            "source": "us_own_xai",
+            "target": "us_use_xai",
+            "value": 5000,
+            "ci_low": 3000,
+            "ci_high": 7000,
+            "label": "60",
             "is_dummy": false
-          },
-          {
-            "source": "us_own_amazon",
-            "target": "us_use_other",
-            "value": 38602,
-            "ci_low": 19301,
-            "ci_high": 67552,
-            "label": "Other (small entities)",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_coreweave",
-            "target": "us_use_other",
-            "value": 3000,
-            "ci_low": 1000,
-            "ci_high": 5000,
-            "label": "Other (small entities)",
-            "is_dummy": false
-          },
-          {
-            "source": "us_own_google",
-            "target": "us_use_other",
-            "value": 14831,
-            "ci_low": 4944,
-            "ci_high": 29663,
-            "label": "Other (small entities)",
-            "is_dummy": false
-          },
-          {
-            "source": "us_own_oracle",
-            "target": "us_use_other",
-            "value": 6788,
-            "ci_low": 2424,
-            "ci_high": 14546,
-            "label": "Other (small entities)",
-            "is_dummy": false
-          },
-          {
-            "source": "us_own_other",
-            "target": "us_use_other",
-            "value": 17992,
-            "ci_low": 15992,
-            "ci_high": 19992,
-            "label": "Other (small entities)",
-            "is_dummy": true
           }
         ],
         "2024": [
@@ -1023,9 +1076,9 @@
           {
             "source": "us_prod_nvidia",
             "target": "us_own_other",
-            "value": 900180,
-            "ci_low": 610362,
-            "ci_high": 1317300,
+            "value": 744538,
+            "ci_low": 505137,
+            "ci_high": 1096350,
             "label": "Nvidia → Other",
             "is_dummy": false
           },
@@ -1077,9 +1130,9 @@
           {
             "source": "us_prod_amd",
             "target": "us_own_other",
-            "value": 248498,
-            "ci_low": 169017,
-            "ci_high": 333381,
+            "value": 197009,
+            "ci_low": 118037,
+            "ci_high": 281371,
             "label": "AMD → Other",
             "is_dummy": false
           },
@@ -1117,6 +1170,42 @@
             "ci_low": 30784,
             "ci_high": 57406,
             "label": "AMD → Oracle",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_xai",
+            "value": 150000,
+            "ci_low": 100000,
+            "ci_high": 215000,
+            "label": "Nvidia → xAI",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_amd",
+            "target": "us_own_doe",
+            "value": 51489,
+            "ci_low": 50980,
+            "ci_high": 52010,
+            "label": "AMD → DoE",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_doe",
+            "value": 5642,
+            "ci_low": 5225,
+            "ci_high": 5950,
+            "label": "Nvidia → DoE",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_intel",
+            "target": "us_own_doe",
+            "value": 26770,
+            "ci_low": 26500,
+            "ci_high": 27050,
+            "label": "Intel → DoE",
             "is_dummy": false
           },
           {
@@ -1166,12 +1255,30 @@
           },
           {
             "source": "us_own_amazon",
+            "target": "us_use_amazon",
+            "value": 100000,
+            "ci_low": 60000,
+            "ci_high": 160000,
+            "label": "40",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_amazon",
             "target": "us_use_anthropic",
             "value": 120000,
             "ci_low": 70000,
             "ci_high": 200000,
             "label": "50",
             "is_dummy": false
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use_apple",
+            "value": 3000,
+            "ci_low": 1000,
+            "ci_high": 8000,
+            "label": "25",
+            "is_dummy": true
           },
           {
             "source": "us_own_amazon",
@@ -1193,6 +1300,15 @@
           },
           {
             "source": "us_own_coreweave",
+            "target": "us_use_nvidia",
+            "value": 5000,
+            "ci_low": 2000,
+            "ci_high": 10000,
+            "label": "35",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_coreweave",
             "target": "us_use_openai",
             "value": 5000,
             "ci_low": 0,
@@ -1210,6 +1326,15 @@
             "is_dummy": true
           },
           {
+            "source": "us_own_doe",
+            "target": "us_use_doe",
+            "value": 83901,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "unattributed",
+            "is_dummy": true
+          },
+          {
             "source": "us_own_google",
             "target": "us_use_anthropic",
             "value": 100000,
@@ -1217,6 +1342,15 @@
             "ci_high": 180000,
             "label": "45",
             "is_dummy": false
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use_apple",
+            "value": 5000,
+            "ci_low": 1000,
+            "ci_high": 15000,
+            "label": "30",
+            "is_dummy": true
           },
           {
             "source": "us_own_google",
@@ -1292,6 +1426,15 @@
           },
           {
             "source": "us_own_oracle",
+            "target": "us_use_nvidia",
+            "value": 10000,
+            "ci_low": 5000,
+            "ci_high": 20000,
+            "label": "45",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_oracle",
             "target": "us_use_openai",
             "value": 30000,
             "ci_low": 10000,
@@ -1327,67 +1470,13 @@
             "is_dummy": true
           },
           {
-            "source": "us_prod_intel",
-            "target": "us_own_other",
-            "value": 26770,
-            "ci_low": 26500,
-            "ci_high": 27050,
-            "label": "Other (small entities)",
-            "is_dummy": false
-          },
-          {
-            "source": "us_own_other",
+            "source": "us_own_xai",
             "target": "us_use_xai",
             "value": 150000,
             "ci_low": 80000,
             "ci_high": 120000,
-            "label": "Other (small entities)",
+            "label": "70",
             "is_dummy": false
-          },
-          {
-            "source": "us_own_amazon",
-            "target": "us_use_other",
-            "value": 103000,
-            "ci_low": 61000,
-            "ci_high": 168000,
-            "label": "Other (small entities)",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_coreweave",
-            "target": "us_use_other",
-            "value": 5000,
-            "ci_low": 2000,
-            "ci_high": 10000,
-            "label": "Other (small entities)",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_google",
-            "target": "us_use_other",
-            "value": 5000,
-            "ci_low": 1000,
-            "ci_high": 15000,
-            "label": "Other (small entities)",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_oracle",
-            "target": "us_use_other",
-            "value": 10000,
-            "ci_low": 5000,
-            "ci_high": 20000,
-            "label": "Other (small entities)",
-            "is_dummy": false
-          },
-          {
-            "source": "us_own_other",
-            "target": "us_use_other",
-            "value": 83901,
-            "ci_low": 83901,
-            "ci_high": 83901,
-            "label": "Other (small entities)",
-            "is_dummy": true
           },
           {
             "source": "us_prod_nvidia",
@@ -1421,9 +1510,9 @@
           {
             "source": "us_prod_nvidia",
             "target": "us_own_other",
-            "value": 1808831,
-            "ci_low": 1343138,
-            "ci_high": 2501014,
+            "value": 1804931,
+            "ci_low": 1339618,
+            "ci_high": 2496734,
             "label": "Nvidia → Other",
             "is_dummy": false
           },
@@ -1502,9 +1591,9 @@
           {
             "source": "us_prod_amd",
             "target": "us_own_other",
-            "value": 167424,
-            "ci_low": 53739,
-            "ci_high": 286596,
+            "value": 115935,
+            "ci_low": 2759,
+            "ci_high": 234586,
             "label": "AMD → Other",
             "is_dummy": false
           },
@@ -1533,6 +1622,33 @@
             "ci_low": 8605,
             "ci_high": 12837,
             "label": "AMD → China",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_amd",
+            "target": "us_own_doe",
+            "value": 51489,
+            "ci_low": 50980,
+            "ci_high": 52010,
+            "label": "AMD → DoE",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_nvidia",
+            "target": "us_own_doe",
+            "value": 3900,
+            "ci_low": 3520,
+            "ci_high": 4280,
+            "label": "Nvidia → DoE",
+            "is_dummy": false
+          },
+          {
+            "source": "us_prod_intel",
+            "target": "us_own_doe",
+            "value": 26770,
+            "ci_low": 26500,
+            "ci_high": 27050,
+            "label": "Intel → DoE",
             "is_dummy": false
           },
           {
@@ -1582,12 +1698,30 @@
           },
           {
             "source": "us_own_amazon",
+            "target": "us_use_amazon",
+            "value": 350000,
+            "ci_low": 200000,
+            "ci_high": 500000,
+            "label": "45",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_amazon",
             "target": "us_use_anthropic",
             "value": 400000,
             "ci_low": 300000,
             "ci_high": 500000,
             "label": "62",
             "is_dummy": false
+          },
+          {
+            "source": "us_own_amazon",
+            "target": "us_use_apple",
+            "value": 20000,
+            "ci_low": 10000,
+            "ci_high": 40000,
+            "label": "35",
+            "is_dummy": true
           },
           {
             "source": "us_own_amazon",
@@ -1609,6 +1743,15 @@
           },
           {
             "source": "us_own_coreweave",
+            "target": "us_use_nvidia",
+            "value": 15000,
+            "ci_low": 5000,
+            "ci_high": 40000,
+            "label": "35",
+            "is_dummy": true
+          },
+          {
+            "source": "us_own_coreweave",
             "target": "us_use_openai",
             "value": 110000,
             "ci_low": 50000,
@@ -1626,12 +1769,30 @@
             "is_dummy": true
           },
           {
+            "source": "us_own_doe",
+            "target": "us_use_doe",
+            "value": 82159,
+            "ci_low": null,
+            "ci_high": null,
+            "label": "unattributed",
+            "is_dummy": true
+          },
+          {
             "source": "us_own_google",
             "target": "us_use_anthropic",
             "value": 450000,
             "ci_low": 250000,
             "ci_high": 700000,
             "label": "48",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_google",
+            "target": "us_use_apple",
+            "value": 25000,
+            "ci_low": 10000,
+            "ci_high": 50000,
+            "label": "50",
             "is_dummy": false
           },
           {
@@ -1717,6 +1878,15 @@
           },
           {
             "source": "us_own_oracle",
+            "target": "us_use_nvidia",
+            "value": 50000,
+            "ci_low": 25000,
+            "ci_high": 80000,
+            "label": "55",
+            "is_dummy": false
+          },
+          {
+            "source": "us_own_oracle",
             "target": "us_use_openai",
             "value": 300000,
             "ci_low": 200000,
@@ -1759,60 +1929,6 @@
             "ci_high": 500000,
             "label": "58",
             "is_dummy": false
-          },
-          {
-            "source": "us_prod_intel",
-            "target": "us_own_other",
-            "value": 26770,
-            "ci_low": 26500,
-            "ci_high": 27050,
-            "label": "Other (small entities)",
-            "is_dummy": false
-          },
-          {
-            "source": "us_own_amazon",
-            "target": "us_use_other",
-            "value": 370000,
-            "ci_low": 210000,
-            "ci_high": 540000,
-            "label": "Other (small entities)",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_coreweave",
-            "target": "us_use_other",
-            "value": 15000,
-            "ci_low": 5000,
-            "ci_high": 40000,
-            "label": "Other (small entities)",
-            "is_dummy": true
-          },
-          {
-            "source": "us_own_google",
-            "target": "us_use_other",
-            "value": 25000,
-            "ci_low": 10000,
-            "ci_high": 50000,
-            "label": "Other (small entities)",
-            "is_dummy": false
-          },
-          {
-            "source": "us_own_oracle",
-            "target": "us_use_other",
-            "value": 50000,
-            "ci_low": 25000,
-            "ci_high": 80000,
-            "label": "Other (small entities)",
-            "is_dummy": false
-          },
-          {
-            "source": "us_own_other",
-            "target": "us_use_other",
-            "value": 82159,
-            "ci_low": 82159,
-            "ci_high": 82159,
-            "label": "Other (small entities)",
-            "is_dummy": true
           },
           {
             "source": "us_prod_nvidia",
@@ -2248,11 +2364,11 @@
         },
         {
           "id": "us_use_doe",
-          "label": "Doe",
+          "label": "DoE",
           "country": "us",
           "stage": "use",
           "sheetUrl": "https://docs.google.com/spreadsheets/d/1hWs7UXoSYXwhuB-pjDVNf7oX0jSI4KZwyfVboNod0O4/edit",
-          "entity": "Doe"
+          "entity": "DoE"
         },
         {
           "id": "us_use_google_internal",
