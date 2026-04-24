@@ -569,9 +569,29 @@ function showTooltip(event, html) {
   const el = tooltipEl();
   el.innerHTML = html;
   el.classList.remove("hidden");
-  const rect = document.querySelector(".chart-wrap").getBoundingClientRect();
-  el.style.left = (event.clientX - rect.left + 14) + "px";
-  el.style.top  = (event.clientY - rect.top  + 14) + "px";
+  const wrap = document.querySelector(".chart-wrap");
+  const rect = wrap.getBoundingClientRect();
+  // Desired position: 14px below+right of cursor.
+  let left = event.clientX - rect.left + 14;
+  let top  = event.clientY - rect.top  + 14;
+  // Measure the rendered tooltip so we can flip when it would overflow the
+  // chart-wrap. Right-column user nodes (widened 440px panel) would otherwise
+  // render off the right edge per 2026-04-24 Codex review (medium finding).
+  // Position is clamped AFTER innerHTML/remove-hidden so offsetWidth reflects
+  // the rich-panel layout.
+  const tipW = el.offsetWidth  || 0;
+  const tipH = el.offsetHeight || 0;
+  const wrapW = rect.width;
+  const wrapH = rect.height;
+  if (left + tipW + 8 > wrapW) {
+    // Flip to the left of cursor.
+    left = Math.max(4, event.clientX - rect.left - tipW - 14);
+  }
+  if (top + tipH + 8 > wrapH) {
+    top = Math.max(4, event.clientY - rect.top - tipH - 14);
+  }
+  el.style.left = left + "px";
+  el.style.top  = top  + "px";
 }
 
 function hideTooltip() {
@@ -615,13 +635,77 @@ function matchOwnerKey(entityName, cl) {
   return Object.keys(cl.owners).find(owner => owner.toLowerCase() === target) || null;
 }
 
+// User-node canonicalization, mirrors sync/sheet_to_json.py USER_MERGE +
+// _is_named_user(). Cells labeled `xAI internal`, `Microsoft internal`,
+// `OpenAI / Stargate`, `NVIDIA DGX Cloud`, `Amazon internal`, etc. in
+// chip_level_*.json must map to the canonical Sankey node (`us_use_xai`,
+// `us_use_microsoft`, `us_use_openai`, `us_use_nvidia`, `us_use_amazon`).
+// The tooltip must follow the SAME canonicalization so hovering a merged
+// node finds every sub-label's cells — see 2026-04-24 Codex pass-2 review.
+//
+// Explicit USER_MERGE from the Python sync. This is a small allow-list; most
+// sub-label merging is handled by the NAMED_USER_PREFIXES rule below (which
+// mirrors _is_named_user).
+const JS_USER_MERGE = {
+  "us_use_nvidia_dgx_cloud": "us_use_nvidia",
+  "us_use_xai_legacy_oci": "us_use_xai",
+  "us_use_xai_grok": "us_use_xai",
+  "us_use_microsoft_internal": "us_use_microsoft",
+  "us_use_openai_stargate": "us_use_openai",
+};
+
+// Named user-node labels that actually appear in the by-company Sankey
+// (sourced from data.json). Any chip-level cell whose user label begins
+// (case-insensitive) with one of these should canonicalize to the
+// corresponding `us_use_<slug>` node — that's exactly the behavior of the
+// Python `_is_named_user()` + `_slugify()` pipeline that generates data.json.
+// Note: "Google internal" must come before "Google" so the longer prefix
+// wins; same for ordering-sensitive pairs.
+const NAMED_USER_PREFIXES = [
+  "Google internal",
+  "OpenAI", "Anthropic", "Apple", "Amazon", "Microsoft", "Meta", "NVIDIA",
+  "Oracle", "CoreWeave", "xAI", "DoE", "Google",
+];
+
+// Match sync/sheet_to_json.py _slugify(): lowercase, non-alnum → '_',
+// collapse repeats, strip edges.
+function _slugify(s) {
+  return String(s || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
+}
+
+function canonicalUseIdFromLabel(userLabel) {
+  const raw = "us_use_" + _slugify(userLabel);
+  if (JS_USER_MERGE[raw]) return JS_USER_MERGE[raw];
+  // Prefix-match fallback — matches Python `_is_named_user()` semantics.
+  // "Amazon internal", "xAI internal", "OpenAI / Stargate" → the canonical
+  // named-user node.
+  const u = String(userLabel || "").trim().toLowerCase();
+  for (const name of NAMED_USER_PREFIXES) {
+    if (u.startsWith(name.toLowerCase())) return "us_use_" + _slugify(name);
+  }
+  return raw;
+}
+
+// Ids that would collide with merge-target buckets ("Other *", "Unknown"),
+// which should never be treated as a named canonical user.
+function _isOtherOrUnknownLabel(label) {
+  const u = String(label || "").trim().toLowerCase();
+  return u.startsWith("other") || u.startsWith("unknown") || u === "";
+}
+
 function matchUserKey(entityName, cl) {
   if (!entityName || !cl || !cl.owners) return null;
-  const target = String(entityName).toLowerCase();
+  // Resolve the hovered node's entity to its canonical use-node id, then
+  // look for any cell whose user label also canonicalizes to that id.
+  const nodeCanon = canonicalUseIdFromLabel(entityName);
   for (const owner of Object.values(cl.owners)) {
     for (const cell of (owner.cells || [])) {
       const user = cell.user || "";
-      if (String(user).toLowerCase() === target) return user;
+      if (_isOtherOrUnknownLabel(user)) continue;
+      if (canonicalUseIdFromLabel(user) === nodeCanon) return user;
     }
   }
   return null;
@@ -650,35 +734,105 @@ function richHoverPanelHTML(d) {
   return "";
 }
 
-function ownerHoverPanel(d, cl) {
-  const ownerKey = matchOwnerKey(d.entity, cl);
-  if (!ownerKey) return "";
+// Scale a set of rows so their medians sum to `targetTotal`, preserving the
+// relative share of each row and scaling the CI bounds by the same factor so
+// the CI widths stay proportional to the median they bracket. Rows are
+// returned as a shallow-copied list — callers mutate safely. If `rawSum` is
+// 0 (no chip-level data) or `targetTotal` is falsy, rows are returned as-is.
+//
+// Rationale: single-source-of-truth reconciliation between the Sankey node
+// value (`d.value`, the mainline number the user sees on the chart) and the
+// per-chip / per-owner chip-level JSON breakdown. Mainline number is
+// canonical; tooltip breakdown is the shape; their totals must agree.
+function scaleRowsToMainline(rows, targetTotal) {
+  const rawSum = rows.reduce((s, r) => s + (Number(r.median) || 0), 0);
+  if (!targetTotal || rawSum <= 0) return rows.map(r => ({ ...r }));
+  const factor = targetTotal / rawSum;
+  return rows.map(r => ({
+    ...r,
+    median: (Number(r.median) || 0) * factor,
+    low:    (Number(r.low)    || 0) * factor,
+    high:   (Number(r.high)   || 0) * factor,
+    _scale: factor,  // kept for tests / debugging; ignored by the renderer
+  }));
+}
+
+// Pull the owner's display data from chip_level JSON and reconcile its total
+// with the Sankey mainline value (`mainlineValue`). Returns:
+//   { mainlineTotal, fleetRows, userRows, residualPresent }
+// where fleetRows + userRows are scaled so their medians sum to mainlineTotal.
+// This is the single source of truth that both the Sankey node label and the
+// hover tooltip consume.
+function getOwnerDisplayData(entity, mainlineValue, cl) {
+  const ownerKey = matchOwnerKey(entity, cl);
+  if (!ownerKey) return null;
   const owner = cl.owners[ownerKey];
-  if (!owner) return "";
+  if (!owner) return null;
 
-  const fleetRows = Object.entries(owner.fleet || {}).map(([chipType, metrics]) => ({
+  const rawFleet = Object.entries(owner.fleet || {}).map(([chipType, m]) => ({
     chipType,
-    median: metricNumber(metrics.h100e_median),
-    low: metricNumber(metrics.h100e_ci_low),
-    high: metricNumber(metrics.h100e_ci_high),
-  })).sort((a, b) => b.median - a.median);
-  const fleetTotal = sumMetricRows(fleetRows);
+    median: metricNumber(m.h100e_median),
+    low: metricNumber(m.h100e_ci_low),
+    high: metricNumber(m.h100e_ci_high),
+  }));
 
-  const userTotals = new Map();
+  const rawUserTotals = new Map();
   for (const cell of (owner.cells || [])) {
     const user = cell.user || "";
-    if (!userTotals.has(user)) userTotals.set(user, { user, median: 0, low: 0, high: 0 });
-    const row = userTotals.get(user);
+    if (!rawUserTotals.has(user)) rawUserTotals.set(user, { user, median: 0, low: 0, high: 0 });
+    const row = rawUserTotals.get(user);
     row.median += metricNumber(cell.h100e_median);
     row.low += metricNumber(cell.h100e_ci_low);
     row.high += metricNumber(cell.h100e_ci_high);
   }
-  const allUserRows = Array.from(userTotals.values()).sort((a, b) => b.median - a.median);
+
+  const fleetRows = scaleRowsToMainline(rawFleet, mainlineValue)
+    .sort((a, b) => b.median - a.median);
+
+  const allUserRowsRaw = Array.from(rawUserTotals.values()).sort((a, b) => b.median - a.median);
+  // Cells can have cells-vs-fleet gaps (see dashboard-updater note, 2026-04-24);
+  // scale the user breakdown to the mainline total as well so the top-users
+  // table's rows sum cleanly to the mainline number.
+  const allUserRows = scaleRowsToMainline(allUserRowsRaw, mainlineValue)
+    .sort((a, b) => b.median - a.median);
   const topRows = allUserRows.filter(row => !isOtherUserBucket(row.user)).slice(0, 5);
   const topUsers = new Set(topRows.map(row => row.user));
   const residualRows = allUserRows.filter(row => isOtherUserBucket(row.user) || !topUsers.has(row.user));
   const residualTotal = sumMetricRows(residualRows);
+  const userRows = residualRows.length
+    ? [...topRows, { user: "Other / residual", ...residualTotal }]
+    : topRows;
 
+  return {
+    ownerKey,
+    mainlineTotal: Number(mainlineValue) || 0,
+    fleetRows,
+    userRows,
+  };
+}
+
+function ownerHoverPanel(d, cl) {
+  const mainlineValue = metricNumber(d.value);
+  const data = getOwnerDisplayData(d.entity, mainlineValue, cl);
+  if (!data) return "";
+  // Zero raw-sum guard: if chip_level has no positive fleet breakdown but
+  // the mainline node is non-zero, surface the discrepancy explicitly
+  // instead of rendering an all-zero table under a non-zero Total. See
+  // 2026-04-24 Codex pass-2 review (medium finding).
+  const rawFleetSum = data.fleetRows.reduce((s, r) => s + (Number(r.median) || 0), 0);
+  if (mainlineValue > 0 && rawFleetSum === 0) {
+    return `<div class="sub">No positive chip-level fleet breakdown for ${escapeHTML(data.ownerKey)} in ${state.year} — showing mainline Total only.</div>`;
+  }
+  // Totals shown in the tooltip MUST equal mainlineValue exactly — that's the
+  // single source of truth anchor to the Sankey node label. Use the raw
+  // mainlineValue for the Total row rather than re-summing the scaled rows,
+  // which can accumulate float drift.
+  const fleetTotalMedian = mainlineValue;
+  // CI totals: sum of scaled row endpoints (within float drift of the scaled
+  // raw CI sum — acceptable because CIs are themselves approximate).
+  const fleetCI = sumMetricRows(data.fleetRows);
+
+  const { fleetRows, userRows } = data;
   const fleetTable = fleetRows.length ? `
     <table class="hover-table">
       <caption>Fleet by chip type (H100e, end of ${state.year})</caption>
@@ -695,16 +849,13 @@ function ownerHoverPanel(d, cl) {
         `).join("")}
         <tr class="total">
           <td>Total</td>
-          <td class="num">${formatNumber(fleetTotal.median)}</td>
-          <td class="num">${ciRangeHTML(fleetTotal.low, fleetTotal.high)}</td>
+          <td class="num">${formatNumber(fleetTotalMedian)}</td>
+          <td class="num">${ciRangeHTML(fleetCI.low, fleetCI.high)}</td>
         </tr>
       </tbody>
     </table>
   ` : "";
 
-  const userRows = residualRows.length
-    ? [...topRows, { user: "Other / residual", ...residualTotal }]
-    : topRows;
   const usersTable = userRows.length ? `
     <table class="hover-table">
       <caption>Top users this year (H100e)</caption>
@@ -726,37 +877,60 @@ function ownerHoverPanel(d, cl) {
   return fleetTable + usersTable;
 }
 
-function userHoverPanel(d, cl) {
-  const userKey = matchUserKey(d.entity, cl) || d.entity || d.label || "";
-  const target = String(userKey).toLowerCase();
-  const rows = [];
+// Pull the user's display data from chip_level JSON and reconcile with the
+// Sankey mainline value (d.value). Returns:
+//   { userKey, mainlineTotal, rows }
+// where `rows` are scaled so their medians sum to mainlineTotal.
+function getUserDisplayData(entity, label, mainlineValue, cl) {
+  // Use the canonical use-node id so merged labels (xAI internal, Microsoft
+  // internal, OpenAI/Stargate, NVIDIA DGX Cloud) all match the canonical
+  // Sankey node — see matchUserKey + JS_USER_MERGE.
+  const entityCanonical = canonicalUseIdFromLabel(entity || label || "");
+  const sampleUserKey = matchUserKey(entity, cl);   // any matching cell label, for display fallback
+  const userKey = sampleUserKey || entity || label || "";
 
-  if (target) {
-    for (const [ownerKey, owner] of Object.entries(cl.owners || {})) {
-      for (const cell of (owner.cells || [])) {
-        if (String(cell.user || "").toLowerCase() !== target) continue;
-        rows.push({
-          owner: ownerKey,
-          chipType: cell.chip_type || "",
-          median: metricNumber(cell.h100e_median),
-          low: metricNumber(cell.h100e_ci_low),
-          high: metricNumber(cell.h100e_ci_high),
-        });
-      }
+  const rawRows = [];
+  for (const [ownerKey, owner] of Object.entries(cl.owners || {})) {
+    for (const cell of (owner.cells || [])) {
+      const cellUser = cell.user || "";
+      if (_isOtherOrUnknownLabel(cellUser)) continue;
+      if (canonicalUseIdFromLabel(cellUser) !== entityCanonical) continue;
+      rawRows.push({
+        owner: ownerKey,
+        chipType: cell.chip_type || "",
+        median: metricNumber(cell.h100e_median),
+        low: metricNumber(cell.h100e_ci_low),
+        high: metricNumber(cell.h100e_ci_high),
+      });
     }
   }
+  const rows = scaleRowsToMainline(rawRows, mainlineValue);
+  return {
+    userKey,
+    mainlineTotal: Number(mainlineValue) || 0,
+    rows,
+  };
+}
 
+function userHoverPanel(d, cl) {
+  const mainlineValue = metricNumber(d.value);
+  const { userKey, rows } = getUserDisplayData(d.entity, d.label, mainlineValue, cl);
   if (!rows.length) {
     const userLabel = userKey || d.entity || d.label || "this user";
     return `<div class="sub">No chip-level rows for ${escapeHTML(userLabel)} in ${state.year}.</div>`;
   }
+  // Zero raw-sum guard (see 2026-04-24 Codex pass-2 review): all cells zero
+  // but mainline positive means the breakdown would mislead — fall back to
+  // a plain sub-note.
+  const rawSum = rows.reduce((s, r) => s + (Number(r.median) || 0), 0);
+  if (mainlineValue > 0 && rawSum === 0) {
+    const userLabel = userKey || d.entity || d.label || "this user";
+    return `<div class="sub">No positive chip-level breakdown for ${escapeHTML(userLabel)} in ${state.year} — showing mainline Total only.</div>`;
+  }
 
-  // Total sums over ALL rows (so the "All owners" line reflects every cell that
-  // mentions this user, not just what we render). We hide rows with a median
-  // that rounds to 0 under formatNumber (< 500 H100e) and a CI upper bound
-  // that also rounds to 0, to keep the tooltip compact when many owners have
-  // near-zero exposure.
-  const total = sumMetricRows(rows);
+  // Total row shows mainlineValue exactly — the single source of truth the
+  // Sankey node label carries. CI endpoints still sum the scaled rows.
+  const ciTotal = sumMetricRows(rows);
   const MIN_MEDIAN = 500;
   const visibleRows = rows.filter(r => r.median >= MIN_MEDIAN || r.high >= MIN_MEDIAN);
   const hiddenCount = rows.length - visibleRows.length;
@@ -783,8 +957,8 @@ function userHoverPanel(d, cl) {
         <tr class="total">
           <td>All owners</td>
           <td></td>
-          <td class="num">${formatNumber(total.median)}</td>
-          <td class="num">${ciRangeHTML(total.low, total.high)}</td>
+          <td class="num">${formatNumber(mainlineValue)}</td>
+          <td class="num">${ciRangeHTML(ciTotal.low, ciTotal.high)}</td>
         </tr>
       </tbody>
     </table>
@@ -808,9 +982,12 @@ function linkTooltipHTML(d, view) {
   const tNode = view.nodes.find(n => n.id === d.targetId);
   const sLabel = sNode ? sNode.label : d.sourceId;
   const tLabel = tNode ? tNode.label : d.targetId;
+  // All text inputs below are derived from data.json — escape them before
+  // injecting into innerHTML. Covers XSS via edge labels / node labels per
+  // the 2026-04-24 Codex review (medium-severity finding).
   return `
-    <div class="value">${sLabel} → ${tLabel}</div>
-    <div class="sub">${formatNumber(d.value)} H100e${d.label ? " — " + d.label : ""}</div>
+    <div class="value">${escapeHTML(sLabel)} → ${escapeHTML(tLabel)}</div>
+    <div class="sub">${formatNumber(d.value)} H100e${d.label ? " — " + escapeHTML(d.label) : ""}</div>
     <div class="sub">${ciSpan(d)}</div>
     ${d.is_dummy ? dummyBadge() : ""}
   `;
