@@ -577,14 +577,218 @@ function dummyBadge() {
   return `<div class="sub ci-missing">⚠ placeholder / forecast — not a measured value</div>`;
 }
 
-function nodeTooltipHTML(d) {
-  const total = formatNumber(d.value);
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, ch => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "'": "&#39;",
+  }[ch]));
+}
+
+function ciRangeHTML(low, high) {
+  return `${formatNumber(low)}–${formatNumber(high)}`;
+}
+
+function metricNumber(value) {
+  const n = Number(value);
+  return Number.isFinite(n) ? n : 0;
+}
+
+function matchOwnerKey(entityName, cl) {
+  if (!entityName || !cl || !cl.owners) return null;
+  if (Object.prototype.hasOwnProperty.call(cl.owners, entityName)) return entityName;
+  const target = String(entityName).toLowerCase();
+  return Object.keys(cl.owners).find(owner => owner.toLowerCase() === target) || null;
+}
+
+function matchUserKey(entityName, cl) {
+  if (!entityName || !cl || !cl.owners) return null;
+  const target = String(entityName).toLowerCase();
+  for (const owner of Object.values(cl.owners)) {
+    for (const cell of (owner.cells || [])) {
+      const user = cell.user || "";
+      if (String(user).toLowerCase() === target) return user;
+    }
+  }
+  return null;
+}
+
+function sumMetricRows(rows) {
+  return rows.reduce((acc, row) => {
+    acc.median += metricNumber(row.median);
+    acc.low += metricNumber(row.low);
+    acc.high += metricNumber(row.high);
+    return acc;
+  }, { median: 0, low: 0, high: 0 });
+}
+
+function isOtherUserBucket(user) {
+  const label = String(user || "").trim().toLowerCase();
+  return !label || label.startsWith("other");
+}
+
+function richHoverPanelHTML(d) {
+  const cl = CHIP_LEVEL_BY_YEAR[state.year];
+  if (!cl) return "";
+  if (d.country !== "us") return "";
+  if (d.stage === "own") return ownerHoverPanel(d, cl);
+  if (d.stage === "use") return userHoverPanel(d, cl);
+  return "";
+}
+
+function ownerHoverPanel(d, cl) {
+  const ownerKey = matchOwnerKey(d.entity, cl);
+  if (!ownerKey) return "";
+  const owner = cl.owners[ownerKey];
+  if (!owner) return "";
+
+  const fleetRows = Object.entries(owner.fleet || {}).map(([chipType, metrics]) => ({
+    chipType,
+    median: metricNumber(metrics.h100e_median),
+    low: metricNumber(metrics.h100e_ci_low),
+    high: metricNumber(metrics.h100e_ci_high),
+  })).sort((a, b) => b.median - a.median);
+  const fleetTotal = sumMetricRows(fleetRows);
+
+  const userTotals = new Map();
+  for (const cell of (owner.cells || [])) {
+    const user = cell.user || "";
+    if (!userTotals.has(user)) userTotals.set(user, { user, median: 0, low: 0, high: 0 });
+    const row = userTotals.get(user);
+    row.median += metricNumber(cell.h100e_median);
+    row.low += metricNumber(cell.h100e_ci_low);
+    row.high += metricNumber(cell.h100e_ci_high);
+  }
+  const allUserRows = Array.from(userTotals.values()).sort((a, b) => b.median - a.median);
+  const topRows = allUserRows.filter(row => !isOtherUserBucket(row.user)).slice(0, 5);
+  const topUsers = new Set(topRows.map(row => row.user));
+  const residualRows = allUserRows.filter(row => isOtherUserBucket(row.user) || !topUsers.has(row.user));
+  const residualTotal = sumMetricRows(residualRows);
+
+  const fleetTable = fleetRows.length ? `
+    <table class="hover-table">
+      <caption>Fleet by chip type (H100e, end of ${state.year})</caption>
+      <thead>
+        <tr><th>chip_type</th><th class="num">median</th><th class="num">80% CI</th></tr>
+      </thead>
+      <tbody>
+        ${fleetRows.map(row => `
+          <tr>
+            <td>${escapeHTML(row.chipType)}</td>
+            <td class="num">${formatNumber(row.median)}</td>
+            <td class="num">${ciRangeHTML(row.low, row.high)}</td>
+          </tr>
+        `).join("")}
+        <tr class="total">
+          <td>Total</td>
+          <td class="num">${formatNumber(fleetTotal.median)}</td>
+          <td class="num">${ciRangeHTML(fleetTotal.low, fleetTotal.high)}</td>
+        </tr>
+      </tbody>
+    </table>
+  ` : "";
+
+  const userRows = residualRows.length
+    ? [...topRows, { user: "Other / residual", ...residualTotal }]
+    : topRows;
+  const usersTable = userRows.length ? `
+    <table class="hover-table">
+      <caption>Top users this year (H100e)</caption>
+      <thead>
+        <tr><th>user</th><th class="num">median H100e</th><th class="num">80% CI</th></tr>
+      </thead>
+      <tbody>
+        ${userRows.map(row => `
+          <tr>
+            <td>${escapeHTML(row.user)}</td>
+            <td class="num">${formatNumber(row.median)}</td>
+            <td class="num">${ciRangeHTML(row.low, row.high)}</td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>
+  ` : "";
+
+  return fleetTable + usersTable;
+}
+
+function userHoverPanel(d, cl) {
+  const userKey = matchUserKey(d.entity, cl) || d.entity || d.label || "";
+  const target = String(userKey).toLowerCase();
+  const rows = [];
+
+  if (target) {
+    for (const [ownerKey, owner] of Object.entries(cl.owners || {})) {
+      for (const cell of (owner.cells || [])) {
+        if (String(cell.user || "").toLowerCase() !== target) continue;
+        rows.push({
+          owner: ownerKey,
+          chipType: cell.chip_type || "",
+          median: metricNumber(cell.h100e_median),
+          low: metricNumber(cell.h100e_ci_low),
+          high: metricNumber(cell.h100e_ci_high),
+        });
+      }
+    }
+  }
+
+  if (!rows.length) {
+    const userLabel = userKey || d.entity || d.label || "this user";
+    return `<div class="sub">No chip-level rows for ${escapeHTML(userLabel)} in ${state.year}.</div>`;
+  }
+
+  // Total sums over ALL rows (so the "All owners" line reflects every cell that
+  // mentions this user, not just what we render). We hide rows with a median
+  // that rounds to 0 under formatNumber (< 500 H100e) and a CI upper bound
+  // that also rounds to 0, to keep the tooltip compact when many owners have
+  // near-zero exposure.
+  const total = sumMetricRows(rows);
+  const MIN_MEDIAN = 500;
+  const visibleRows = rows.filter(r => r.median >= MIN_MEDIAN || r.high >= MIN_MEDIAN);
+  const hiddenCount = rows.length - visibleRows.length;
+  if (!visibleRows.length) visibleRows.push(...rows.slice(0, Math.min(3, rows.length)));
+  visibleRows.sort((a, b) => a.owner.localeCompare(b.owner) || b.median - a.median);
+  const hiddenNote = hiddenCount > 0
+    ? `<div class="sub hover-footer">${hiddenCount} near-zero row${hiddenCount === 1 ? "" : "s"} hidden.</div>`
+    : "";
   return `
-    <div class="value">${d.label}</div>
-    <div class="sub">${total} H100e installed base through end of ${state.year}</div>
-    ${d.is_dummy ? dummyBadge() : ""}
-    <div class="sub">Click to open sheet tab.</div>
+    <table class="hover-table">
+      <caption>Compute from owners (H100e, end of ${state.year})</caption>
+      <thead>
+        <tr><th>owner</th><th>chip_type</th><th class="num">median</th><th class="num">80% CI</th></tr>
+      </thead>
+      <tbody>
+        ${visibleRows.map(row => `
+          <tr>
+            <td>${escapeHTML(row.owner)}</td>
+            <td>${escapeHTML(row.chipType)}</td>
+            <td class="num">${formatNumber(row.median)}</td>
+            <td class="num">${ciRangeHTML(row.low, row.high)}</td>
+          </tr>
+        `).join("")}
+        <tr class="total">
+          <td>All owners</td>
+          <td></td>
+          <td class="num">${formatNumber(total.median)}</td>
+          <td class="num">${ciRangeHTML(total.low, total.high)}</td>
+        </tr>
+      </tbody>
+    </table>
+    ${hiddenNote}
   `;
+}
+
+function nodeTooltipHTML(d) {
+  const headerHTML = `
+    <div class="value">${escapeHTML(d.label)}</div>
+    <div class="sub">${formatNumber(d.value)} H100e installed base through end of ${state.year}</div>
+    ${d.is_dummy ? dummyBadge() : ""}
+  `;
+  const rich = richHoverPanelHTML(d);
+  const footer = `<div class="sub hover-footer">Click to open sheet tab.</div>`;
+  return headerHTML + rich + footer;
 }
 
 function linkTooltipHTML(d, view) {

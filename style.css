@@ -134,7 +134,7 @@ header .subtitle {
   border-radius: 4px;
   font-size: 13px;
   pointer-events: none;
-  max-width: 280px;
+  max-width: 440px;
   line-height: 1.4;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
@@ -321,3 +321,46 @@ footer code {
 #legend-chip .swatch {
   border: 1px solid #999;
 }
+
+/* Rich hover-panel tables (owner + user).
+   The parent .tooltip has a dark background (#1a1a1a at 95%) with white text,
+   so every table color below is tuned for readability on dark. */
+.tooltip table.hover-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 6px 0 2px 0;
+  font-size: 11px;
+  table-layout: auto;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.tooltip table.hover-table caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 600;
+  font-size: 11px;
+  padding: 4px 0 2px 0;
+  color: #ddd;
+}
+.tooltip table.hover-table th,
+.tooltip table.hover-table td {
+  padding: 2px 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.tooltip table.hover-table th {
+  font-weight: 700;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+.tooltip table.hover-table td.num,
+.tooltip table.hover-table th.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.tooltip table.hover-table tr.total td {
+  font-weight: 700;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+.tooltip .hover-footer { opacity: 0.7; margin-top: 4px; }
