@@ -1,0 +1,633 @@
+{
+  "unit": "H100-equivalents",
+  "year": 2022,
+  "owners_order": [
+    "Microsoft",
+    "Amazon",
+    "Google",
+    "Oracle",
+    "CoreWeave",
+    "Meta"
+  ],
+  "notes": "Chip-level 2022 data. Source: canonical sheet https://docs.google.com/spreadsheets/d/1unfVrnl3bzKIrf6ASRpNtlfV1vIGoS7W66ZoeR-kKlc/edit \u2014 users_2022 tab (shares) + owner_fleet_by_chip_type (fleet anchors from Epoch AI Chip Owners DB). CI on h100e is the naive product of share \u00d7 fleet endpoints (not a full Monte Carlo). Last synced: 2026-04-24T15:03:21Z.",
+  "owners": {
+    "Amazon": {
+      "fleet": {
+        "A100": {
+          "h100e_median": 20889,
+          "h100e_ci_low": 13234,
+          "h100e_ci_high": 33876
+        },
+        "H100/H200": {
+          "h100e_median": 3836,
+          "h100e_ci_low": 2701,
+          "h100e_ci_high": 5310
+        }
+      },
+      "cells": [
+        {
+          "user": "Amazon",
+          "chip_type": "A100",
+          "share_median": 0.3,
+          "share_ci_low": 0.18,
+          "share_ci_high": 0.45,
+          "h100e_median": 6267,
+          "h100e_ci_low": 2382,
+          "h100e_ci_high": 15244,
+          "confidence_pct": null,
+          "source_label": "AWS Inferentia (Alexa NLP migration); AWS EC2 P4d UltraClusters launch; methodology GDoc Amazon 2022 section",
+          "source_url": "https://aws.amazon.com/ai/machine-learning/inferentia/",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Anthropic",
+          "chip_type": "A100",
+          "share_median": 0.0,
+          "share_ci_low": 0.0,
+          "share_ci_high": 0.02,
+          "h100e_median": 0,
+          "h100e_ci_low": 0,
+          "h100e_ci_high": 678,
+          "confidence_pct": null,
+          "source_label": "Methodology GDoc Amazon 2022 section",
+          "source_url": "https://docs.google.com/document/d/1JhgRfBvHmVC2q-J3Iz1TUSSKVtC5vFr20RFqrSs1mVA/edit",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Other AWS",
+          "chip_type": "A100",
+          "share_median": 0.64,
+          "share_ci_low": 0.5,
+          "share_ci_high": 0.75,
+          "h100e_median": 13369,
+          "h100e_ci_low": 6617,
+          "h100e_ci_high": 25407,
+          "confidence_pct": null,
+          "source_label": "AWS EC2 P4d UltraClusters (ServeTheHome Nov 2020); residual after named customers",
+          "source_url": "https://www.servethehome.com/aws-ec2-p4d-scales-to-4000-intel-nvidia-a100-gpus-ultraclusters/",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Stability AI",
+          "chip_type": "A100",
+          "share_median": 0.06,
+          "share_ci_low": 0.04,
+          "share_ci_high": 0.09,
+          "h100e_median": 1253,
+          "h100e_ci_low": 529,
+          "h100e_ci_high": 3049,
+          "confidence_pct": null,
+          "source_label": "AWS re:Invent 2022 CMP314 \u2014 How Stable Diffusion was built",
+          "source_url": "https://d1.awsstatic.com/events/Summits/reinvent2022/CMP314_How-Stable-Diffusion-was-built-Tips-and-tricks-to-train-large-AI-models.pdf",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Amazon",
+          "chip_type": "H100/H200",
+          "share_median": 0.6,
+          "share_ci_low": 0.4,
+          "share_ci_high": 0.8,
+          "h100e_median": 2302,
+          "h100e_ci_low": 1080,
+          "h100e_ci_high": 4248,
+          "confidence_pct": null,
+          "source_label": "AWS EC2 P5 launch timing (mid-2023); methodology GDoc",
+          "source_url": "https://aws.amazon.com/ec2/instance-types/p5/",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Anthropic",
+          "chip_type": "H100/H200",
+          "share_median": 0.0,
+          "share_ci_low": 0.0,
+          "share_ci_high": 0.0,
+          "h100e_median": 0,
+          "h100e_ci_low": 0,
+          "h100e_ci_high": 0,
+          "confidence_pct": null,
+          "source_label": "Methodology GDoc Amazon 2022 section (Anthropic-AWS partnership was Sep 2023)",
+          "source_url": "https://docs.google.com/document/d/1JhgRfBvHmVC2q-J3Iz1TUSSKVtC5vFr20RFqrSs1mVA/edit",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Other AWS",
+          "chip_type": "H100/H200",
+          "share_median": 0.4,
+          "share_ci_low": 0.2,
+          "share_ci_high": 0.6,
+          "h100e_median": 1534,
+          "h100e_ci_low": 540,
+          "h100e_ci_high": 3186,
+          "confidence_pct": null,
+          "source_label": "Residual after Amazon internal; no named strategic partners disclosed for 2022 AWS H100 early access",
+          "source_url": "https://aws.amazon.com/ec2/instance-types/p5/",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Stability AI",
+          "chip_type": "H100/H200",
+          "share_median": 0.0,
+          "share_ci_low": 0.0,
+          "share_ci_high": 0.0,
+          "h100e_median": 0,
+          "h100e_ci_low": 0,
+          "h100e_ci_high": 0,
+          "confidence_pct": null,
+          "source_label": "BusinessWire Nov 2022 (Stability AI A100-only cluster)",
+          "source_url": "https://www.businesswire.com/news/home/20221130006008/en/Stability-AI-Selects-AWS-as-Its-Preferred-Cloud-Provider-to-Build-Artificial-Intelligence-for-the-Future",
+          "reasoning_url": null,
+          "reasoning": null
+        }
+      ],
+      "fleet_total_h100e_median": 24725,
+      "cells_total_h100e_median": 24725
+    },
+    "CoreWeave": {
+      "fleet": {
+        "A100_family_bundled": {
+          "h100e_median": 0,
+          "h100e_ci_low": 0,
+          "h100e_ci_high": 0
+        }
+      },
+      "cells": [
+        {
+          "user": "Microsoft",
+          "chip_type": "A100_family_bundled",
+          "share_median": 0.0,
+          "share_ci_low": 0.0,
+          "share_ci_high": 0.01,
+          "h100e_median": 0,
+          "h100e_ci_low": 0,
+          "h100e_ci_high": 0,
+          "confidence_pct": null,
+          "source_label": "Microsoft CoreWeave contract signed late 2023 per CoreWeave [S-1](https://www.sec.gov/Archives/edgar/data/1769628/000119312525055915/d899798ds1.htm); no Microsoft presence at CoreWeave in 2022",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1769628/000119312525055915/d899798ds1.htm",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "NVIDIA_DGX",
+          "chip_type": "A100_family_bundled",
+          "share_median": 0.0,
+          "share_ci_low": 0.0,
+          "share_ci_high": 0.01,
+          "h100e_median": 0,
+          "h100e_ci_low": 0,
+          "h100e_ci_high": 0,
+          "confidence_pct": null,
+          "source_label": "[NVIDIA DGX Cloud launched March 2023](https://blogs.nvidia.com/blog/dgx-cloud/) \u2014 no 2022 presence",
+          "source_url": "https://blogs.nvidia.com/blog/dgx-cloud/",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "OpenAI",
+          "chip_type": "A100_family_bundled",
+          "share_median": 0.0,
+          "share_ci_low": 0.0,
+          "share_ci_high": 0.01,
+          "h100e_median": 0,
+          "h100e_ci_low": 0,
+          "h100e_ci_high": 0,
+          "confidence_pct": null,
+          "source_label": "OpenAI's first CoreWeave contract was [March 2025](https://www.coreweave.com/news/coreweave-expands-agreement-with-openai-by-up-to-6-5b); OpenAI in 2022 was using Microsoft Azure exclusively per its partnership disclosure",
+          "source_url": "https://www.coreweave.com/news/coreweave-expands-agreement-with-openai-by-up-to-6-5b",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Other",
+          "chip_type": "A100_family_bundled",
+          "share_median": 1.0,
+          "share_ci_low": 0.97,
+          "share_ci_high": 1.0,
+          "h100e_median": 0,
+          "h100e_ci_low": 0,
+          "h100e_ci_high": 0,
+          "confidence_pct": null,
+          "source_label": "[CoreWeave S-1](https://www.sec.gov/Archives/edgar/data/1769628/000119312525055915/d899798ds1.htm) on the August 2022 AI pivot; [CoreWeave-EleutherAI-NovelAI partnership PR Feb 2022](https://www.prnewswire.com/news-releases/coreweave-partners-with-eleutherai--novelai-to-make-open-source-ai-more-acce",
+          "source_url": "https://www.prnewswire.com/news-releases/coreweave-partners-with-eleutherai--novelai-to-make-open-source-ai-more-accessible-301474123.html",
+          "reasoning_url": null,
+          "reasoning": null
+        }
+      ],
+      "fleet_total_h100e_median": 0,
+      "cells_total_h100e_median": 0
+    },
+    "Google": {
+      "fleet": {
+        "A100": {
+          "h100e_median": 20886,
+          "h100e_ci_low": 13064,
+          "h100e_ci_high": 33566
+        },
+        "H100/H200": {
+          "h100e_median": 3828,
+          "h100e_ci_low": 2721,
+          "h100e_ci_high": 5394
+        }
+      },
+      "cells": [
+        {
+          "user": "Anthropic",
+          "chip_type": "A100",
+          "share_median": 0.0,
+          "share_ci_low": 0.0,
+          "share_ci_high": 0.03,
+          "h100e_median": 0,
+          "h100e_ci_low": 0,
+          "h100e_ci_high": 1007,
+          "confidence_pct": null,
+          "source_label": "No documented 2022 Anthropic-Google partnership; first joint announcement Feb 2023",
+          "source_url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Apple",
+          "chip_type": "A100",
+          "share_median": 0.0,
+          "share_ci_low": 0.0,
+          "share_ci_high": 0.005,
+          "h100e_median": 0,
+          "h100e_ci_low": 0,
+          "h100e_ci_high": 168,
+          "confidence_pct": null,
+          "source_label": "No documented Apple-Google-Cloud chip use in 2022",
+          "source_url": "https://arxiv.org/html/2407.21075",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Google internal",
+          "chip_type": "A100",
+          "share_median": 0.35,
+          "share_ci_low": 0.25,
+          "share_ci_high": 0.5,
+          "h100e_median": 7310,
+          "h100e_ci_low": 3266,
+          "h100e_ci_high": 16783,
+          "confidence_pct": null,
+          "source_label": "DeepMind PyTorch research + product-team ML + platform overhead; TPU-first internal posture",
+          "source_url": "https://www.uncoveralpha.com/p/the-chip-made-for-the-ai-inference",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Other GCP",
+          "chip_type": "A100",
+          "share_median": 0.65,
+          "share_ci_low": 0.5,
+          "share_ci_high": 0.75,
+          "h100e_median": 13576,
+          "h100e_ci_low": 6532,
+          "h100e_ci_high": 25175,
+          "confidence_pct": null,
+          "source_label": "A2 (A100) VM family GA March 2021; 18+ months of enterprise adoption by EOY 2022",
+          "source_url": "https://cloud.google.com/blog/products/compute/a2-vms-with-nvidia-a100-gpus-are-ga",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Anthropic",
+          "chip_type": "H100/H200",
+          "share_median": 0.0,
+          "share_ci_low": 0.0,
+          "share_ci_high": 0.02,
+          "h100e_median": 0,
+          "h100e_ci_low": 0,
+          "h100e_ci_high": 108,
+          "confidence_pct": null,
+          "source_label": "No documented 2022 Anthropic-Google partnership",
+          "source_url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Apple",
+          "chip_type": "H100/H200",
+          "share_median": 0.0,
+          "share_ci_low": 0.0,
+          "share_ci_high": 0.0,
+          "h100e_median": 0,
+          "h100e_ci_low": 0,
+          "h100e_ci_high": 0,
+          "confidence_pct": null,
+          "source_label": "No documented Apple-Google chip use in 2022",
+          "source_url": "https://arxiv.org/html/2407.21075",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Google internal",
+          "chip_type": "H100/H200",
+          "share_median": 0.75,
+          "share_ci_low": 0.55,
+          "share_ci_high": 0.9,
+          "h100e_median": 2871,
+          "h100e_ci_low": 1497,
+          "h100e_ci_high": 4855,
+          "confidence_pct": null,
+          "source_label": "H100 GA Sept-Oct 2022; very early cumulative tilts internal for DeepMind/research",
+          "source_url": "https://blogs.nvidia.com/blog/h100-transformer-engine/",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Other GCP",
+          "chip_type": "H100/H200",
+          "share_median": 0.25,
+          "share_ci_low": 0.1,
+          "share_ci_high": 0.45,
+          "h100e_median": 957,
+          "h100e_ci_low": 272,
+          "h100e_ci_high": 2427,
+          "confidence_pct": null,
+          "source_label": "Early-access enterprise H100 preview via Google Cloud",
+          "source_url": "https://cloud.google.com/blog/products/compute/introducing-a3-supercomputers-with-nvidia-h100-gpus",
+          "reasoning_url": null,
+          "reasoning": null
+        }
+      ],
+      "fleet_total_h100e_median": 24714,
+      "cells_total_h100e_median": 24714
+    },
+    "Meta": {
+      "fleet": {
+        "A100": {
+          "h100e_median": 28625,
+          "h100e_ci_low": 17755,
+          "h100e_ci_high": 46685
+        },
+        "H100/H200": {
+          "h100e_median": 5263,
+          "h100e_ci_low": 3708,
+          "h100e_ci_high": 7374
+        }
+      },
+      "cells": [
+        {
+          "user": "Meta",
+          "chip_type": "A100",
+          "share_median": 1.0,
+          "share_ci_low": 0.98,
+          "share_ci_high": 1.0,
+          "h100e_median": 28625,
+          "h100e_ci_low": 17400,
+          "h100e_ci_high": 46685,
+          "confidence_pct": null,
+          "source_label": "Epoch AI Chip Owners Database, cumulative_by_chip_type.csv end-of-Q4 2022 (2026-04-16 snapshot); Meta AI RSC announcement Jan 2022",
+          "source_url": "https://epoch.ai/data/ai-chip-owners",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Meta",
+          "chip_type": "H100/H200",
+          "share_median": 1.0,
+          "share_ci_low": 0.98,
+          "share_ci_high": 1.0,
+          "h100e_median": 5263,
+          "h100e_ci_low": 3634,
+          "h100e_ci_high": 7374,
+          "confidence_pct": null,
+          "source_label": "Epoch AI Chip Owners Database, cumulative_by_chip_type.csv end-of-Q4 2022 (2026-04-16 snapshot); NVIDIA H100 GA Oct 2022",
+          "source_url": "https://epoch.ai/data/ai-chip-owners",
+          "reasoning_url": null,
+          "reasoning": null
+        }
+      ],
+      "fleet_total_h100e_median": 33888,
+      "cells_total_h100e_median": 33888
+    },
+    "Microsoft": {
+      "fleet": {
+        "A100": {
+          "h100e_median": 54907,
+          "h100e_ci_low": 34100,
+          "h100e_ci_high": 88653
+        },
+        "H100/H200": {
+          "h100e_median": 10027,
+          "h100e_ci_low": 7156,
+          "h100e_ci_high": 14277
+        }
+      },
+      "cells": [
+        {
+          "user": "Anthropic",
+          "chip_type": "A100",
+          "share_median": 0.0,
+          "share_ci_low": 0.0,
+          "share_ci_high": 0.0,
+          "h100e_median": 0,
+          "h100e_ci_low": 0,
+          "h100e_ci_high": 0,
+          "confidence_pct": null,
+          "source_label": "Microsoft-NVIDIA-Anthropic partnership announcement, Nov 18 2025 (first MSFT-Anthropic capacity commitment)",
+          "source_url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Microsoft internal",
+          "chip_type": "A100",
+          "share_median": 0.12,
+          "share_ci_low": 0.06,
+          "share_ci_high": 0.22,
+          "h100e_median": 6589,
+          "h100e_ci_low": 2046,
+          "h100e_ci_high": 19504,
+          "confidence_pct": null,
+          "source_label": "GitHub Copilot GA June 2022; Microsoft Research disclosures; Azure Cognitive Services (no direct GPU-count disclosure)",
+          "source_url": "https://github.blog/news-insights/product-news/github-copilot-is-generally-available-to-all-developers/",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "OpenAI",
+          "chip_type": "A100",
+          "share_median": 0.25,
+          "share_ci_low": 0.15,
+          "share_ci_high": 0.35,
+          "h100e_median": 13727,
+          "h100e_ci_low": 5115,
+          "h100e_ci_high": 31028,
+          "confidence_pct": null,
+          "source_label": "SemiAnalysis GPT-4 Architecture piece (July 2023); Semafor / situational-awareness.ai secondhand; OpenAI product launches (DALL-E 2 Apr 2022, ChatGPT Nov 30 2022)",
+          "source_url": "https://semianalysis.com/2023/07/10/gpt-4-architecture-infrastructure/",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Other",
+          "chip_type": "A100",
+          "share_median": 0.63,
+          "share_ci_low": 0.43,
+          "share_ci_high": 0.78,
+          "h100e_median": 34591,
+          "h100e_ci_low": 14663,
+          "h100e_ci_high": 69149,
+          "confidence_pct": null,
+          "source_label": "Azure ND A100 v4 VM catalog; Azure OpenAI Service limited preview 2022; Azure Machine Learning enterprise tenants",
+          "source_url": "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/nda100v4-series",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Anthropic",
+          "chip_type": "H100/H200",
+          "share_median": 0.0,
+          "share_ci_low": 0.0,
+          "share_ci_high": 0.0,
+          "h100e_median": 0,
+          "h100e_ci_low": 0,
+          "h100e_ci_high": 0,
+          "confidence_pct": null,
+          "source_label": "Microsoft-NVIDIA-Anthropic partnership announcement, Nov 18 2025",
+          "source_url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Microsoft internal",
+          "chip_type": "H100/H200",
+          "share_median": 0.3,
+          "share_ci_low": 0.15,
+          "share_ci_high": 0.5,
+          "h100e_median": 3008,
+          "h100e_ci_low": 1073,
+          "h100e_ci_high": 7138,
+          "confidence_pct": null,
+          "source_label": "Microsoft Research early H100 R&D (inferred; no direct disclosure)",
+          "source_url": "https://www.microsoft.com/en-us/research/blog/turing-bletchley-a-universal-image-language-representation-model-by-microsoft/",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "OpenAI",
+          "chip_type": "H100/H200",
+          "share_median": 0.45,
+          "share_ci_low": 0.25,
+          "share_ci_high": 0.65,
+          "h100e_median": 4512,
+          "h100e_ci_low": 1789,
+          "h100e_ci_high": 9280,
+          "confidence_pct": null,
+          "source_label": "Microsoft-OpenAI exclusive cloud partnership (2019-October 2025 ROFR era); SemiAnalysis GPT-4 piece context on early H100 era",
+          "source_url": "https://blogs.microsoft.com/blog/2023/01/23/microsoftandopenaiextendpartnership/",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Other",
+          "chip_type": "H100/H200",
+          "share_median": 0.25,
+          "share_ci_low": 0.1,
+          "share_ci_high": 0.45,
+          "h100e_median": 2507,
+          "h100e_ci_low": 716,
+          "h100e_ci_high": 6425,
+          "confidence_pct": null,
+          "source_label": "ND H100 v5 VM series preview (announced March 2023; 2022 external access was private preview only)",
+          "source_url": "https://azure.microsoft.com/en-us/updates/nd-h100-v5-vms-preview/",
+          "reasoning_url": null,
+          "reasoning": null
+        }
+      ],
+      "fleet_total_h100e_median": 64934,
+      "cells_total_h100e_median": 64934
+    },
+    "Oracle": {
+      "fleet": {
+        "A100": {
+          "h100e_median": 6291,
+          "h100e_ci_low": 3172,
+          "h100e_ci_high": 12138
+        },
+        "H100_H200_bundled": {
+          "h100e_median": 1547,
+          "h100e_ci_low": 873,
+          "h100e_ci_high": 2704
+        },
+        "H100/H200": {
+          "h100e_median": 1547,
+          "h100e_ci_low": 873,
+          "h100e_ci_high": 2704
+        }
+      },
+      "cells": [
+        {
+          "user": "Oracle_internal",
+          "chip_type": "A100",
+          "share_median": 0.05,
+          "share_ci_low": 0.0,
+          "share_ci_high": 0.15,
+          "h100e_median": 315,
+          "h100e_ci_low": 0,
+          "h100e_ci_high": 1821,
+          "confidence_pct": null,
+          "source_label": "Oracle Fusion Applications 2022 AI/ML features announcements",
+          "source_url": "https://www.oracle.com/a/ocom/docs/applications/oracle-applications-platform-strategy.pdf",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Other Oracle",
+          "chip_type": "A100",
+          "share_median": 0.95,
+          "share_ci_low": 0.85,
+          "share_ci_high": 1.0,
+          "h100e_median": 5976,
+          "h100e_ci_low": 2696,
+          "h100e_ci_high": 12138,
+          "confidence_pct": null,
+          "source_label": "OCI GPU shapes page (BM.GPU4.8 / BM.GPU.A100-v2.8 with A100 40GB / 80GB); no named AI-lab customer",
+          "source_url": "https://www.oracle.com/cloud/compute/gpu/",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Oracle_internal",
+          "chip_type": "H100_H200_bundled",
+          "share_median": 0.85,
+          "share_ci_low": 0.3,
+          "share_ci_high": 0.95,
+          "h100e_median": 1315,
+          "h100e_ci_low": 262,
+          "h100e_ci_high": 2569,
+          "confidence_pct": null,
+          "source_label": "NVIDIA H100 launch announcement (Sep 20, 2022) \u2014 'AWS, Google Cloud, Microsoft Azure, Oracle Cloud Infrastructure ... will be among the first to deploy H100-based instances in the cloud starting next year'",
+          "source_url": "https://nvidianews.nvidia.com/news/nvidia-hopper-in-full-production",
+          "reasoning_url": null,
+          "reasoning": null
+        },
+        {
+          "user": "Other Oracle",
+          "chip_type": "H100_H200_bundled",
+          "share_median": 0.15,
+          "share_ci_low": 0.05,
+          "share_ci_high": 0.7,
+          "h100e_median": 232,
+          "h100e_ci_low": 44,
+          "h100e_ci_high": 1893,
+          "confidence_pct": null,
+          "source_label": "Inferred \u2014 no public evidence of a Q4 2022 Oracle H100 customer-preview program",
+          "source_url": "https://www.oracle.com/cloud/compute/gpu/",
+          "reasoning_url": null,
+          "reasoning": null
+        }
+      ],
+      "fleet_total_h100e_median": 9385,
+      "cells_total_h100e_median": 7838
+    }
+  }
+}

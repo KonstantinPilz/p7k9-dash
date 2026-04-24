@@ -249,3 +249,75 @@ footer code {
   border-radius: 3px;
   font-size: 12px;
 }
+
+/* ---------- Chip-level 2025 preview view ---------- */
+.chip-preview-banner {
+  display: block;
+  background: #fef2e0;
+  border: 1px solid #f0c47a;
+  color: #5c3a10;
+  padding: 8px 12px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+#chip-level-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+  gap: 18px;
+}
+
+.chip-owner-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 14px 10px 14px;
+}
+
+.chip-owner-card h3 {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.chip-owner-card .owner-meta {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.chip-owner-card svg {
+  width: 100%;
+  height: 260px;
+  display: block;
+}
+
+.chip-owner-card .axis text {
+  font-size: 11px;
+  fill: var(--ink);
+}
+
+.chip-owner-card .axis path,
+.chip-owner-card .axis line {
+  stroke: #bbb;
+}
+
+.chip-owner-card .bar-label {
+  font-size: 10px;
+  fill: var(--ink);
+  pointer-events: none;
+}
+
+.chip-owner-card .bar-stack:hover rect {
+  stroke: #333;
+  stroke-width: 1.5;
+}
+
+#legend-chip {
+  flex-wrap: wrap;
+  gap: 10px 16px;
+}
+
+#legend-chip .swatch {
+  border: 1px solid #999;
+}
