@@ -9,7 +9,7 @@
     "CoreWeave",
     "xAI"
   ],
-  "notes": "Chip-level 2023 data. Source: canonical sheet https://docs.google.com/spreadsheets/d/1unfVrnl3bzKIrf6ASRpNtlfV1vIGoS7W66ZoeR-kKlc/edit \u2014 users_2023 tab (shares) + owner_fleet_by_chip_type (fleet anchors from Epoch AI Chip Owners DB). CI on h100e is the naive product of share \u00d7 fleet endpoints (not a full Monte Carlo). Last synced: 2026-04-24T15:45:02Z.",
+  "notes": "Chip-level 2023 data. Source: canonical sheet https://docs.google.com/spreadsheets/d/1unfVrnl3bzKIrf6ASRpNtlfV1vIGoS7W66ZoeR-kKlc/edit \u2014 users_2023 tab (shares) + owner_fleet_by_chip_type (fleet anchors from Epoch AI Chip Owners DB). CI on h100e is the naive product of share \u00d7 fleet endpoints (not a full Monte Carlo). Last synced: 2026-04-24T20:58:08Z.",
   "owners": {
     "Amazon": {
       "fleet": {
@@ -35,8 +35,6 @@
           "h100e_ci_low": 3217,
           "h100e_ci_high": 19119,
           "confidence_pct": null,
-          "source_label": "Internal first-party AI products: Bedrock backend, CodeWhisperer (Apr 2023 GA), Titan FM training, Alexa, search/ads ML",
-          "source_url": "https://press.aboutamazon.com/2023/7/aws-expands-amazon-bedrock-with-additional-foundation-models-new-model-provider-and-advanced-capability-to-help-customers-build-generative-ai-applications",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -50,8 +48,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 2124,
           "confidence_pct": null,
-          "source_label": "Claude 2 on Bedrock from 26 Jul 2023; Sep 2023 $1.25B first tranche closed",
-          "source_url": "https://techcrunch.com/2023/09/25/amazon-to-invest-up-to-4-billion-in-ai-startup-anthropic/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -65,8 +61,6 @@
           "h100e_ci_low": 8937,
           "h100e_ci_high": 31865,
           "confidence_pct": null,
-          "source_label": "Residual. Named tenants: AI21 Labs (Bedrock Apr 2023), Cohere (Bedrock Jul 2023), Hugging Face (SageMaker Feb 2023); plus long-tail P4d/P4de renters",
-          "source_url": "https://press.aboutamazon.com/2023/7/aws-expands-amazon-bedrock-with-additional-foundation-models-new-model-provider-and-advanced-capability-to-help-customers-build-generative-ai-applications",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -80,8 +74,6 @@
           "h100e_ci_low": 179,
           "h100e_ci_high": 2549,
           "confidence_pct": null,
-          "source_label": "AWS re:Invent 2022 CMP314 deck (4,000 A100 p4de); carried forward to 2023 absent new public disclosure",
-          "source_url": "https://d1.awsstatic.com/events/Summits/reinvent2022/CMP314_How-Stable-Diffusion-was-built-Tips-and-tricks-to-train-large-AI-models.pdf",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -95,8 +87,6 @@
           "h100e_ci_low": 16716,
           "h100e_ci_high": 65074,
           "confidence_pct": null,
-          "source_label": "AWS EC2 P5 GA (26 Jul 2023); H1 2023 pre-GA Hopper defaulted to internal validation; Titan training + Bedrock backend dominated H2 2023",
-          "source_url": "https://aws.amazon.com/blogs/aws/new-amazon-ec2-p5-instances-powered-by-nvidia-h100-tensor-core-gpus-for-accelerating-generative-ai-and-hpc-applications/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -110,8 +100,6 @@
           "h100e_ci_low": 334,
           "h100e_ci_high": 7099,
           "confidence_pct": null,
-          "source_label": "Claude 2 on Bedrock from 26 Jul 2023 (same week as P5 GA); $1.25B first tranche closed 2023",
-          "source_url": "https://press.aboutamazon.com/2023/7/aws-expands-amazon-bedrock-with-additional-foundation-models-new-model-provider-and-advanced-capability-to-help-customers-build-generative-ai-applications",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -125,8 +113,6 @@
           "h100e_ci_low": 26745,
           "h100e_ci_high": 85188,
           "confidence_pct": null,
-          "source_label": "EC2 P5 external renters post-GA; Bedrock FM tenants (AI21, Cohere, Hugging Face); residual",
-          "source_url": "https://aws.amazon.com/blogs/aws/new-amazon-ec2-p5-instances-powered-by-nvidia-h100-tensor-core-gpus-for-accelerating-generative-ai-and-hpc-applications/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -140,8 +126,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 1183,
           "confidence_pct": null,
-          "source_label": "2022 CMP314 deck A100-only; no 2023 Hopper disclosure",
-          "source_url": "https://d1.awsstatic.com/events/Summits/reinvent2022/CMP314_How-Stable-Diffusion-was-built-Tips-and-tricks-to-train-large-AI-models.pdf",
           "reasoning_url": null,
           "reasoning": null
         }
@@ -178,8 +162,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "No public source places Meta on CoreWeave in 2023 for any chip type.",
-          "source_url": "https://en.wikipedia.org/wiki/CoreWeave",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -193,8 +175,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "Microsoft's 2023 CoreWeave contract targeted Hopper capacity for AI training ([CNBC Jun 2023](https://www.cnbc.com/2023/06/01/microsoft-inks-deal-with-coreweave-to-meet-openai-cloud-demand.html)); no public source mentions Microsoft taking A100-family capacity from CoreWeave.",
-          "source_url": "https://www.cnbc.com/2023/06/01/microsoft-inks-deal-with-coreweave-to-meet-openai-cloud-demand.html",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -208,8 +188,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "[NVIDIA DGX Cloud launch release (Mar 2023)](https://nvidianews.nvidia.com/news/nvidia-launches-dgx-cloud-giving-every-enterprise-instant-access-to-ai-supercomputer-from-a-browser); DGX Cloud SKUs span both H100 and A100.",
-          "source_url": "https://nvidianews.nvidia.com/news/nvidia-launches-dgx-cloud-giving-every-enterprise-instant-access-to-ai-supercomputer-from-a-browser",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -223,8 +201,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "OpenAI had no direct CoreWeave relationship in 2023 per [CoreWeave-OpenAI agreement dated March 2025](https://www.coreweave.com/news/coreweave-announces-agreement-with-openai-to-deliver-ai-infrastructure)",
-          "source_url": "https://www.coreweave.com/news/coreweave-announces-agreement-with-openai-to-deliver-ai-infrastructure",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -238,8 +214,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "[Wikipedia](https://en.wikipedia.org/wiki/CoreWeave) on Stability AI as CoreWeave customer through 2023; [EleutherAI GPT-NeoX-20B 2022 training on CoreWeave A100 cluster](https://www.prnewswire.com/news-releases/coreweave-partners-with-eleutherai--novelai-to-make-open-source-ai-more-accessible-30147",
-          "source_url": "https://en.wikipedia.org/wiki/CoreWeave",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -253,8 +227,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 221,
           "confidence_pct": null,
-          "source_label": "No public source places Meta on CoreWeave in 2023; Meta operated its own H100 clusters (Research SuperCluster follow-ons) per its 2023 infrastructure communications.",
-          "source_url": "https://en.wikipedia.org/wiki/CoreWeave",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -268,8 +240,6 @@
           "h100e_ci_low": 4857,
           "h100e_ci_high": 14572,
           "confidence_pct": null,
-          "source_label": "Microsoft-CoreWeave multi-billion cloud compute deal signed June 2023 ([CNBC, Jun 1 2023](https://www.cnbc.com/2023/06/01/microsoft-inks-deal-with-coreweave-to-meet-openai-cloud-demand.html)); CoreWeave S-1 reports Microsoft = 35% of CoreWeave 2023 revenue on $228.9M total (per the [CoreWeave S-1](h",
-          "source_url": "https://www.cnbc.com/2023/06/01/microsoft-inks-deal-with-coreweave-to-meet-openai-cloud-demand.html",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -283,8 +253,6 @@
           "h100e_ci_low": 486,
           "h100e_ci_high": 6888,
           "confidence_pct": null,
-          "source_label": "[NVIDIA DGX Cloud March 2023 launch release](https://nvidianews.nvidia.com/news/nvidia-launches-dgx-cloud-giving-every-enterprise-instant-access-to-ai-supercomputer-from-a-browser) names Oracle Cloud Infrastructure as the only inaugural DGX Cloud host; CoreWeave joined later in 2023.",
-          "source_url": "https://nvidianews.nvidia.com/news/nvidia-launches-dgx-cloud-giving-every-enterprise-instant-access-to-ai-supercomputer-from-a-browser",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -298,8 +266,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 883,
           "confidence_pct": null,
-          "source_label": "OpenAI's first DIRECT CoreWeave contract was [March 2025](https://www.coreweave.com/news/coreweave-announces-agreement-with-openai-to-deliver-ai-infrastructure); in 2023 OpenAI workloads were hosted on Microsoft Azure per the [Jan 2023 extension](https://openai.com/blog/openai-and-microsoft-extend-p",
-          "source_url": "https://www.coreweave.com/news/coreweave-announces-agreement-with-openai-to-deliver-ai-infrastructure",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -313,8 +279,6 @@
           "h100e_ci_low": 17663,
           "h100e_ci_high": 44157,
           "confidence_pct": null,
-          "source_label": "[Inflection AI 22,000 H100 cluster with CoreWeave and NVIDIA, NextPlatform Jul 2023](https://www.nextplatform.com/2023/07/05/the-1-billion-and-higher-ante-to-play-the-ai-game/); [CoreWeave-Inflection MLPerf 3,500 H100 submission (Jun 2023)](https://www.coreweave.com/blog/mlperf-coreweave-nvidia-reco",
-          "source_url": "https://www.nextplatform.com/2023/07/05/the-1-billion-and-higher-ante-to-play-the-ai-game/",
           "reasoning_url": null,
           "reasoning": null
         }
@@ -366,8 +330,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 421,
           "confidence_pct": null,
-          "source_label": "No 2023 source places Anthropic on GCP NVIDIA. Disclosed Anthropic non-GCP compute commitments in 2023: AWS Trainium/Inferentia (Anthropic-AWS announcement Sep 25 2023) + CoreWeave Hopper.",
-          "source_url": "https://www.anthropic.com/news/anthropic-amazon",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -381,8 +343,6 @@
           "h100e_ci_low": 887,
           "h100e_ci_high": 7584,
           "confidence_pct": null,
-          "source_label": "Midjourney inference on GPU clusters (Mar 2023); Character.AI A3 + some A100 fallback",
-          "source_url": "https://www.googlecloudpresscorner.com/2023-03-14-Midjourney-Selects-Google-Cloud-to-Power-AI-Generated-Creative-Platform",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -396,8 +356,6 @@
           "h100e_ci_low": 3546,
           "h100e_ci_high": 17695,
           "confidence_pct": null,
-          "source_label": "Rough breakdown: Gemini + PaLM 2 on TPU, A100 secondary internal; Uncover Alpha framing",
-          "source_url": "https://www.uncoveralpha.com/p/the-chip-made-for-the-ai-inference",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -411,8 +369,6 @@
           "h100e_ci_low": 8511,
           "h100e_ci_high": 29492,
           "confidence_pct": null,
-          "source_label": "A2 VM GA Mar 2021; near-3-year enterprise accumulation by EOY 2023",
-          "source_url": "https://cloud.google.com/blog/products/compute/a2-vms-with-nvidia-a100-gpus-are-ga",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -426,8 +382,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 2388,
           "confidence_pct": null,
-          "source_label": "No 2023 source places Anthropic on GCP Hopper. Disclosed Anthropic 2023 Hopper footprint is AWS + CoreWeave.",
-          "source_url": "https://www.prnewswire.com/news-releases/google-announces-expansion-of-ai-partnership-with-anthropic-301981815.html",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -441,8 +395,6 @@
           "h100e_ci_low": 4028,
           "h100e_ci_high": 26273,
           "confidence_pct": null,
-          "source_label": "Character.AI May 2023 announcement names A3/H100 VMs",
-          "source_url": "https://www.googlecloudpresscorner.com/2023-05-10-Character-AI-and-Google-Cloud-Partner-to-Build-the-Next-Generation-of-Conversational-AI",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -456,8 +408,6 @@
           "h100e_ci_low": 14768,
           "h100e_ci_high": 53741,
           "confidence_pct": null,
-          "source_label": "Rough breakdown; H100 new + supply-constrained in 2023; Gemini on TPU not H100",
-          "source_url": "https://www.uncoveralpha.com/p/the-chip-made-for-the-ai-inference",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -471,8 +421,6 @@
           "h100e_ci_low": 23495,
           "h100e_ci_high": 77626,
           "confidence_pct": null,
-          "source_label": "A3 GA Sep 2023; Q4 enterprise H100 ramp under industry-wide scarcity",
-          "source_url": "https://cloud.google.com/blog/products/compute/announcing-cloud-tpu-v5e-and-a3-gpus-in-ga",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -486,8 +434,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 2391,
           "confidence_pct": null,
-          "source_label": "No public source places Anthropic on TPU v4; Nov 2023 expansion names v5e",
-          "source_url": "https://www.prnewswire.com/news-releases/google-announces-expansion-of-ai-partnership-with-anthropic-301981815.html",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -501,8 +447,6 @@
           "h100e_ci_low": 1060,
           "h100e_ci_high": 6216,
           "confidence_pct": null,
-          "source_label": "Midjourney Mar 2023 (v4 training verbatim); Character.AI May 2023 (TPU training)",
-          "source_url": "https://www.googlecloudpresscorner.com/2023-03-14-Midjourney-Selects-Google-Cloud-to-Power-AI-Generated-Creative-Platform",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -516,8 +460,6 @@
           "h100e_ci_low": 19882,
           "h100e_ci_high": 43990,
           "confidence_pct": null,
-          "source_label": "Gemini 1.0 v4+v5e training disclosure; PaLM 2 v4 training; Uncover Alpha TPU-first-internal framing",
-          "source_url": "https://blog.google/technology/ai/google-gemini-ai/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -531,8 +473,6 @@
           "h100e_ci_low": 530,
           "h100e_ci_high": 4782,
           "confidence_pct": null,
-          "source_label": "Cloud TPU v4 general availability through 2023",
-          "source_url": "https://cloud.google.com/tpu",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -546,8 +486,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 32,
           "confidence_pct": null,
-          "source_label": "No source; no plausible externally-available v4i path",
-          "source_url": "https://cloud.google.com/tpu",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -561,8 +499,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 32,
           "confidence_pct": null,
-          "source_label": "No source; no plausible externally-available v4i path",
-          "source_url": "https://cloud.google.com/tpu",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -576,8 +512,6 @@
           "h100e_ci_low": 1227,
           "h100e_ci_high": 3186,
           "confidence_pct": null,
-          "source_label": "TPU v4i is Google's inference-tuned v4 variant; not externally marketed on Cloud TPU",
-          "source_url": "https://cloud.google.com/tpu",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -591,8 +525,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 127,
           "confidence_pct": null,
-          "source_label": "Token residual for possible undisclosed preview access",
-          "source_url": "https://cloud.google.com/tpu",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -606,8 +538,6 @@
           "h100e_ci_low": 4756,
           "h100e_ci_high": 32140,
           "confidence_pct": null,
-          "source_label": "Nov 2023 Google-Anthropic expansion: 'Anthropic is now one of the first companies to deploy at scale TPU v5e'",
-          "source_url": "https://www.prnewswire.com/news-releases/google-announces-expansion-of-ai-partnership-with-anthropic-301981815.html",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -621,8 +551,6 @@
           "h100e_ci_low": 595,
           "h100e_ci_high": 10713,
           "confidence_pct": null,
-          "source_label": "No public source places Midjourney or Character.AI on v5e in 2023; inferred late-2023 inference deployment",
-          "source_url": "https://cloud.google.com/blog/products/compute/announcing-cloud-tpu-v5e-and-a3-gpus-in-ga",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -636,8 +564,6 @@
           "h100e_ci_low": 77293,
           "h100e_ci_high": 188554,
           "confidence_pct": null,
-          "source_label": "Gemini 1.0 v5e training disclosure; Uncover Alpha TPU-first-internal framing",
-          "source_url": "https://blog.google/technology/ai/google-gemini-ai/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -651,8 +577,6 @@
           "h100e_ci_low": 7135,
           "h100e_ci_high": 47138,
           "confidence_pct": null,
-          "source_label": "Aug 2023 v5e launch blog: 2.7x price-performance vs v4 for LLM inference",
-          "source_url": "https://cloud.google.com/blog/products/compute/announcing-cloud-tpu-v5e-and-a3-gpus-in-ga",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -666,8 +590,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 313,
           "confidence_pct": null,
-          "source_label": "No public source places Anthropic on v5p in 2023; Nov 2023 expansion names v5e only",
-          "source_url": "https://www.prnewswire.com/news-releases/google-announces-expansion-of-ai-partnership-with-anthropic-301981815.html",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -681,8 +603,6 @@
           "h100e_ci_low": 236,
           "h100e_ci_high": 3130,
           "confidence_pct": null,
-          "source_label": "v5p launch blog: Salesforce (foundation-model training), Lightricks (text-to-video) named as early customers",
-          "source_url": "https://cloud.google.com/blog/products/ai-machine-learning/introducing-cloud-tpu-v5p-and-ai-hypercomputer",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -696,8 +616,6 @@
           "h100e_ci_low": 1858,
           "h100e_ci_high": 8867,
           "confidence_pct": null,
-          "source_label": "Jeff Dean v5p launch blog: DeepMind + Research 2x speedups over v4",
-          "source_url": "https://cloud.google.com/blog/products/ai-machine-learning/introducing-cloud-tpu-v5p-and-ai-hypercomputer",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -711,8 +629,6 @@
           "h100e_ci_low": 169,
           "h100e_ci_high": 3130,
           "confidence_pct": null,
-          "source_label": "v5p access gated via Google account manager at launch",
-          "source_url": "https://cloud.google.com/blog/products/ai-machine-learning/introducing-cloud-tpu-v5p-and-ai-hypercomputer",
           "reasoning_url": null,
           "reasoning": null
         }
@@ -744,8 +660,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 1114,
           "confidence_pct": null,
-          "source_label": "Microsoft-NVIDIA-Anthropic partnership announcement, Nov 18 2025",
-          "source_url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -759,8 +673,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 3342,
           "confidence_pct": null,
-          "source_label": "Inflection AI $1.3B funding announcement (June 29 2023) \u2014 names CoreWeave + NVIDIA as partners for the 22,000-H100 cluster; Azure not named",
-          "source_url": "https://inflection.ai/inflection-ai-announces-1-3-billion-of-funding",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -774,8 +686,6 @@
           "h100e_ci_low": 3247,
           "h100e_ci_high": 22280,
           "confidence_pct": null,
-          "source_label": "Bing Chat launch Feb 2023; GitHub Copilot for Business GA Feb 2023; M365 Copilot preview Nov 2023",
-          "source_url": "https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -789,8 +699,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 557,
           "confidence_pct": null,
-          "source_label": "Microsoft-Mistral partnership announcement, Feb 26 2024",
-          "source_url": "https://azure.microsoft.com/en-us/blog/microsoft-and-mistral-ai-announce-new-partnership-to-accelerate-ai-innovation/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -804,8 +712,6 @@
           "h100e_ci_low": 9277,
           "h100e_ci_high": 46788,
           "confidence_pct": null,
-          "source_label": "SemiAnalysis GPT-4 Architecture (July 2023); Reuters ChatGPT 100M MAU (Feb 2023); OpenAI DALL-E 3 (Oct 2023); OpenAI ChatGPT Enterprise (Aug 2023)",
-          "source_url": "https://semianalysis.com/2023/07/10/gpt-4-architecture-infrastructure/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -819,8 +725,6 @@
           "h100e_ci_low": 18553,
           "h100e_ci_high": 81323,
           "confidence_pct": null,
-          "source_label": "Azure OpenAI Service GA Jan 2023; Azure ND A100 v4 VM; 11,000+ AOAI orgs by Nov 2023 (Nadella at Ignite)",
-          "source_url": "https://azure.microsoft.com/en-us/blog/generalavailabilityofazureopenaiservice/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -834,8 +738,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 3113,
           "confidence_pct": null,
-          "source_label": "Microsoft-NVIDIA-Anthropic partnership announcement, Nov 18 2025",
-          "source_url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -849,8 +751,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 9339,
           "confidence_pct": null,
-          "source_label": "Inflection AI $1.3B funding announcement (June 29 2023) \u2014 names CoreWeave + NVIDIA as partners for the 22,000-H100 cluster; Azure not named",
-          "source_url": "https://inflection.ai/inflection-ai-announces-1-3-billion-of-funding",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -864,8 +764,6 @@
           "h100e_ci_low": 8833,
           "h100e_ci_high": 56031,
           "confidence_pct": null,
-          "source_label": "Bing Chat GPT-4 (March 2023); M365 Copilot preview (Nov 2023); MSR Phi models 2023",
-          "source_url": "https://blogs.microsoft.com/blog/2023/11/01/microsoft-copilot-available-today-and-available-for-commercial-customers-on-nov-1/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -879,8 +777,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 1556,
           "confidence_pct": null,
-          "source_label": "Microsoft-Mistral partnership announcement, Feb 26 2024",
-          "source_url": "https://azure.microsoft.com/en-us/blog/microsoft-and-mistral-ai-announce-new-partnership-to-accelerate-ai-innovation/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -894,8 +790,6 @@
           "h100e_ci_low": 61830,
           "h100e_ci_high": 192996,
           "confidence_pct": null,
-          "source_label": "Microsoft-OpenAI exclusive cloud partnership (Jan 2023 extension); Azure scale record (Nov 2023: 10,752 H100); GPT-4 launch Mar 2023; GPT-4-Turbo announcement Nov 2023",
-          "source_url": "https://azure.microsoft.com/en-us/blog/azure-sets-a-scale-record-in-large-language-model-training/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -909,8 +803,6 @@
           "h100e_ci_low": 44164,
           "h100e_ci_high": 180545,
           "confidence_pct": null,
-          "source_label": "Azure OpenAI Service GA; ND H100 v5 VM preview Mar 2023 / GA Aug 2023; CoreWeave overflow to MSFT (freeing Azure H100)",
-          "source_url": "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/ndh100v5-series",
           "reasoning_url": null,
           "reasoning": null
         }
@@ -947,8 +839,6 @@
           "h100e_ci_low": 85,
           "h100e_ci_high": 2333,
           "confidence_pct": null,
-          "source_label": null,
-          "source_url": null,
           "reasoning_url": null,
           "reasoning": null
         },
@@ -962,8 +852,6 @@
           "h100e_ci_low": 174,
           "h100e_ci_high": 4665,
           "confidence_pct": null,
-          "source_label": null,
-          "source_url": null,
           "reasoning_url": null,
           "reasoning": null
         },
@@ -977,8 +865,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": null,
-          "source_url": null,
           "reasoning_url": null,
           "reasoning": null
         },
@@ -992,8 +878,6 @@
           "h100e_ci_low": 85,
           "h100e_ci_high": 2333,
           "confidence_pct": null,
-          "source_label": null,
-          "source_url": null,
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1007,8 +891,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 583,
           "confidence_pct": null,
-          "source_label": null,
-          "source_url": null,
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1022,8 +904,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": null,
-          "source_url": null,
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1037,8 +917,6 @@
           "h100e_ci_low": 85,
           "h100e_ci_high": 2666,
           "confidence_pct": null,
-          "source_label": null,
-          "source_url": null,
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1052,8 +930,6 @@
           "h100e_ci_low": 2390,
           "h100e_ci_high": 16662,
           "confidence_pct": null,
-          "source_label": null,
-          "source_url": null,
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1067,8 +943,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": null,
-          "source_url": null,
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1082,8 +956,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 1537,
           "confidence_pct": null,
-          "source_label": null,
-          "source_url": null,
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1097,8 +969,6 @@
           "h100e_ci_low": 325,
           "h100e_ci_high": 9082,
           "confidence_pct": null,
-          "source_label": null,
-          "source_url": null,
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1112,8 +982,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": null,
-          "source_url": null,
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1127,8 +995,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 4611,
           "confidence_pct": null,
-          "source_label": null,
-          "source_url": null,
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1142,8 +1008,6 @@
           "h100e_ci_low": 325,
           "h100e_ci_high": 7684,
           "confidence_pct": null,
-          "source_label": null,
-          "source_url": null,
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1157,8 +1021,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": null,
-          "source_url": null,
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1172,8 +1034,6 @@
           "h100e_ci_low": 325,
           "h100e_ci_high": 7684,
           "confidence_pct": null,
-          "source_label": null,
-          "source_url": null,
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1187,8 +1047,6 @@
           "h100e_ci_low": 14180,
           "h100e_ci_high": 69858,
           "confidence_pct": null,
-          "source_label": null,
-          "source_url": null,
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1202,8 +1060,6 @@
           "h100e_ci_low": 1300,
           "h100e_ci_high": 15369,
           "confidence_pct": null,
-          "source_label": null,
-          "source_url": null,
           "reasoning_url": null,
           "reasoning": null
         }
@@ -1235,8 +1091,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "Epoch AI Chip Owners DB (no xAI 2023 rows)",
-          "source_url": "https://epoch.ai/data/ai-chip-owners",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1250,8 +1104,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "Epoch AI Chip Owners DB (no xAI 2023 rows); xAI corporate timeline (Wikipedia); The Next Platform 30 Jul 2024 retrospective",
-          "source_url": "https://epoch.ai/data/ai-chip-owners",
           "reasoning_url": null,
           "reasoning": null
         }

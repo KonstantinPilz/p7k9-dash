@@ -544,14 +544,18 @@ function renderOwnerStackedBar(svgNode, owner, o) {
 
 function chipCellTooltipHTML(owner, user, seg) {
   const cellLines = seg._cells.map(c => {
-    const href = safeHref(c.source_url);
+    // In schema v2.0 (2026-04-24) source_url + source_label were dropped
+    // from the canonical sheet — provenance now lives in the per-owner
+    // GDoc linked by reasoning_url.
+    const href = safeHref(c.reasoning_url);
     const src = href
-      ? `<a href="${href}" target="_blank" rel="noopener">source</a>`
-      : escapeHTML(c.source_label || "");
+      ? `<a href="${href}" target="_blank" rel="noopener">reasoning ↗</a>`
+      : "";
     const conf = (c.confidence_pct != null)
       ? ` — ${escapeHTML(c.confidence_pct)}% conf`
       : "";
-    return `<div class="sub">share=${(c.share_median*100).toFixed(1)}% [${(c.share_ci_low*100).toFixed(1)}–${(c.share_ci_high*100).toFixed(1)}%]${conf} · ${src}</div>`;
+    const srcSep = src ? ` · ${src}` : "";
+    return `<div class="sub">share=${(c.share_median*100).toFixed(1)}% [${(c.share_ci_low*100).toFixed(1)}–${(c.share_ci_high*100).toFixed(1)}%]${conf}${srcSep}</div>`;
   }).join("");
   return `
     <div class="value">${escapeHTML(owner)} → ${escapeHTML(user)}</div>

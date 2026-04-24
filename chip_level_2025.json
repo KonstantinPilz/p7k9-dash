@@ -10,7 +10,7 @@
     "Meta",
     "xAI"
   ],
-  "notes": "Chip-level 2025 data. Source: canonical sheet https://docs.google.com/spreadsheets/d/1unfVrnl3bzKIrf6ASRpNtlfV1vIGoS7W66ZoeR-kKlc/edit \u2014 users_2025 tab (shares) + owner_fleet_by_chip_type (fleet anchors from Epoch AI Chip Owners DB). CI on h100e is the naive product of share \u00d7 fleet endpoints (not a full Monte Carlo). Last synced: 2026-04-24T15:45:02Z.",
+  "notes": "Chip-level 2025 data. Source: canonical sheet https://docs.google.com/spreadsheets/d/1unfVrnl3bzKIrf6ASRpNtlfV1vIGoS7W66ZoeR-kKlc/edit \u2014 users_2025 tab (shares) + owner_fleet_by_chip_type (fleet anchors from Epoch AI Chip Owners DB). CI on h100e is the naive product of share \u00d7 fleet endpoints (not a full Monte Carlo). Last synced: 2026-04-24T20:58:09Z.",
   "owners": {
     "Amazon": {
       "fleet": {
@@ -56,8 +56,6 @@
           "h100e_ci_low": 2681,
           "h100e_ci_high": 16145,
           "confidence_pct": null,
-          "source_label": "AWS Trainium customers page \u2014 Search M5 30% LLM training-cost saving via Trainium (migration-away-from-A100 anchor)",
-          "source_url": "https://aws.amazon.com/ai/machine-learning/trainium/customers/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -71,8 +69,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 850,
           "confidence_pct": null,
-          "source_label": "About Amazon \u2014 Project Rainier (Anthropic Trainium2-forward anchor)",
-          "source_url": "https://www.aboutamazon.com/news/aws/aws-project-rainier-ai-trainium-chips-compute-cluster",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -86,8 +82,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 425,
           "confidence_pct": null,
-          "source_label": "Maginative \u2014 Apple-AWS re:Invent 2024 (Graviton + Inferentia + Trainium2 evaluation, no A100)",
-          "source_url": "https://www.maginative.com/article/apple-reveals-deep-aws-partnership-for-ai-development/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -101,8 +95,6 @@
           "h100e_ci_low": 10724,
           "h100e_ci_high": 36114,
           "confidence_pct": null,
-          "source_label": "Pinterest AWS case study (600+ P4/P4de A100 training instances); AWS Trainium customers page",
-          "source_url": "https://aws.amazon.com/solutions/case-studies/pinterest-ai-case-study/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -116,8 +108,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 850,
           "confidence_pct": null,
-          "source_label": "SiliconANGLE \u2014 Stability AI leadership collapse Mar 2024 (carries through 2025)",
-          "source_url": "https://siliconangle.com/2024/03/24/emad-mostaque-resigns-ceo-troubled-generative-ai-startup-stability-ai/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -131,8 +121,6 @@
           "h100e_ci_low": 64811,
           "h100e_ci_high": 301037,
           "confidence_pct": null,
-          "source_label": "AWS EC2 P6 page (B200 rental SKU); Amazon Nova announcement",
-          "source_url": "https://aws.amazon.com/ec2/instance-types/p6/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -146,8 +134,6 @@
           "h100e_ci_low": 4321,
           "h100e_ci_high": 90311,
           "confidence_pct": null,
-          "source_label": "Anthropic Google TPU expansion (Oct 2025); About Amazon Rainier",
-          "source_url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -161,8 +147,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 37630,
           "confidence_pct": null,
-          "source_label": "Maginative \u2014 Apple-AWS re:Invent 2024 (Trainium-anchored)",
-          "source_url": "https://www.maginative.com/article/apple-reveals-deep-aws-partnership-for-ai-development/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -176,8 +160,6 @@
           "h100e_ci_low": 216036,
           "h100e_ci_high": 602074,
           "confidence_pct": null,
-          "source_label": "AWS EC2 P6 page; Jassy 'small number of very large customers' on Trainium (re:Invent 2025 via Constellation)",
-          "source_url": "https://www.constellationr.com/blog-news/insights/aws-reinvent-2025-feature-trainium3-scaling-secure-ai-agents",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -191,8 +173,6 @@
           "h100e_ci_low": 25401,
           "h100e_ci_high": 159323,
           "confidence_pct": null,
-          "source_label": "AWS EC2 P6 page (B300 = Blackwell Ultra rental SKU)",
-          "source_url": "https://aws.amazon.com/ec2/instance-types/p6/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -206,8 +186,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 36417,
           "confidence_pct": null,
-          "source_label": "Anthropic Google TPU expansion (non-Trainium growth diverted to TPU)",
-          "source_url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -221,8 +199,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 18208,
           "confidence_pct": null,
-          "source_label": "Maginative \u2014 Apple-AWS re:Invent 2024 (no public B300 signal)",
-          "source_url": "https://www.maginative.com/article/apple-reveals-deep-aws-partnership-for-ai-development/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -236,8 +212,6 @@
           "h100e_ci_low": 139706,
           "h100e_ci_high": 386926,
           "confidence_pct": null,
-          "source_label": "AWS EC2 P6 page (P6-B300 targeting frontier training)",
-          "source_url": "https://aws.amazon.com/ec2/instance-types/p6/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -251,8 +225,6 @@
           "h100e_ci_low": 61645,
           "h100e_ci_high": 245967,
           "confidence_pct": null,
-          "source_label": "Matt Garman re:Invent 2025 keynote \u2014 majority of Bedrock inference on Trainium (shifts Hopper share toward external tenants)",
-          "source_url": "https://builder.aws.com/content/37FzTD9aYF6SIHE421joJaN2Hgv/get-the-latest-on-aws-ai-chips-from-reinvent-2025",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -266,8 +238,6 @@
           "h100e_ci_low": 20548,
           "h100e_ci_high": 128840,
           "confidence_pct": null,
-          "source_label": "Anthropic \u2014 Expanding use of Google Cloud TPUs (three-platform framing retains NVIDIA GPUs)",
-          "source_url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -281,8 +251,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 17569,
           "confidence_pct": null,
-          "source_label": "Maginative \u2014 Apple-AWS re:Invent 2024 (Graviton + Inferentia + Trn2 evaluation)",
-          "source_url": "https://www.maginative.com/article/apple-reveals-deep-aws-partnership-for-ai-development/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -296,8 +264,6 @@
           "h100e_ci_low": 143838,
           "h100e_ci_high": 439227,
           "confidence_pct": null,
-          "source_label": "AWS EC2 P5/P5e instance pages (core enterprise GPU-rental SKUs)",
-          "source_url": "https://aws.amazon.com/ec2/instance-types/p5/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -311,8 +277,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 5856,
           "confidence_pct": null,
-          "source_label": "SiliconANGLE \u2014 Stability AI leadership collapse (carries through 2025)",
-          "source_url": "https://siliconangle.com/2024/03/24/emad-mostaque-resigns-ceo-troubled-generative-ai-startup-stability-ai/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -326,8 +290,6 @@
           "h100e_ci_low": 5728,
           "h100e_ci_high": 65381,
           "confidence_pct": null,
-          "source_label": "AWS ML blog \u2014 Rufus multi-node Trainium vLLM (tens of thousands of Trainium chips, gen not split); AWS Trainium customers page (Search M5)",
-          "source_url": "https://aws.amazon.com/blogs/machine-learning/how-amazon-scaled-rufus-by-building-multi-node-inference-using-aws-trainium-chips-and-vllm/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -341,8 +303,6 @@
           "h100e_ci_low": 191,
           "h100e_ci_high": 7692,
           "confidence_pct": null,
-          "source_label": "AWS Trainium customers page (Anthropic named on Trainium; 2025 disclosure is Trn2-specific)",
-          "source_url": "https://aws.amazon.com/ai/machine-learning/trainium/customers/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -356,8 +316,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 2884,
           "confidence_pct": null,
-          "source_label": "Hugging Face Inferentia Inference Endpoints blog (optimum-neuron Trn1 training is secondary capability)",
-          "source_url": "https://huggingface.co/blog/inferentia-inference-endpoints",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -371,8 +329,6 @@
           "h100e_ci_low": 5346,
           "h100e_ci_high": 62496,
           "confidence_pct": null,
-          "source_label": "AWS Trainium customers page + Ricoh 1,024-Trn1 LLM training (only public external-customer chip count)",
-          "source_url": "https://aws.amazon.com/blogs/machine-learning/unlocking-japanese-llms-with-aws-trainium-innovators-showcase-from-the-aws-llm-development-support-program/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -386,8 +342,6 @@
           "h100e_ci_low": 66171,
           "h100e_ci_high": 303978,
           "confidence_pct": null,
-          "source_label": "Matt Garman re:Invent 2025 \u2014 majority of Bedrock inference on Trainium; AWS Rufus Trainium multi-node vLLM blog",
-          "source_url": "https://builder.aws.com/content/37FzTD9aYF6SIHE421joJaN2Hgv/get-the-latest-on-aws-ai-chips-from-reinvent-2025",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -401,8 +355,6 @@
           "h100e_ci_low": 454926,
           "h100e_ci_high": 790342,
           "confidence_pct": null,
-          "source_label": "AWS Trainium customers page \u2014 Anthropic 'almost a million Trainium2 chips'; About Amazon \u2014 Project Rainier 'nearly half a million Trn2 chips' fully operational; Anthropic 'more than 1M Trainium2 chips by end of year'",
-          "source_url": "https://aws.amazon.com/ai/machine-learning/trainium/customers/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -416,8 +368,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 40530,
           "confidence_pct": null,
-          "source_label": "Maginative \u2014 Apple Trn2 evaluation (re:Invent 2024)",
-          "source_url": "https://www.maginative.com/article/apple-reveals-deep-aws-partnership-for-ai-development/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -431,8 +381,6 @@
           "h100e_ci_low": 41357,
           "h100e_ci_high": 253315,
           "confidence_pct": null,
-          "source_label": "AWS Trainium customers page (Poolside, Decart, Karakuri named); Jassy 'small number of very large customers' re:Invent 2025 via Constellation",
-          "source_url": "https://www.constellationr.com/blog-news/insights/aws-reinvent-2025-feature-trainium3-scaling-secure-ai-agents",
           "reasoning_url": null,
           "reasoning": null
         }
@@ -489,8 +437,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "CoreWeave S-1 revenue-concentration disclosures covering 2022\u20132024 Ampere era; Microsoft dominant tenant at that time",
-          "source_url": "https://www.sec.gov/Archives/edgar/data/1769628/000119312525055915/d899798ds1.htm",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -504,8 +450,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "NVIDIA DGX Cloud SKU catalog: H100 / H200 / B200 / GB200 \u2014 no A-generation",
-          "source_url": "https://blogs.nvidia.com/blog/dgx-cloud/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -519,8 +463,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "OpenAI $22.4B contract is forward-looking capacity \u2014 no reason to take pre-Hopper inventory",
-          "source_url": "https://www.bloomberg.com/news/articles/2025-09-25/coreweave-expands-deals-with-openai-to-as-much-as-22-4-billion",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -534,8 +476,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "CoreWeave S-1 (23% of 2024 revenue from non-top-3); academic + enterprise + batch inference",
-          "source_url": "https://www.sec.gov/Archives/edgar/data/1769628/000119312525055915/d899798ds1.htm",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -549,8 +489,6 @@
           "h100e_ci_low": 11659,
           "h100e_ci_high": 103884,
           "confidence_pct": null,
-          "source_label": "Semafor (March 2025): Microsoft passed on the CoreWeave capacity OpenAI subsequently took; team-level ~90% Hopper override implies ~10% Blackwell",
-          "source_url": "https://www.semafor.com/article/03/06/2025/openai-to-sign-coreweave-deal-after-microsoft-passed",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -564,8 +502,6 @@
           "h100e_ci_low": 2332,
           "h100e_ci_high": 29681,
           "confidence_pct": null,
-          "source_label": "NVIDIA DGX Cloud Blackwell SKUs; April 2025 MLPerf Inference v5.0 2,496-GPU GB200 footprint implies standing Blackwell presence",
-          "source_url": "https://mlcommons.org/benchmarks/inference-datacenter/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -579,8 +515,6 @@
           "h100e_ci_low": 93268,
           "h100e_ci_high": 237449,
           "confidence_pct": null,
-          "source_label": "OpenAI-CoreWeave $22.4B cumulative contract (Bloomberg Sept 25, 2025); September 2025 $6.5B expansion hits H2 Blackwell deliveries",
-          "source_url": "https://www.bloomberg.com/news/articles/2025-09-25/coreweave-expands-deals-with-openai-to-as-much-as-22-4-billion",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -594,8 +528,6 @@
           "h100e_ci_low": 18654,
           "h100e_ci_high": 118725,
           "confidence_pct": null,
-          "source_label": "IBM/Cohere/Mistral April 2025 GB200 first customers (take B200 HGX for adjacent workloads); Meta Sept 30 2025 contract end-2025 deployment ~0",
-          "source_url": "https://blogs.nvidia.com/blog/coreweave-grace-blackwell-gb200-nvl72/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -609,8 +541,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "Microsoft 2023-vintage Hopper-priority contract; Semafor pass on OpenAI block",
-          "source_url": "https://www.semafor.com/article/03/06/2025/openai-to-sign-coreweave-deal-after-microsoft-passed",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -624,8 +554,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "MLPerf Inference v5.0 (April 2025) 2,496-GPU CoreWeave GB200 NVL72 submission + DGX Cloud Blackwell SKU overhead",
-          "source_url": "https://mlcommons.org/benchmarks/inference-datacenter/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -639,8 +567,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "OpenAI September 2025 $6.5B expansion; NVL72 rack-scale interconnect fit for frontier training",
-          "source_url": "https://www.bloomberg.com/news/articles/2025-09-25/coreweave-expands-deals-with-openai-to-as-much-as-22-4-billion",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -654,8 +580,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "IBM/Cohere/Mistral first GB200 NVL72 customers \u2014 NVIDIA blog + CoreWeave IR (April 15, 2025)",
-          "source_url": "https://investors.coreweave.com/news/news-details/2025/CoreWeave-Launches-NVIDIA-GB200-Grace-Blackwell-Systems-at-Scale/default.aspx",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -669,8 +593,6 @@
           "h100e_ci_low": 176638,
           "h100e_ci_high": 264421,
           "confidence_pct": null,
-          "source_label": "CoreWeave S-1 (March 2025); FY2025 10-K (Microsoft 67% of 2025 revenue)",
-          "source_url": "https://www.sec.gov/Archives/edgar/data/1769628/000119312525055915/d899798ds1.htm",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -684,8 +606,6 @@
           "h100e_ci_low": 589,
           "h100e_ci_high": 9333,
           "confidence_pct": null,
-          "source_label": "NVIDIA DGX Cloud overview; NVIDIA's 11.5% CoreWeave equity stake and $6.3B backstop (January 2026)",
-          "source_url": "https://blogs.nvidia.com/blog/dgx-cloud/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -699,8 +619,6 @@
           "h100e_ci_low": 23552,
           "h100e_ci_high": 77771,
           "confidence_pct": null,
-          "source_label": "OpenAI-CoreWeave $11.9B initial contract (March 10, 2025); September 2025 $22.4B cumulative commitment",
-          "source_url": "https://www.bloomberg.com/news/articles/2025-09-25/coreweave-expands-deals-with-openai-to-as-much-as-22-4-billion",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -714,8 +632,6 @@
           "h100e_ci_low": 14720,
           "h100e_ci_high": 77771,
           "confidence_pct": null,
-          "source_label": "CoreWeave S-1 (23% of 2024 revenue from non-top-3); smaller AI labs + enterprise",
-          "source_url": "https://www.sec.gov/Archives/edgar/data/1769628/000119312525055915/d899798ds1.htm",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -729,8 +645,6 @@
           "h100e_ci_low": 161918,
           "h100e_ci_high": 264421,
           "confidence_pct": null,
-          "source_label": "CoreWeave first-to-market H200 PR (Aug 2024); Microsoft anchor-tenant status throughout H200 ramp",
-          "source_url": "https://www.prnewswire.com/news-releases/coreweave-first-to-market-with-nvidia-h200-tensor-core-gpus-ushering-in-a-new-era-of-ai-infrastructure-performance-302233045.html",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -744,8 +658,6 @@
           "h100e_ci_low": 1472,
           "h100e_ci_high": 12443,
           "confidence_pct": null,
-          "source_label": "NVIDIA DGX Cloud \u2014 H200 supported SKU",
-          "source_url": "https://blogs.nvidia.com/blog/dgx-cloud/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -759,8 +671,6 @@
           "h100e_ci_low": 29440,
           "h100e_ci_high": 108879,
           "confidence_pct": null,
-          "source_label": "OpenAI-CoreWeave contract (March 2025) with deliveries spanning Hopper and Blackwell",
-          "source_url": "https://www.coreweave.com/news/coreweave-expands-agreement-with-openai-by-up-to-6-5b",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -774,8 +684,6 @@
           "h100e_ci_low": 8832,
           "h100e_ci_high": 77771,
           "confidence_pct": null,
-          "source_label": "IBM/Cohere/Mistral April 2025 GB200 first customers; memory-bound inference demand on H200",
-          "source_url": "https://blogs.nvidia.com/blog/coreweave-grace-blackwell-gb200-nvl72/",
           "reasoning_url": null,
           "reasoning": null
         }
@@ -847,8 +755,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "Methodology plan \u00a74.1 override",
-          "source_url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -862,8 +768,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "DCD: Apple opts out of NVIDIA on Google",
-          "source_url": "https://www.datacenterdynamics.com/en/news/apple-to-use-googles-tpus-for-ai-opts-out-of-nvidia-chips/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -877,8 +781,6 @@
           "h100e_ci_low": 70542,
           "h100e_ci_high": 275869,
           "confidence_pct": null,
-          "source_label": "Uncover Alpha on Google's TPU-first internal posture; Blackwell scarcity",
-          "source_url": "https://www.uncoveralpha.com/p/the-chip-made-for-the-ai-inference",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -892,8 +794,6 @@
           "h100e_ci_low": 193990,
           "h100e_ci_high": 490434,
           "confidence_pct": null,
-          "source_label": "GCP enterprise Blackwell demand; $240B backlog",
-          "source_url": "https://cloudwars.com/cloud/google-cloud-reports-surge-in-billion-dollar-deals/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -907,8 +807,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "Methodology plan \u00a74.1 override",
-          "source_url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -922,8 +820,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "DCD",
-          "source_url": "https://www.datacenterdynamics.com/en/news/apple-to-use-googles-tpus-for-ai-opts-out-of-nvidia-chips/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -937,8 +833,6 @@
           "h100e_ci_low": 42455,
           "h100e_ci_high": 168751,
           "confidence_pct": null,
-          "source_label": "Uncover Alpha; mirrors B200 split",
-          "source_url": "https://www.uncoveralpha.com/p/the-chip-made-for-the-ai-inference",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -952,8 +846,6 @@
           "h100e_ci_low": 116751,
           "h100e_ci_high": 300002,
           "confidence_pct": null,
-          "source_label": "GCP enterprise demand; $240B backlog",
-          "source_url": "https://cloudwars.com/cloud/google-cloud-reports-surge-in-billion-dollar-deals/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -967,8 +859,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "Methodology plan \u00a74.1 override: Google\u2192Anthropic is TPU-only",
-          "source_url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -982,8 +872,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "DCD: Apple opts out of NVIDIA chips for Google-hosted training",
-          "source_url": "https://www.datacenterdynamics.com/en/news/apple-to-use-googles-tpus-for-ai-opts-out-of-nvidia-chips/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -997,8 +885,6 @@
           "h100e_ci_low": 64466,
           "h100e_ci_high": 250109,
           "confidence_pct": null,
-          "source_label": "Uncover Alpha on Google's TPU-first internal posture; DeepMind PyTorch research",
-          "source_url": "https://www.uncoveralpha.com/p/the-chip-made-for-the-ai-inference",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1012,8 +898,6 @@
           "h100e_ci_low": 177282,
           "h100e_ci_high": 444638,
           "confidence_pct": null,
-          "source_label": "GCP enterprise CUDA-locked workloads; $240B backlog",
-          "source_url": "https://cloudwars.com/cloud/google-cloud-reports-surge-in-billion-dollar-deals/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1027,8 +911,6 @@
           "h100e_ci_low": 10399,
           "h100e_ci_high": 125034,
           "confidence_pct": null,
-          "source_label": "No public source on Anthropic v5e specifically; inference from low-cost inference chip economics",
-          "source_url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1042,8 +924,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 6252,
           "confidence_pct": null,
-          "source_label": "No disclosed Apple v5e cluster",
-          "source_url": "https://arxiv.org/html/2407.21075",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1057,8 +937,6 @@
           "h100e_ci_low": 242655,
           "h100e_ci_high": 581406,
           "confidence_pct": null,
-          "source_label": "Residual; v5e legacy inference for Search/Ads/YouTube/Gemini",
-          "source_url": "https://www.uncoveralpha.com/p/the-chip-made-for-the-ai-inference",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1072,8 +950,6 @@
           "h100e_ci_low": 3466,
           "h100e_ci_high": 75020,
           "confidence_pct": null,
-          "source_label": "GCP Vertex AI inference on v5e; enterprise batch",
-          "source_url": "https://cloud.google.com/tpu",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1087,8 +963,6 @@
           "h100e_ci_low": 11482,
           "h100e_ci_high": 101045,
           "confidence_pct": null,
-          "source_label": "No public source on Anthropic v5p specifically; inference from legacy TPU footprint",
-          "source_url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1102,8 +976,6 @@
           "h100e_ci_low": 10334,
           "h100e_ci_high": 38397,
           "confidence_pct": null,
-          "source_label": "Apple Intelligence Foundation Language Models Tech Report 2025 \u2014 8,192 TPU v5p disclosed for AFM-server (web-fetch verified)",
-          "source_url": "https://arxiv.org/html/2507.13575v3",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1117,8 +989,6 @@
           "h100e_ci_low": 142377,
           "h100e_ci_high": 371846,
           "confidence_pct": null,
-          "source_label": "Residual; v5p legacy Gemini 1.x/2.0 training and fine-tuning clusters",
-          "source_url": "https://www.uncoveralpha.com/p/the-chip-made-for-the-ai-inference",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1132,8 +1002,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 20209,
           "confidence_pct": null,
-          "source_label": "GCP v5p enterprise training availability",
-          "source_url": "https://cloud.google.com/blog/products/compute/announcing-cloud-tpu-v5p-and-ai-hypercomputer",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1147,8 +1015,6 @@
           "h100e_ci_low": 174761,
           "h100e_ci_high": 764584,
           "confidence_pct": null,
-          "source_label": "Anthropic-Google TPU expansion (Oct 2025)",
-          "source_url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1162,8 +1028,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 33981,
           "confidence_pct": null,
-          "source_label": "No disclosed Apple v6e cluster",
-          "source_url": "https://arxiv.org/html/2407.21075",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1177,8 +1041,6 @@
           "h100e_ci_low": 1188375,
           "h100e_ci_high": 2491976,
           "confidence_pct": null,
-          "source_label": "Residual after named external users; Gemini 2.5 Pro disclosed as TPU-trained",
-          "source_url": "https://epoch.ai/data/notable-ai-models",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1192,8 +1054,6 @@
           "h100e_ci_low": 8738,
           "h100e_ci_high": 169907,
           "confidence_pct": null,
-          "source_label": "Midjourney v6e migration (Q2 2025); Google Cloud $240B backlog",
-          "source_url": "https://cloud.google.com/blog/products/compute/ai-hypercomputer-inference-updates-for-google-cloud-tpu-and-gpu",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1207,8 +1067,6 @@
           "h100e_ci_low": 9930,
           "h100e_ci_high": 135388,
           "confidence_pct": null,
-          "source_label": "Anthropic-Google TPU expansion (Oct 2025); Ironwood = v7",
-          "source_url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1222,8 +1080,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 4513,
           "confidence_pct": null,
-          "source_label": "No disclosed Apple v7 cluster",
-          "source_url": "https://arxiv.org/html/2407.21075",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1237,8 +1093,6 @@
           "h100e_ci_low": 387261,
           "h100e_ci_high": 857457,
           "confidence_pct": null,
-          "source_label": "Residual; TPU-first internal posture + v7 scarcity in 2025",
-          "source_url": "https://www.uncoveralpha.com/p/the-chip-made-for-the-ai-inference",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1252,8 +1106,6 @@
           "h100e_ci_low": 4965,
           "h100e_ci_high": 135388,
           "confidence_pct": null,
-          "source_label": "Google Cloud AI Hypercomputer v7 preview (Q3 2025)",
-          "source_url": "https://cloud.google.com/blog/products/compute/in-q3-2025-ai-hypercomputer-adds-vllm-tpu-and-more",
           "reasoning_url": null,
           "reasoning": null
         }
@@ -1320,8 +1172,6 @@
           "h100e_ci_low": 523617,
           "h100e_ci_high": 928047,
           "confidence_pct": null,
-          "source_label": "Epoch AI Chip Owners Database (2026-04-16 snapshot); Omdia top-3 Blackwell buyer reporting (via rt_2026.md)",
-          "source_url": "https://epoch.ai/data/ai-chip-owners",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1335,8 +1185,6 @@
           "h100e_ci_low": 332100,
           "h100e_ci_high": 611820,
           "confidence_pct": null,
-          "source_label": "Epoch AI Chip Owners Database (2026-04-16 snapshot)",
-          "source_url": "https://epoch.ai/data/ai-chip-owners",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1350,8 +1198,6 @@
           "h100e_ci_low": 442368,
           "h100e_ci_high": 774476,
           "confidence_pct": null,
-          "source_label": "Epoch AI Chip Owners Database (2026-04-16 snapshot); Meta rental-evidence search (docs/ + web, 2026-04-22, zero hits)",
-          "source_url": "https://epoch.ai/data/ai-chip-owners",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1365,8 +1211,6 @@
           "h100e_ci_low": 197960,
           "h100e_ci_high": 370773,
           "confidence_pct": null,
-          "source_label": "Epoch AI Chip Owners Database (2026-04-16 snapshot); AMD Meta MI300X disclosure (Dec 2023 + 2024)",
-          "source_url": "https://epoch.ai/data/ai-chip-owners",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1380,8 +1224,6 @@
           "h100e_ci_low": 31272,
           "h100e_ci_high": 85673,
           "confidence_pct": null,
-          "source_label": "Epoch AI Chip Owners Database (2026-04-16 snapshot)",
-          "source_url": "https://epoch.ai/data/ai-chip-owners",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1395,8 +1237,6 @@
           "h100e_ci_low": 51719,
           "h100e_ci_high": 107758,
           "confidence_pct": null,
-          "source_label": "Epoch AI Chip Owners Database (2026-04-16 snapshot)",
-          "source_url": "https://epoch.ai/data/ai-chip-owners",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1410,8 +1250,6 @@
           "h100e_ci_low": 35785,
           "h100e_ci_high": 78547,
           "confidence_pct": null,
-          "source_label": "Epoch AI Chip Owners Database (2026-04-16 snapshot)",
-          "source_url": "https://epoch.ai/data/ai-chip-owners",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1425,8 +1263,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "Meta March 2026 blog ('hundreds of thousands' MTIA chips deployed); Meta April 2024 engineering blog (MTIA v2 'Artemis' spec); unsourced_claims.md tracking 200k\u2013500k band",
-          "source_url": "https://about.fb.com/news/2026/03/expanding-metas-custom-silicon-to-power-our-ai-workloads/",
           "reasoning_url": null,
           "reasoning": null
         }
@@ -1488,8 +1324,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 56,
           "confidence_pct": null,
-          "source_label": "Microsoft-Anthropic partnership blog (18 Nov 2025)",
-          "source_url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1503,8 +1337,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 22,
           "confidence_pct": null,
-          "source_label": "Figure AI Series C (Feb 2025)",
-          "source_url": "https://www.figure.ai/news/series-c",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1518,8 +1350,6 @@
           "h100e_ci_low": 1855,
           "h100e_ci_high": 16710,
           "confidence_pct": null,
-          "source_label": "Microsoft Ignite 2025 Book of News",
-          "source_url": "https://news.microsoft.com/ignite-2025-book-of-news/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1533,8 +1363,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 1114,
           "confidence_pct": null,
-          "source_label": "Azure AI Foundry model catalog (through 2025)",
-          "source_url": "https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models?tabs=global-standard-chat-completions",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1548,8 +1376,6 @@
           "h100e_ci_low": 3711,
           "h100e_ci_high": 27850,
           "confidence_pct": null,
-          "source_label": "SemiAnalysis GPT-4 Architecture (Jul 2023); Azure OpenAI Service legacy endpoints",
-          "source_url": "https://semianalysis.com/2023/07/10/gpt-4-architecture-infrastructure/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1563,8 +1389,6 @@
           "h100e_ci_low": 25511,
           "h100e_ci_high": 94691,
           "confidence_pct": null,
-          "source_label": "Azure ND A100 v4 series (operational through 2025)",
-          "source_url": "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/nda100v4-series",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1578,8 +1402,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 22,
           "confidence_pct": null,
-          "source_label": "users_2025.json (xAI entry: 100% internal Colossus)",
-          "source_url": "https://x.ai/news/colossus",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1593,8 +1415,6 @@
           "h100e_ci_low": 7046,
           "h100e_ci_high": 91754,
           "confidence_pct": null,
-          "source_label": "Microsoft-Anthropic partnership blog (18 Nov 2025)",
-          "source_url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1608,8 +1428,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 306,
           "confidence_pct": null,
-          "source_label": "Figure AI Series C (Feb 2025)",
-          "source_url": "https://www.figure.ai/news/series-c",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1623,8 +1441,6 @@
           "h100e_ci_low": 44035,
           "h100e_ci_high": 244678,
           "confidence_pct": null,
-          "source_label": "Microsoft Ignite 2025 Book of News",
-          "source_url": "https://news.microsoft.com/ignite-2025-book-of-news/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1638,8 +1454,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 765,
           "confidence_pct": null,
-          "source_label": "Azure AI Foundry model catalog",
-          "source_url": "https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models?tabs=global-standard-chat-completions",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1653,8 +1467,6 @@
           "h100e_ci_low": 132105,
           "h100e_ci_high": 581109,
           "confidence_pct": null,
-          "source_label": "Microsoft-OpenAI restructuring (28 Oct 2025); SemiAnalysis Arizona; Oracle Q2 FY2026 earnings (Stargate Abilene)",
-          "source_url": "https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1668,8 +1480,6 @@
           "h100e_ci_low": 396315,
           "h100e_ci_high": 1192803,
           "confidence_pct": null,
-          "source_label": "Microsoft-OpenAI restructuring (28 Oct 2025) + Azure AI Foundry",
-          "source_url": "https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1683,8 +1493,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 306,
           "confidence_pct": null,
-          "source_label": "users_2025.json",
-          "source_url": "https://x.ai/news/colossus",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1698,8 +1506,6 @@
           "h100e_ci_low": 4429,
           "h100e_ci_high": 58780,
           "confidence_pct": null,
-          "source_label": "Microsoft-Anthropic partnership blog + NVIDIA GB300 NVL72 blog",
-          "source_url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1713,8 +1519,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 196,
           "confidence_pct": null,
-          "source_label": "Figure AI Series C (Feb 2025)",
-          "source_url": "https://www.figure.ai/news/series-c",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1728,8 +1532,6 @@
           "h100e_ci_low": 27683,
           "h100e_ci_high": 156746,
           "confidence_pct": null,
-          "source_label": "Microsoft Ignite 2025 Book of News",
-          "source_url": "https://news.microsoft.com/ignite-2025-book-of-news/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1743,8 +1545,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 490,
           "confidence_pct": null,
-          "source_label": "Azure AI Foundry model catalog",
-          "source_url": "https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models?tabs=global-standard-chat-completions",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1758,8 +1558,6 @@
           "h100e_ci_low": 83050,
           "h100e_ci_high": 372272,
           "confidence_pct": null,
-          "source_label": "Microsoft-OpenAI restructuring + SemiAnalysis Arizona",
-          "source_url": "https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1773,8 +1571,6 @@
           "h100e_ci_low": 249150,
           "h100e_ci_high": 764137,
           "confidence_pct": null,
-          "source_label": "Microsoft-OpenAI restructuring (28 Oct 2025)",
-          "source_url": "https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1788,8 +1584,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 196,
           "confidence_pct": null,
-          "source_label": "users_2025.json",
-          "source_url": "https://x.ai/news/colossus",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1803,8 +1597,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 4334,
           "confidence_pct": null,
-          "source_label": "Microsoft-Anthropic partnership blog (18 Nov 2025)",
-          "source_url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1818,8 +1610,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 289,
           "confidence_pct": null,
-          "source_label": "Figure AI Series C (Feb 2025)",
-          "source_url": "https://www.figure.ai/news/series-c",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1833,8 +1623,6 @@
           "h100e_ci_low": 41725,
           "h100e_ci_high": 231130,
           "confidence_pct": null,
-          "source_label": "Microsoft Q2 FY2026 earnings",
-          "source_url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q2/press-release-webcast",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1848,8 +1636,6 @@
           "h100e_ci_low": 834,
           "h100e_ci_high": 14446,
           "confidence_pct": null,
-          "source_label": "Azure AI Foundry model catalog",
-          "source_url": "https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models?tabs=global-standard-chat-completions",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1863,8 +1649,6 @@
           "h100e_ci_low": 150209,
           "h100e_ci_high": 577825,
           "confidence_pct": null,
-          "source_label": "Microsoft-OpenAI partnership restructuring (28 Oct 2025) + SemiAnalysis Arizona cluster coverage",
-          "source_url": "https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1878,8 +1662,6 @@
           "h100e_ci_low": 375521,
           "h100e_ci_high": 1083422,
           "confidence_pct": null,
-          "source_label": "Azure OpenAI Service + ND H100 v5 series",
-          "source_url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/whats-new",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1893,8 +1675,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 289,
           "confidence_pct": null,
-          "source_label": "users_2025.json",
-          "source_url": "https://x.ai/news/colossus",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1908,8 +1688,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 111,
           "confidence_pct": null,
-          "source_label": "Microsoft-Anthropic partnership blog (18 Nov 2025)",
-          "source_url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1923,8 +1701,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 45,
           "confidence_pct": null,
-          "source_label": "Figure AI Series C (Feb 2025)",
-          "source_url": "https://www.figure.ai/news/series-c",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1938,8 +1714,6 @@
           "h100e_ci_low": 14667,
           "h100e_ci_high": 71262,
           "confidence_pct": null,
-          "source_label": "Microsoft Azure Tech Community ND-MI300X-v5 GA blog + AMD MI300X product page",
-          "source_url": "https://techcommunity.microsoft.com/blog/azurehighperformancecomputingblog/introducing-the-new-azure-ai-infrastructure-vm-series-nd-mi300x-v5/4145152",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1953,8 +1727,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 445,
           "confidence_pct": null,
-          "source_label": "Azure AI Foundry model catalog",
-          "source_url": "https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models?tabs=global-standard-chat-completions",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1968,8 +1740,6 @@
           "h100e_ci_low": 6111,
           "h100e_ci_high": 66808,
           "confidence_pct": null,
-          "source_label": "Microsoft Azure Tech Community ND-MI300X-v5 GA blog",
-          "source_url": "https://techcommunity.microsoft.com/blog/azurehighperformancecomputingblog/introducing-the-new-azure-ai-infrastructure-vm-series-nd-mi300x-v5/4145152",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1983,8 +1753,6 @@
           "h100e_ci_low": 55000,
           "h100e_ci_high": 173701,
           "confidence_pct": null,
-          "source_label": "Microsoft Azure Tech Community ND-MI300X-v5 GA blog + AOAI customer disclosures",
-          "source_url": "https://techcommunity.microsoft.com/blog/azurehighperformancecomputingblog/introducing-the-new-azure-ai-infrastructure-vm-series-nd-mi300x-v5/4145152",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -1998,8 +1766,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 45,
           "confidence_pct": null,
-          "source_label": "users_2025.json",
-          "source_url": "https://x.ai/news/colossus",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2013,8 +1779,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 24,
           "confidence_pct": null,
-          "source_label": "Microsoft-Anthropic partnership blog (18 Nov 2025)",
-          "source_url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2028,8 +1792,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 10,
           "confidence_pct": null,
-          "source_label": "Figure AI Series C (Feb 2025)",
-          "source_url": "https://www.figure.ai/news/series-c",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2043,8 +1805,6 @@
           "h100e_ci_low": 1996,
           "h100e_ci_high": 15241,
           "confidence_pct": null,
-          "source_label": "AMD MI325X product page",
-          "source_url": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi325x.html",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2058,8 +1818,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 95,
           "confidence_pct": null,
-          "source_label": "Azure AI Foundry model catalog",
-          "source_url": "https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models?tabs=global-standard-chat-completions",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2073,8 +1831,6 @@
           "h100e_ci_low": 832,
           "h100e_ci_high": 14288,
           "confidence_pct": null,
-          "source_label": "AMD Advancing AI 2024 (SiliconANGLE); MSFT named among AMD AI partners",
-          "source_url": "https://siliconangle.com/2024/10/10/amd-attack-ai-workloads-next-generation-instinct-mi325x-accelerator-networking-chips/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2088,8 +1844,6 @@
           "h100e_ci_low": 7484,
           "h100e_ci_high": 37150,
           "confidence_pct": null,
-          "source_label": "Microsoft Azure Tech Community ND-MI300X-v5 GA blog",
-          "source_url": "https://techcommunity.microsoft.com/blog/azurehighperformancecomputingblog/introducing-the-new-azure-ai-infrastructure-vm-series-nd-mi300x-v5/4145152",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2103,8 +1857,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 10,
           "confidence_pct": null,
-          "source_label": "users_2025.json",
-          "source_url": "https://x.ai/news/colossus",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2118,8 +1870,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 31,
           "confidence_pct": null,
-          "source_label": "Microsoft-Anthropic partnership blog (18 Nov 2025)",
-          "source_url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2133,8 +1883,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 12,
           "confidence_pct": null,
-          "source_label": "Figure AI Series C (Feb 2025)",
-          "source_url": "https://www.figure.ai/news/series-c",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2148,8 +1896,6 @@
           "h100e_ci_low": 3249,
           "h100e_ci_high": 19773,
           "confidence_pct": null,
-          "source_label": "AMD Instinct MI350 Series blog",
-          "source_url": "https://www.amd.com/en/blogs/2025/amd-instinct-mi350-series-and-beyond-accelerating-the-future-of-ai-and-hpc.html",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2163,8 +1909,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 124,
           "confidence_pct": null,
-          "source_label": "Azure AI Foundry model catalog",
-          "source_url": "https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models?tabs=global-standard-chat-completions",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2178,8 +1922,6 @@
           "h100e_ci_low": 1354,
           "h100e_ci_high": 18537,
           "confidence_pct": null,
-          "source_label": "AMD Instinct MI350 Series blog",
-          "source_url": "https://www.amd.com/en/blogs/2025/amd-instinct-mi350-series-and-beyond-accelerating-the-future-of-ai-and-hpc.html",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2193,8 +1935,6 @@
           "h100e_ci_low": 12185,
           "h100e_ci_high": 48196,
           "confidence_pct": null,
-          "source_label": "AMD Instinct MI350 Series blog",
-          "source_url": "https://www.amd.com/en/blogs/2025/amd-instinct-mi350-series-and-beyond-accelerating-the-future-of-ai-and-hpc.html",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2208,8 +1948,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 12,
           "confidence_pct": null,
-          "source_label": "users_2025.json",
-          "source_url": "https://x.ai/news/colossus",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2223,8 +1961,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 23,
           "confidence_pct": null,
-          "source_label": "Microsoft-Anthropic partnership blog (18 Nov 2025)",
-          "source_url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2238,8 +1974,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 9,
           "confidence_pct": null,
-          "source_label": "Figure AI Series C (Feb 2025)",
-          "source_url": "https://www.figure.ai/news/series-c",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2253,8 +1987,6 @@
           "h100e_ci_low": 2227,
           "h100e_ci_high": 14488,
           "confidence_pct": null,
-          "source_label": "AMD Instinct MI350 Series blog",
-          "source_url": "https://www.amd.com/en/blogs/2025/amd-instinct-mi350-series-and-beyond-accelerating-the-future-of-ai-and-hpc.html",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2268,8 +2000,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 91,
           "confidence_pct": null,
-          "source_label": "Azure AI Foundry model catalog",
-          "source_url": "https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models?tabs=global-standard-chat-completions",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2283,8 +2013,6 @@
           "h100e_ci_low": 928,
           "h100e_ci_high": 13582,
           "confidence_pct": null,
-          "source_label": "AMD Instinct MI350 Series blog",
-          "source_url": "https://www.amd.com/en/blogs/2025/amd-instinct-mi350-series-and-beyond-accelerating-the-future-of-ai-and-hpc.html",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2298,8 +2026,6 @@
           "h100e_ci_low": 8351,
           "h100e_ci_high": 35314,
           "confidence_pct": null,
-          "source_label": "AMD Instinct MI350 Series blog",
-          "source_url": "https://www.amd.com/en/blogs/2025/amd-instinct-mi350-series-and-beyond-accelerating-the-future-of-ai-and-hpc.html",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2313,8 +2039,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 9,
           "confidence_pct": null,
-          "source_label": "users_2025.json",
-          "source_url": "https://x.ai/news/colossus",
           "reasoning_url": null,
           "reasoning": null
         }
@@ -2401,8 +2125,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 45787,
           "confidence_pct": null,
-          "source_label": "Oracle Q2 FY2026 earnings: 'multibillion Meta contract' flagged alongside NVIDIA in RPO drivers",
-          "source_url": "https://futurumgroup.com/insights/oracle-q2-fy-2026-cloud-grows-capex-rises-for-ai-buildout/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2416,8 +2138,6 @@
           "h100e_ci_low": 15689,
           "h100e_ci_high": 114467,
           "confidence_pct": null,
-          "source_label": "NVIDIA blog April 2025; Oracle blog on 131,072 GB200 Supercluster",
-          "source_url": "https://blogs.oracle.com/cloud-infrastructure/supercluster-nvidia-blackwell-dedicated-alloy",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2431,8 +2151,6 @@
           "h100e_ci_low": 156889,
           "h100e_ci_high": 429251,
           "confidence_pct": null,
-          "source_label": "Oracle Q2 FY2026 earnings call (Dec 10, 2025): co-CEO Clay Magouyrk disclosed 96,000+ GB200 delivered to Stargate Abilene",
-          "source_url": "https://www.fool.com/earnings/call-transcripts/2025/12/10/oracle-orcl-q2-2026-earnings-call-transcript/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2446,8 +2164,6 @@
           "h100e_ci_low": 31378,
           "h100e_ci_high": 200317,
           "confidence_pct": null,
-          "source_label": "Oracle Q3 FY2026 RPO commentary; TikTok named as anchor customer",
-          "source_url": "https://futurumgroup.com/insights/oracle-q3-fy-2026-earnings-driven-by-oci-ai-infrastructure-demand/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2461,8 +2177,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 17170,
           "confidence_pct": null,
-          "source_label": "Tom's Hardware on NVIDIA $20B xAI Colossus 2 investment; xAI canceled Oracle deal mid-2024",
-          "source_url": "https://www.tomshardware.com/pc-components/gpus/nvidia-backs-20-billion-xai-chip-deal",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2476,8 +2190,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 30935,
           "confidence_pct": null,
-          "source_label": "Meta $20B OCI deal; unclear on chip SKU mix",
-          "source_url": "https://futurumgroup.com/insights/oracle-q3-fy-2026-earnings-driven-by-oci-ai-infrastructure-demand/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2491,8 +2203,6 @@
           "h100e_ci_low": 6175,
           "h100e_ci_high": 58003,
           "confidence_pct": null,
-          "source_label": "NVIDIA blog + Oracle OCI Supercluster blog (inference on Blackwell Ultra)",
-          "source_url": "https://blogs.oracle.com/cloud-infrastructure/supercluster-nvidia-blackwell-dedicated-alloy",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2506,8 +2216,6 @@
           "h100e_ci_low": 20583,
           "h100e_ci_high": 154675,
           "confidence_pct": null,
-          "source_label": "Epoch US owners tab 2025; DCD on Abilene buildout",
-          "source_url": "https://www.datacenterdynamics.com/en/news/openai-and-oracle-to-deploy-450000-gb200-gpus-at-stargate-abilene-data-center/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2521,8 +2229,6 @@
           "h100e_ci_low": 92625,
           "h100e_ci_high": 328685,
           "confidence_pct": null,
-          "source_label": "Oracle Q3 FY2026 RPO; residual after named users",
-          "source_url": "https://www.oracle.com/news/announcement/q3fy26-earnings-release-2026-03-10/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2536,8 +2242,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 7734,
           "confidence_pct": null,
-          "source_label": "No public source linking xAI to Oracle B300",
-          "source_url": "https://www.tomshardware.com/pc-components/gpus/nvidia-backs-20-billion-xai-chip-deal",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2551,8 +2255,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 31814,
           "confidence_pct": null,
-          "source_label": "Oracle Q3 FY2026 earnings (March 2026); SiliconANGLE Sep 2025 on Meta $20B OCI deal",
-          "source_url": "https://futurumgroup.com/insights/oracle-q3-fy-2026-earnings-driven-by-oci-ai-infrastructure-demand/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2566,8 +2268,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 19884,
           "confidence_pct": null,
-          "source_label": "NVIDIA blog April 2025 (Blackwell-centric); soft override from methodology GDoc",
-          "source_url": "https://blogs.nvidia.com/blog/oracle-cloud-infrastructure-blackwell-gpus-agentic-ai-reasoning-models/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2581,8 +2281,6 @@
           "h100e_ci_low": 16120,
           "h100e_ci_high": 99418,
           "confidence_pct": null,
-          "source_label": "Oracle Q2 FY2026 earnings (Dec 10, 2025); pre-Stargate OCI OpenAI usage; users_microsoft_oracle.md \u00a72.1",
-          "source_url": "https://www.fool.com/earnings/call-transcripts/2025/12/10/oracle-orcl-q2-2026-earnings-call-transcript/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2596,8 +2294,6 @@
           "h100e_ci_low": 100750,
           "h100e_ci_high": 318137,
           "confidence_pct": null,
-          "source_label": "Oracle Q3 FY2026 RPO commentary; residual after named users",
-          "source_url": "https://www.oracle.com/news/announcement/q3fy26-earnings-release-2026-03-10/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2611,8 +2307,6 @@
           "h100e_ci_low": 16120,
           "h100e_ci_high": 99418,
           "confidence_pct": null,
-          "source_label": "Epoch GPU Clusters CSV; Next Platform July 2024; users_microsoft_oracle.md \u00a72.2",
-          "source_url": "https://www.nextplatform.com/2024/07/10/why-xai-will-settle-for-nothing-less-than-a-colossus-memphis/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2626,8 +2320,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 5000,
           "confidence_pct": null,
-          "source_label": "Meta has its own MI300X fleet; no Oracle-Meta AMD deal disclosed",
-          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-and-amd-expand-partnership-to-help-customers-achieve-next-generation-ai-scale-2025-10-14/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2641,8 +2333,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "NVIDIA DGX Cloud is NVIDIA-only by definition",
-          "source_url": "https://blogs.nvidia.com/blog/oracle-cloud-infrastructure-blackwell-gpus-agentic-ai-reasoning-models/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2656,8 +2346,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 3000,
           "confidence_pct": null,
-          "source_label": "No public evidence of OpenAI on AMD Instinct",
-          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-and-amd-expand-partnership-to-help-customers-achieve-next-generation-ai-scale-2025-10-14/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2671,8 +2359,6 @@
           "h100e_ci_low": 42030,
           "h100e_ci_high": 100007,
           "confidence_pct": null,
-          "source_label": "Oracle-AMD partnership announcements; MI300X was Oracle's flagship AMD offering 2024-2025",
-          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-and-amd-expand-partnership-to-help-customers-achieve-next-generation-ai-scale-2025-10-14/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2686,8 +2372,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 2000,
           "confidence_pct": null,
-          "source_label": "No public source on xAI AMD usage",
-          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-and-amd-expand-partnership-to-help-customers-achieve-next-generation-ai-scale-2025-10-14/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2701,8 +2385,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 1259,
           "confidence_pct": null,
-          "source_label": "Same as MI300X",
-          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-and-amd-expand-partnership-to-help-customers-achieve-next-generation-ai-scale-2025-10-14/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2716,8 +2398,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "DGX Cloud is NVIDIA-only",
-          "source_url": "https://blogs.nvidia.com/blog/oracle-cloud-infrastructure-blackwell-gpus-agentic-ai-reasoning-models/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2731,8 +2411,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 756,
           "confidence_pct": null,
-          "source_label": "Same as MI300X \u2014 no OpenAI AMD usage",
-          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-and-amd-expand-partnership-to-help-customers-achieve-next-generation-ai-scale-2025-10-14/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2746,8 +2424,6 @@
           "h100e_ci_low": 5492,
           "h100e_ci_high": 25189,
           "confidence_pct": null,
-          "source_label": "Oracle-AMD expanded partnership Oct 2025; enterprise AMD fleet",
-          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-and-amd-expand-partnership-to-help-customers-achieve-next-generation-ai-scale-2025-10-14/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2761,8 +2437,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 504,
           "confidence_pct": null,
-          "source_label": "Same as MI300X",
-          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-and-amd-expand-partnership-to-help-customers-achieve-next-generation-ai-scale-2025-10-14/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2776,8 +2450,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 1669,
           "confidence_pct": null,
-          "source_label": "Same as MI300X",
-          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-and-amd-expand-partnership-to-help-customers-achieve-next-generation-ai-scale-2025-10-14/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2791,8 +2463,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "DGX Cloud is NVIDIA-only",
-          "source_url": "https://blogs.nvidia.com/blog/oracle-cloud-infrastructure-blackwell-gpus-agentic-ai-reasoning-models/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2806,8 +2476,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 1002,
           "confidence_pct": null,
-          "source_label": "Same as MI300X",
-          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-and-amd-expand-partnership-to-help-customers-achieve-next-generation-ai-scale-2025-10-14/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2821,8 +2489,6 @@
           "h100e_ci_low": 8532,
           "h100e_ci_high": 33390,
           "confidence_pct": null,
-          "source_label": "Oracle-AMD Q4 2025 launch; late-2025 enterprise deployment",
-          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-and-amd-expand-partnership-to-help-customers-achieve-next-generation-ai-scale-2025-10-14/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2836,8 +2502,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 668,
           "confidence_pct": null,
-          "source_label": "Same as MI300X",
-          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-and-amd-expand-partnership-to-help-customers-achieve-next-generation-ai-scale-2025-10-14/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2851,8 +2515,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 1230,
           "confidence_pct": null,
-          "source_label": "Same as MI300X",
-          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-and-amd-expand-partnership-to-help-customers-achieve-next-generation-ai-scale-2025-10-14/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2866,8 +2528,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 0,
           "confidence_pct": null,
-          "source_label": "DGX Cloud is NVIDIA-only",
-          "source_url": "https://blogs.nvidia.com/blog/oracle-cloud-infrastructure-blackwell-gpus-agentic-ai-reasoning-models/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2881,8 +2541,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 738,
           "confidence_pct": null,
-          "source_label": "Same as MI300X",
-          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-and-amd-expand-partnership-to-help-customers-achieve-next-generation-ai-scale-2025-10-14/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2896,8 +2554,6 @@
           "h100e_ci_low": 5785,
           "h100e_ci_high": 24590,
           "confidence_pct": null,
-          "source_label": "Oracle-AMD MI355X Q4 2025 launch",
-          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-and-amd-expand-partnership-to-help-customers-achieve-next-generation-ai-scale-2025-10-14/",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2911,8 +2567,6 @@
           "h100e_ci_low": 0,
           "h100e_ci_high": 492,
           "confidence_pct": null,
-          "source_label": "Same as MI300X",
-          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-and-amd-expand-partnership-to-help-customers-achieve-next-generation-ai-scale-2025-10-14/",
           "reasoning_url": null,
           "reasoning": null
         }
@@ -2944,8 +2598,6 @@
           "h100e_ci_low": 353714,
           "h100e_ci_high": 353714,
           "confidence_pct": null,
-          "source_label": "Epoch AI Chip Owners DB (2026-04-16 snapshot, 2.526\u00d7 H100e/unit matches NVIDIA GB200 NVL72); Wikipedia Colossus (Musk 19 Jun 2025 video: 30k GB200 operational Phase 3); Introl Blog Jan 2026 (Colossus 2 Phase 1 ~110k GB200 staging H2 2025)",
-          "source_url": "https://epoch.ai/data/ai-chip-owners",
           "reasoning_url": null,
           "reasoning": null
         },
@@ -2959,8 +2611,6 @@
           "h100e_ci_low": 200000,
           "h100e_ci_high": 200000,
           "confidence_pct": null,
-          "source_label": "Epoch AI Chip Owners DB (2026-04-16 snapshot); Wikipedia Colossus citing Musk 19 Jun 2025 video (200k Hopper operational by mid-2025); HPCwire 13 May 2025 (200k milestone)",
-          "source_url": "https://epoch.ai/data/ai-chip-owners",
           "reasoning_url": null,
           "reasoning": null
         }
