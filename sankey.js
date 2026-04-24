@@ -93,6 +93,15 @@ function formatNumber(n) {
   return n.toString();
 }
 
+// Only allow http(s) URLs in href attributes — blocks javascript:/data: URIs
+// sourced from sheet cells. escapeHTML() is defined near the hover helpers.
+function safeHref(url) {
+  if (!url) return "";
+  const s = String(url).trim();
+  if (/^https?:\/\//i.test(s)) return escapeHTML(s);
+  return "";
+}
+
 function getActiveView() {
   if (state.view === "by_company" && state.showAll) {
     return PIPELINE_DATA.views.by_company_full;
@@ -383,7 +392,7 @@ function renderChipLevel() {
   for (const chip of chipsOrdered) {
     const el = document.createElement("div");
     el.className = "legend-item";
-    el.innerHTML = `<span class="swatch" style="background:${chipColor(chip)}"></span> ${chip}`;
+    el.innerHTML = `<span class="swatch" style="background:${chipColor(chip)}"></span> ${escapeHTML(chip)}`;
     legend.appendChild(el);
   }
 }
@@ -394,7 +403,7 @@ function buildOwnerCard(owner, o) {
 
   const fleetTotal = o.fleet_total_h100e_median;
   card.innerHTML = `
-    <h3>${owner} <span class="owner-meta">— ${formatNumber(fleetTotal)} H100e fleet, ${o.cells.length} cells</span></h3>
+    <h3>${escapeHTML(owner)} <span class="owner-meta">— ${formatNumber(fleetTotal)} H100e fleet, ${o.cells.length} cells</span></h3>
   `;
 
   const svg = d3.select(card).append("svg").node();
@@ -535,15 +544,18 @@ function renderOwnerStackedBar(svgNode, owner, o) {
 
 function chipCellTooltipHTML(owner, user, seg) {
   const cellLines = seg._cells.map(c => {
-    const src = c.source_url
-      ? `<a href="${c.source_url}" target="_blank" rel="noopener">source</a>`
-      : (c.source_label || "");
-    const conf = (c.confidence_pct != null) ? ` — ${c.confidence_pct}% conf` : "";
+    const href = safeHref(c.source_url);
+    const src = href
+      ? `<a href="${href}" target="_blank" rel="noopener">source</a>`
+      : escapeHTML(c.source_label || "");
+    const conf = (c.confidence_pct != null)
+      ? ` — ${escapeHTML(c.confidence_pct)}% conf`
+      : "";
     return `<div class="sub">share=${(c.share_median*100).toFixed(1)}% [${(c.share_ci_low*100).toFixed(1)}–${(c.share_ci_high*100).toFixed(1)}%]${conf} · ${src}</div>`;
   }).join("");
   return `
-    <div class="value">${owner} → ${user}</div>
-    <div class="sub">${seg.chip_type}: ${formatNumber(seg.h100e_median)} H100e</div>
+    <div class="value">${escapeHTML(owner)} → ${escapeHTML(user)}</div>
+    <div class="sub">${escapeHTML(seg.chip_type)}: ${formatNumber(seg.h100e_median)} H100e</div>
     <div class="sub">80% CI: ${formatNumber(seg.h100e_ci_low)}–${formatNumber(seg.h100e_ci_high)}</div>
     ${cellLines}
   `;
@@ -826,6 +838,21 @@ function setupControls() {
     el.addEventListener("change", (e) => {
       if (e.target.checked) {
         state.view = e.target.value;
+        // Chip-level data only exists for CHIP_LEVEL_YEARS. If the current
+        // year is outside that domain (e.g. user picked 2026 and switched
+        // to chip-level view), snap to the nearest available chip-level
+        // year so the user sees data instead of an error banner.
+        if (state.view === "chip_level") {
+          const available = Object.keys(CHIP_LEVEL_BY_YEAR)
+            .map(Number).sort((a, b) => a - b);
+          if (available.length && !CHIP_LEVEL_BY_YEAR[state.year]) {
+            // Pick the closest year; tie-break by choosing the higher year.
+            state.year = available.reduce((best, y) =>
+              Math.abs(y - state.year) < Math.abs(best - state.year) ? y : best,
+              available[available.length - 1]);
+            updateYearButtons();
+          }
+        }
         updateShowAllVisibility();
         render();
       }

@@ -9,7 +9,7 @@
     "CoreWeave",
     "xAI"
   ],
-  "notes": "Chip-level 2023 data. Source: canonical sheet https://docs.google.com/spreadsheets/d/1unfVrnl3bzKIrf6ASRpNtlfV1vIGoS7W66ZoeR-kKlc/edit \u2014 users_2023 tab (shares) + owner_fleet_by_chip_type (fleet anchors from Epoch AI Chip Owners DB). CI on h100e is the naive product of share \u00d7 fleet endpoints (not a full Monte Carlo). Last synced: 2026-04-24T15:03:22Z.",
+  "notes": "Chip-level 2023 data. Source: canonical sheet https://docs.google.com/spreadsheets/d/1unfVrnl3bzKIrf6ASRpNtlfV1vIGoS7W66ZoeR-kKlc/edit \u2014 users_2023 tab (shares) + owner_fleet_by_chip_type (fleet anchors from Epoch AI Chip Owners DB). CI on h100e is the naive product of share \u00d7 fleet endpoints (not a full Monte Carlo). Last synced: 2026-04-24T15:45:02Z.",
   "owners": {
     "Amazon": {
       "fleet": {
